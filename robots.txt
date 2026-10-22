@@ -1,7 +1,8 @@
 # DAIMA COMMUNICATIONS — independent website concept
-# Replace https://your-domain.example with the verified production domain before launch.
+# Production: https://daima-communications-website.vercel.app
+# If a custom domain is connected, replace the production URL below.
 User-agent: *
 Allow: /
 Disallow: /admin.html
 
-Sitemap: https://your-domain.example/sitemap.xml
+Sitemap: https://daima-communications-website.vercel.app/sitemap.xml

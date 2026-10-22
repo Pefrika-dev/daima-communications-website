@@ -1249,13 +1249,6 @@
     });
   }
 
-  function initSeo() {
-    const canonical = document.querySelector('link[rel="canonical"]');
-    if (canonical && canonical.href.includes('your-domain.example')) {
-      canonical.href = location.origin + '/' + (location.pathname.split('/').pop() || 'index.html');
-    }
-  }
-
   /* ------------------------------------------------------------------ */
   /* Boot                                                               */
   /* ------------------------------------------------------------------ */
@@ -1269,7 +1262,6 @@
     else if (page === 'cart') initCartPage();
     else if (page === 'branches') initBranchesPage();
 
-    initSeo();
     initReveal();
     UI.updateCounts();
 

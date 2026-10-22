@@ -4,6 +4,9 @@ An independent, premium website concept and local demonstration dashboard for **
 
 **Website concept designed and developed by Thomas Hondo Chacha — Software Engineer.**
 
+**Live demonstration:** <https://daima-communications-website.vercel.app>  
+**Source repository:** <https://github.com/Pefrika-dev/daima-communications-website>
+
 ---
 
 ## 1. What this project is
@@ -79,8 +82,8 @@ There is **no login**. The dashboard is intentionally a local prototype; a clien
 ├── tools/
 │   ├── serve.js               Zero-dependency local static server
 │   └── generate-assets.js     Regenerates the original SVG illustration set
-├── robots.txt                 Crawler guidance (placeholder domain)
-├── sitemap.xml                Sitemap (placeholder domain)
+├── robots.txt                 Crawler guidance
+├── sitemap.xml                Production sitemap
 ├── vercel.json                Static deployment headers
 └── README.md
 ```
@@ -169,7 +172,11 @@ The site is plain static HTML, CSS and JavaScript. It can be deployed to Vercel,
 
 ### Vercel
 
-1. Import the folder as a project, or run `vercel` from this directory.
+The demonstration is deployed at <https://daima-communications-website.vercel.app>. The GitHub repository is connected to the Vercel project, so pushes to `main` trigger a new production deployment.
+
+To deploy a copy:
+
+1. Import the repository as a project, or run `vercel` from this directory.
 2. Choose **Other** as the framework preset.
 3. Leave the build command empty.
 4. Use the repository root as the output directory.
@@ -179,10 +186,11 @@ No environment variables are required for the demonstration.
 
 ### Before a public launch
 
-1. **Replace the placeholder domain** `https://your-domain.example` in:
+1. **Custom domain:** the current deployment uses the Vercel URL above. If a custom domain is connected, update the production URL in:
    - canonical and Open Graph tags in all public HTML files
    - `robots.txt`
    - `sitemap.xml`
+   - `CONFIG.meta.siteUrl` in `js/config.js`
 2. Confirm the verified business name, branch details, opening hours, telephone numbers and WhatsApp number. Do not publish unverified placeholders.
 3. Replace the illustrative prices and stock with approved data, or keep the catalogue clearly labelled as a demonstration.
 4. Decide whether product and cart pages should remain `noindex`. `admin.html` should always stay `noindex, nofollow` and should be protected by real authentication in production.
@@ -192,8 +200,8 @@ No environment variables are required for the demonstration.
 
 ### Google Search Console
 
-1. Add the production domain as a property and verify ownership (DNS or HTML file method).
-2. Submit `https://your-domain.example/sitemap.xml` after replacing the placeholder domain.
+1. Add the production domain as a property and verify ownership (DNS or HTML file method). For a `vercel.app` address, use the Vercel domain or connect a custom domain you control.
+2. Submit `https://daima-communications-website.vercel.app/sitemap.xml`.
 3. Request indexing for the homepage, catalogue and branches page.
 4. Confirm that `admin.html` is excluded and that cart/product pages use the intended `noindex` settings.
 5. Review the Page indexing report after deployment.
@@ -269,6 +277,7 @@ The following checks were run against the local server during development:
   - `admin.html` — 100 / 100 / 100
 - **Responsive overflow checks** at 360, 390, 768, 1024 and 1440 px for all six pages. No page-level horizontal overflow was found.
 - **Browser console checks** on the public pages and dashboard. No JavaScript errors were reported after the final fixes.
+- **Production deployment:** the Vercel URL returned HTTP 200 with the expected page title, and all 54 SVG assets passed XML validation.
 - **Manual flows:** homepage featured search/filter/sort, catalogue search/filter/sort, product gallery, cart quantity/removal/subtotal, wishlist toggle, contact and inquiry validation/success states, admin product add/delete, inventory editing, inquiry status/detail, settings reset and confirmation dialogs.
 
 These checks describe the demonstration only. They are not a security audit or a production performance guarantee.

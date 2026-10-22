@@ -219,7 +219,7 @@ function earbuds(p, o = {}) {
   const shellEdge = o.shellEdge || '#c9d2e0';
   const bud = o.bud || '#eef2f8';
   const face = o.budFace || '#2a3140';
-  const led = o.led || '#2f6bff';
+  const led = o.led || '#285fee';
   return `<g transform="translate(400 410) rotate(-5)" filter="url(#${p}-sh)">
     <g transform="translate(0 96)">
       <rect x="-142" y="-74" width="284" height="212" rx="78" fill="${shell}" stroke="${shellEdge}" stroke-width="2"/>
@@ -286,7 +286,7 @@ function headphones(p, o = {}) {
 
 function powerBank(p, o = {}) {
   const body = o.body || '#20262f';
-  const accent = o.accent || '#3b7bff';
+  const accent = o.accent || '#285fee';
   return `<g transform="translate(400 400) rotate(-12)" filter="url(#${p}-sh)">
     <rect x="-122" y="-192" width="244" height="384" rx="34" fill="${body}" stroke="#ffffff" stroke-opacity=".18"/>
     <rect x="-114" y="-184" width="228" height="368" rx="28" fill="none" stroke="#000" stroke-opacity=".3"/>
@@ -309,7 +309,7 @@ function powerBank(p, o = {}) {
 function charger(p, o = {}) {
   const body = o.body || '#f8fafc';
   const edge = o.edge || '#c9d3e2';
-  const accent = o.accent || '#2f6bff';
+  const accent = o.accent || '#285fee';
   return `<g transform="translate(392 382) rotate(-8)" filter="url(#${p}-sh)">
     <rect x="-104" y="-104" width="208" height="208" rx="44" fill="${body}" stroke="${edge}" stroke-width="2"/>
     <rect x="-96" y="-96" width="192" height="192" rx="38" fill="none" stroke="#ffffff" stroke-opacity=".65"/>
@@ -512,7 +512,7 @@ function router(p) {
       <rect x="-152" y="-90" width="304" height="132" rx="32" transform="rotate(-4)"/>
     </g>
     <rect x="-132" y="-64" width="264" height="80" rx="22" fill="#f9fbfd"/>
-    <circle cx="-88" cy="-24" r="5" fill="#2f6bff"/>
+    <circle cx="-88" cy="-24" r="5" fill="#285fee"/>
     <circle cx="-68" cy="-24" r="5" fill="#39c98a"/>
     <circle cx="-48" cy="-24" r="5" fill="#ffc247"/>
     <text x="80" y="-18" fill="#7a8698" font-family="Segoe UI, Arial" font-size="9" letter-spacing="2">DEMO</text>
@@ -548,29 +548,29 @@ const products = [
   { slug: 'iphone-15', type: 'phoneFront', alt: 'phoneBack', tint: '#edf3fa', accent: '#6aa8d8', bodyA: '#adc6dd', bodyB: '#6388a8', bodyC: '#8fb0ca', screen: ['#0b2a4a', '#1e8fc4', '#8ee6dd'] },
   { slug: 'redmi-note-13-pro', type: 'phoneBack', alt: 'phoneFront', tint: '#f0edfb', accent: '#8b6cf5', bodyA: '#8268df', bodyB: '#392a72', bodyC: '#5b46aa', screen: ['#160a3f', '#7a3cff', '#ff9ad5'] },
   { slug: 'redmi-13c', type: 'phoneBack', alt: 'phoneFront', tint: '#eaf4f0', accent: '#2f9271', bodyA: '#347a63', bodyB: '#123c30', bodyC: '#27664f', screen: ['#052a21', '#17a07a', '#b7f2d8'] },
-  { slug: 'infinix-hot-50', type: 'phoneBack', alt: 'phoneFront', tint: '#eaf1fe', accent: '#2f6bff', bodyA: '#3a79ee', bodyB: '#123a85', bodyC: '#2b60c4', screen: ['#071a4f', '#2f6bff', '#7ce8ff'] },
+  { slug: 'infinix-hot-50', type: 'phoneBack', alt: 'phoneFront', tint: '#eaf1fe', accent: '#285fee', bodyA: '#3a79ee', bodyB: '#123a85', bodyC: '#2b60c4', screen: ['#071a4f', '#285fee', '#7ce8ff'] },
   { slug: 'infinix-note-40', type: 'phoneBack', alt: 'phoneFront', tint: '#f3f0ea', accent: '#d1a75a', bodyA: '#3b3732', bodyB: '#0b0b0d', bodyC: '#252320', screen: ['#241503', '#b17417', '#ffd899'] },
   { slug: 'tecno-camon-30', type: 'phoneBack', alt: 'phoneFront', tint: '#edf3ef', accent: '#57a784', bodyA: '#28463a', bodyB: '#0b1713', bodyC: '#1b332a', screen: ['#04231c', '#12836a', '#8ef2c8'] },
   { slug: 'tecno-spark-20', type: 'phoneBack', alt: 'phoneFront', tint: '#eaf3fb', accent: '#3d93d6', bodyA: '#3f8fc4', bodyB: '#173e60', bodyC: '#2f719e', screen: ['#03243a', '#1d8bc4', '#8be9ff'] },
   { slug: 'galaxy-a55', type: 'phoneBack', alt: 'phoneFront', tint: '#f1eff9', accent: '#7970c9', bodyA: '#8f88cf', bodyB: '#443e78', bodyC: '#6f68b0', screen: ['#160a3a', '#6c5cff', '#ffb3e6'] },
 
   { slug: 'nokia-105', type: 'feature', tint: '#eef1f6', accent: '#3c7cb8', feature: { body: '#232a36', accent: '#3c7cb8' } },
-  { slug: 'nokia-110', type: 'feature', tint: '#e9f0fa', accent: '#2f6bff', feature: { body: '#274b7c', accent: '#8fd0ff' } },
+  { slug: 'nokia-110', type: 'feature', tint: '#e9f0fa', accent: '#285fee', feature: { body: '#274b7c', accent: '#8fd0ff' } },
   { slug: 'tecno-t301', type: 'feature', tint: '#f2f1ee', accent: '#8b8f98', feature: { body: '#303339', accent: '#f0b13b' } },
 
-  { slug: 'oraimo-freepods', type: 'earbuds', tint: '#eef3f9', accent: '#3d7bff', earbuds: { shell: '#fbfcfe', shellEdge: '#c9d2e0', bud: '#eef2f8', led: '#2f6bff' } },
+  { slug: 'oraimo-freepods', type: 'earbuds', tint: '#eef3f9', accent: '#3d7bff', earbuds: { shell: '#fbfcfe', shellEdge: '#c9d2e0', bud: '#eef2f8', led: '#285fee' } },
   { slug: 'galaxy-buds-fe', type: 'earbuds', tint: '#eef0f5', accent: '#5b7bb5', earbuds: { shell: '#333a46', shellEdge: '#161b23', bud: '#222833', budFace: '#0c1016', led: '#62a8ff' } },
   { slug: 'soundcore-buds', type: 'earbuds', tint: '#eaf1fa', accent: '#2f5fd6', earbuds: { shell: '#1e335c', shellEdge: '#0c1730', bud: '#1a2a4a', budFace: '#060b14', led: '#57a0ff' } },
-  { slug: 'oraimo-headphones', type: 'headphones', tint: '#f0f1f4', accent: '#3b7bff', headphones: { body: '#2a303c', cushion: '#11151f', accent: '#3b7bff' } },
+  { slug: 'oraimo-headphones', type: 'headphones', tint: '#f0f1f4', accent: '#285fee', headphones: { body: '#2a303c', cushion: '#11151f', accent: '#285fee' } },
 
-  { slug: 'oraimo-powerbank', type: 'power', tint: '#edf1f7', accent: '#3b7bff', power: { body: '#232a34', accent: '#3b7bff', capacity: '20K' } },
+  { slug: 'oraimo-powerbank', type: 'power', tint: '#edf1f7', accent: '#285fee', power: { body: '#232a34', accent: '#285fee', capacity: '20K' } },
   { slug: 'anker-powerbank', type: 'power', tint: '#eef4f6', accent: '#37c2b0', power: { body: '#1c2530', accent: '#39d0b8', capacity: '20K' } },
   { slug: 'xiaomi-powerbank', type: 'power', tint: '#f1f2f4', accent: '#6a7688', power: { body: '#c9d0d8', accent: '#2d3540', capacity: '10K' } },
 
-  { slug: 'anker-charger-30w', type: 'charger', tint: '#edf3fb', accent: '#2f6bff', charger: { body: '#f9fbfd', edge: '#c9d3e2', accent: '#2f6bff', label: '30W' } },
+  { slug: 'anker-charger-30w', type: 'charger', tint: '#edf3fb', accent: '#285fee', charger: { body: '#f9fbfd', edge: '#c9d3e2', accent: '#285fee', label: '30W' } },
   { slug: 'oraimo-charger-33w', type: 'charger', tint: '#edf1fa', accent: '#3f7bff', charger: { body: '#f4f8ff', edge: '#bccbe2', accent: '#3f7bff', label: '33W', cable: '#2a3240' } },
   { slug: 'samsung-charger-25w', type: 'charger', tint: '#eff1f4', accent: '#7a8698', charger: { body: '#2a303b', edge: '#0f141c', accent: '#9fc4ff', label: '25W', cable: '#0f141c' } },
-  { slug: 'usbc-cable', type: 'cable', tint: '#eff2f6', accent: '#3b7bff', cable: { cord: '#242b37' } },
+  { slug: 'usbc-cable', type: 'cable', tint: '#eff2f6', accent: '#285fee', cable: { cord: '#242b37' } },
 
   { slug: 'clear-case', type: 'case', tint: '#edf3fb', accent: '#6aa6ff', case: { tint: '#b9d4ff', edge: '#9cbde9' } },
   { slug: 'tempered-glass', type: 'glass', tint: '#edf3fb', accent: '#78aaff' },
@@ -580,7 +580,7 @@ const products = [
   { slug: 'oraimo-watch', type: 'watch', tint: '#edf4ef', accent: '#42d68f', watch: { strap: '#1f3a30', caseCol: '#263f35', accent: '#48e59c' } },
   { slug: 'redmi-watch', type: 'watch', tint: '#f1f2f4', accent: '#ff9f5a', watch: { strap: '#c7ced8', caseCol: '#aab3c0', accent: '#ff9f5a' } },
 
-  { slug: 'jbl-go4', type: 'speaker', tint: '#eaf2fb', accent: '#2f6bff', speaker: { body: '#1c3f77', accent: '#4f9bff' } },
+  { slug: 'jbl-go4', type: 'speaker', tint: '#eaf2fb', accent: '#285fee', speaker: { body: '#1c3f77', accent: '#4f9bff' } },
   { slug: 'oraimo-speaker', type: 'speaker', tint: '#f1f1f3', accent: '#ff7a3d', speaker: { body: '#24262c', accent: '#ff7a3d' } },
 
   { slug: 'logitech-mouse', type: 'mouse', tint: '#f0f2f5', accent: '#5c6a7e' },
@@ -588,7 +588,7 @@ const products = [
   { slug: 'usbc-hub', type: 'hub', tint: '#eff2f6', accent: '#4a5768' },
   { slug: 'laptop-stand', type: 'stand', tint: '#eff2f6', accent: '#4a5768' },
 
-  { slug: 'wifi-router', type: 'router', tint: '#edf4fa', accent: '#2f6bff' },
+  { slug: 'wifi-router', type: 'router', tint: '#edf4fa', accent: '#285fee' },
   { slug: 'smart-bulb', type: 'bulb', tint: '#eff4fa', accent: '#66bfff', bulb: { glow: '#8fd2ff' } },
 ];
 
@@ -671,12 +671,12 @@ products.forEach(renderProduct);
 
 function buildHero() {
   const p = 'hero';
-  const accent = '#3b7bff';
+  const accent = '#285fee';
   const phoneA = { bodyA: '#4b5363', bodyB: '#1c2230', bodyC: '#3a4150', screen: ['#0a1a4d', '#3a5cff', '#65d7ff'] };
   const phoneB = { bodyA: '#c9c2b4', bodyB: '#7c766b', bodyC: '#a8a195', screen: ['#241436', '#a3487f', '#ffa36f'] };
   const defs = `<defs>
     <radialGradient id="hero-glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0" stop-color="#3b7bff" stop-opacity=".5"/>
+      <stop offset="0" stop-color="#285fee" stop-opacity=".5"/>
       <stop offset=".55" stop-color="#1f4fd8" stop-opacity=".14"/>
       <stop offset="1" stop-color="#081226" stop-opacity="0"/>
     </radialGradient>
@@ -983,13 +983,13 @@ function socialCard() {
       <stop offset="0" stop-color="#070c18"/><stop offset=".6" stop-color="#0b1428"/><stop offset="1" stop-color="#0e1b36"/>
     </linearGradient>
     <radialGradient id="sc-glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0" stop-color="#2f6bff" stop-opacity=".45"/><stop offset="1" stop-color="#2f6bff" stop-opacity="0"/>
+      <stop offset="0" stop-color="#285fee" stop-opacity=".45"/><stop offset="1" stop-color="#285fee" stop-opacity="0"/>
     </radialGradient>
     <linearGradient id="sc-phone" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#4b5363"/><stop offset=".5" stop-color="#1b2230"/><stop offset="1" stop-color="#3a4150"/>
     </linearGradient>
     <linearGradient id="sc-scr" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0a1a4d"/><stop offset=".5" stop-color="#3762ff"/><stop offset="1" stop-color="#6fe8ff"/>
+      <stop offset="0" stop-color="#0a1a4d"/><stop offset=".5" stop-color="#2a63ef"/><stop offset="1" stop-color="#6fe8ff"/>
     </linearGradient>
     <filter id="sc-sh"><feDropShadow dx="0" dy="22" stdDeviation="30" flood-color="#000" flood-opacity=".6"/></filter>
   </defs>
@@ -998,12 +998,12 @@ function socialCard() {
   <circle cx="980" cy="300" r="300" fill="none" stroke="#7fa6ff" stroke-opacity=".15"/>
   <text x="80" y="112" fill="#ffffff" font-family="Segoe UI, Arial" font-size="30" font-weight="700" letter-spacing="5">DAIMA</text>
   <text x="80" y="136" fill="#7fa6e0" font-family="Segoe UI, Arial" font-size="11" letter-spacing="6">COMMUNICATIONS</text>
-  <rect x="80" y="170" width="48" height="4" fill="#3b7bff"/>
+  <rect x="80" y="170" width="48" height="4" fill="#285fee"/>
   <text x="80" y="280" fill="#ffffff" font-family="Segoe UI, Arial" font-size="62" font-weight="700" letter-spacing="-1">Technology that</text>
   <text x="80" y="350" fill="#ffffff" font-family="Segoe UI, Arial" font-size="62" font-weight="700" letter-spacing="-1">moves with you.</text>
   <text x="80" y="410" fill="#b7c5dc" font-family="Segoe UI, Arial" font-size="21">Smartphones · Accessories · Everyday technology</text>
   <text x="80" y="442" fill="#7fa6e0" font-family="Segoe UI, Arial" font-size="17">Sirare &amp; Kehancha · Migori County, Kenya</text>
-  <rect x="80" y="500" width="238" height="52" rx="26" fill="#2f6bff"/>
+  <rect x="80" y="500" width="238" height="52" rx="26" fill="#285fee"/>
   <text x="199" y="532" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Arial" font-size="15" font-weight="600">Website concept · 2026</text>
   <text x="80" y="592" fill="#5f7597" font-family="Segoe UI, Arial" font-size="12">Concept &amp; development by Thomas Hondo Chacha · Illustrative product render</text>
   <g transform="translate(965 330) rotate(-8)" filter="url(#sc-sh)">
@@ -1012,8 +1012,7 @@ function socialCard() {
     <ellipse cx="-20" cy="-80" rx="180" ry="220" fill="#8fd8ff" opacity=".25" filter="url(#sc-sh)"/>
     <circle cx="0" cy="-236" r="7" fill="#020306"/>
     <rect x="-40" y="222" width="80" height="4" rx="2" fill="#fff" opacity=".65"/>
-  </g>
-</svg>`;
+  </g>`;
   fs.writeFileSync(path.join(OUT, 'social-card.svg'), `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Daima Communications concept social card">${body}</svg>`, 'utf8');
 }
 socialCard();

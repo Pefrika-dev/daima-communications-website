@@ -199,7 +199,7 @@ DAIMA.CONFIG = {
   /* Proposal meta                                                      */
   /* ------------------------------------------------------------------ */
   meta: {
-    siteUrl: 'https://your-domain.example', // TODO: replace after deployment
+    siteUrl: 'https://daima-communications-website.vercel.app', // Update if a custom domain is connected.
     proposalYear: '2026',
   },
 };
