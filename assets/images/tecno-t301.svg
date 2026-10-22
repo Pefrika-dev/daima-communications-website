@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" role="img" aria-label="Illustrative product render — demonstration catalogue">
+<title>Illustrative product render — demonstration catalogue</title>
+<defs>
+    <linearGradient id="atecnot301-bg" x1="0" y1="0" x2=".85" y2="1">
+      <stop offset="0" stop-color="#fcfdff"/>
+      <stop offset=".55" stop-color="#f2f1ee"/>
+      <stop offset="1" stop-color="#e2e8f2"/>
+    </linearGradient>
+    <radialGradient id="atecnot301-glow" cx="50%" cy="40%" r="60%">
+      <stop offset="0" stop-color="#8b8f98" stop-opacity=".30"/>
+      <stop offset=".55" stop-color="#8b8f98" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#8b8f98" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="atecnot301-dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="1.2" cy="1.2" r="1.1" fill="#0a1020" opacity=".06"/>
+    </pattern>
+    <filter id="atecnot301-sh" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="26" stdDeviation="24" flood-color="#081020" flood-opacity=".26"/>
+    </filter>
+    <filter id="atecnot301-sh-soft" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#081020" flood-opacity=".18"/>
+    </filter>
+    <filter id="atecnot301-blur" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="30"/>
+    </filter>
+    <filter id="atecnot301-blur-s" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <linearGradient id="atecnot301-sweep" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".0"/>
+      <stop offset=".45" stop-color="#ffffff" stop-opacity=".55"/>
+      <stop offset=".55" stop-color="#ffffff" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs><defs>
+    <linearGradient id="atecnot301-body" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#454e60"/>
+      <stop offset=".42" stop-color="#222937"/>
+      <stop offset=".62" stop-color="#343d4e"/>
+      <stop offset="1" stop-color="#222937"/>
+    </linearGradient>
+    <linearGradient id="atecnot301-frame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#454e60"/>
+      <stop offset=".08" stop-color="#343d4e"/>
+      <stop offset=".5" stop-color="#222937"/>
+      <stop offset=".92" stop-color="#343d4e"/>
+      <stop offset="1" stop-color="#454e60"/>
+    </linearGradient>
+    <linearGradient id="atecnot301-screen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10296b"/>
+      <stop offset=".55" stop-color="#6d3ff0"/>
+      <stop offset="1" stop-color="#04a6c8"/>
+    </linearGradient>
+    <radialGradient id="atecnot301-sglow" cx="30%" cy="24%" r="72%">
+      <stop offset="0" stop-color="#8fd8ff" stop-opacity=".9"/>
+      <stop offset=".5" stop-color="#3f7dff" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#0a1030" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="atecnot301-edge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".55"/>
+      <stop offset=".18" stop-color="#ffffff" stop-opacity=".05"/>
+      <stop offset=".82" stop-color="#ffffff" stop-opacity=".03"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity=".42"/>
+    </linearGradient>
+    <linearGradient id="atecnot301-lens" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3f4a5e"/>
+      <stop offset=".45" stop-color="#10151f"/>
+      <stop offset="1" stop-color="#03050a"/>
+    </linearGradient>
+    <clipPath id="atecnot301-scrclip"><rect x="16" y="16" width="268" height="578" rx="34"/></clipPath>
+  </defs>
+<rect width="800" height="800" fill="url(#atecnot301-bg)"/>
+  <rect width="800" height="800" fill="url(#atecnot301-dots)"/>
+  <circle cx="400" cy="330" r="340" fill="url(#atecnot301-glow)"/>
+  <ellipse cx="400" cy="705" rx="230" ry="38" fill="#0a1020" opacity=".18" filter="url(#atecnot301-blur)"/>
+  <path d="M0 610 L800 320 L800 800 L0 800 Z" fill="#ffffff" opacity=".16"/>
+<g transform="translate(400 396) rotate(-7) scale(1) translate(-112 -226)" filter="url(#atecnot301-sh)">
+    <rect width="224" height="452" rx="30" fill="#303339" stroke="#ffffff" stroke-opacity=".28"/>
+    <rect x="3" y="3" width="218" height="446" rx="28" fill="none" stroke="#000" stroke-opacity=".3"/>
+    <rect x="16" y="18" width="192" height="164" rx="14" fill="#070c12" stroke="#ffffff" stroke-opacity=".1"/>
+    <rect x="22" y="24" width="180" height="152" rx="9" fill="url(#atecnot301-screen)"/>
+    <rect x="22" y="24" width="180" height="152" rx="9" fill="#ffffff" opacity=".12"/>
+    <text x="112" y="78" text-anchor="middle" fill="#ffffff" fill-opacity=".92" font-family="Segoe UI, Arial" font-size="15" font-weight="600">Daima</text>
+    <text x="112" y="98" text-anchor="middle" fill="#ffffff" fill-opacity=".55" font-family="Segoe UI, Arial" font-size="9" letter-spacing="2">DEMO</text>
+    <text x="112" y="150" text-anchor="middle" fill="#ffffff" fill-opacity=".8" font-family="Segoe UI, Arial" font-size="22" font-weight="600">9:41</text>
+    <circle cx="112" cy="202" r="16" fill="#3a4454" stroke="#ffffff" stroke-opacity=".18"/>
+    <g transform="translate(112 264)"><rect x="-74" y="66" width="42" height="34" rx="9" fill="#323b4a" stroke="#ffffff" stroke-opacity=".10"/>
+        <text x="-53" y="88" text-anchor="middle" fill="#dfe8f4" fill-opacity=".72" font-family="Segoe UI, Arial" font-size="13">1</text><rect x="-22" y="66" width="42" height="34" rx="9" fill="#323b4a" stroke="#ffffff" stroke-opacity=".10"/>
+        <text x="-1" y="88" text-anchor="middle" fill="#dfe8f4" fill-opacity=".72" font-family="Segoe UI, Arial" font-size="13">2</text><rect x="30" y="66" width="42" height="34" rx="9" fill="#323b4a" stroke="#ffffff" stroke-opacity=".10"/>
+        <text x="51" y="88" text-anchor="middle" fill="#dfe8f4" fill-opacity=".72" font-family="Segoe UI, Arial" font-size="13">3</text><rect x="-74" y="110" width="42" height="34" rx="9" fill="#323b4a" stroke="#ffffff" stroke-opacity=".10"/>
+        <text x="-53" y="132" text-anchor="middle" fill="#dfe8f4" fill-opacity=".72" font-family="Segoe UI, Arial" font-size="13">4</text><rect x="-22" y="110" width="42" height="34" rx="9" fill="#323b4a" stroke="#ffffff" stroke-opacity=".10"/>
+        <text x="-1" y="132" text-anchor="middle" fill="#dfe8f4" fill-opacity=".72" font-family="Segoe UI, Arial" font-size="13">5</text><rect x="30" y="110" width="42" height="34" rx="9" fill="#323b4a" stroke="#ffffff" stroke-opacity=".10"/>
+        <text x="51" y="132" text-anchor="middle" fill="#dfe8f4" fill-opacity=".72" font-family="Segoe UI, Arial" font-size="13">6</text><rect x="-74" y="154" width="42" height="34" rx="9" fill="#323b4a" stroke="#ffffff" stroke-opacity=".10"/>
+        <text x="-53" y="176" text-anchor="middle" fill="#dfe8f4" fill-opacity=".72" font-family="Segoe UI, Arial" font-size="13">7</text><rect x="-22" y="154" width="42" height="34" rx="9" fill="#323b4a" stroke="#ffffff" stroke-opacity=".10"/>
+        <text x="-1" y="176" text-anchor="middle" fill="#dfe8f4" fill-opacity=".72" font-family="Segoe UI, Arial" font-size="13">8</text><rect x="30" y="154" width="42" height="34" rx="9" fill="#323b4a" stroke="#ffffff" stroke-opacity=".10"/>
+        <text x="51" y="176" text-anchor="middle" fill="#dfe8f4" fill-opacity=".72" font-family="Segoe UI, Arial" font-size="13">9</text><rect x="-74" y="198" width="42" height="34" rx="9" fill="#323b4a" stroke="#ffffff" stroke-opacity=".10"/>
+        <text x="-53" y="220" text-anchor="middle" fill="#dfe8f4" fill-opacity=".72" font-family="Segoe UI, Arial" font-size="13">*</text><rect x="-22" y="198" width="42" height="34" rx="9" fill="#323b4a" stroke="#ffffff" stroke-opacity=".10"/>
+        <text x="-1" y="220" text-anchor="middle" fill="#dfe8f4" fill-opacity=".72" font-family="Segoe UI, Arial" font-size="13">0</text><rect x="30" y="198" width="42" height="34" rx="9" fill="#323b4a" stroke="#ffffff" stroke-opacity=".10"/>
+        <text x="51" y="220" text-anchor="middle" fill="#dfe8f4" fill-opacity=".72" font-family="Segoe UI, Arial" font-size="13">#</text></g>
+    <circle cx="112" cy="430" r="4" fill="#ffffff" opacity=".22"/>
+  </g>
+</svg>

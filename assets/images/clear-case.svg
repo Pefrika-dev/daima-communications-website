@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" role="img" aria-label="Illustrative product render — demonstration catalogue">
+<title>Illustrative product render — demonstration catalogue</title>
+<defs>
+    <linearGradient id="aclearcase-bg" x1="0" y1="0" x2=".85" y2="1">
+      <stop offset="0" stop-color="#fcfdff"/>
+      <stop offset=".55" stop-color="#edf3fb"/>
+      <stop offset="1" stop-color="#e2e8f2"/>
+    </linearGradient>
+    <radialGradient id="aclearcase-glow" cx="50%" cy="40%" r="60%">
+      <stop offset="0" stop-color="#6aa6ff" stop-opacity=".30"/>
+      <stop offset=".55" stop-color="#6aa6ff" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#6aa6ff" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="aclearcase-dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="1.2" cy="1.2" r="1.1" fill="#0a1020" opacity=".06"/>
+    </pattern>
+    <filter id="aclearcase-sh" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="26" stdDeviation="24" flood-color="#081020" flood-opacity=".26"/>
+    </filter>
+    <filter id="aclearcase-sh-soft" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#081020" flood-opacity=".18"/>
+    </filter>
+    <filter id="aclearcase-blur" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="30"/>
+    </filter>
+    <filter id="aclearcase-blur-s" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <linearGradient id="aclearcase-sweep" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".0"/>
+      <stop offset=".45" stop-color="#ffffff" stop-opacity=".55"/>
+      <stop offset=".55" stop-color="#ffffff" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs><defs>
+    <linearGradient id="aclearcase-body" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#454e60"/>
+      <stop offset=".42" stop-color="#222937"/>
+      <stop offset=".62" stop-color="#343d4e"/>
+      <stop offset="1" stop-color="#222937"/>
+    </linearGradient>
+    <linearGradient id="aclearcase-frame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#454e60"/>
+      <stop offset=".08" stop-color="#343d4e"/>
+      <stop offset=".5" stop-color="#222937"/>
+      <stop offset=".92" stop-color="#343d4e"/>
+      <stop offset="1" stop-color="#454e60"/>
+    </linearGradient>
+    <linearGradient id="aclearcase-screen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10296b"/>
+      <stop offset=".55" stop-color="#6d3ff0"/>
+      <stop offset="1" stop-color="#04a6c8"/>
+    </linearGradient>
+    <radialGradient id="aclearcase-sglow" cx="30%" cy="24%" r="72%">
+      <stop offset="0" stop-color="#8fd8ff" stop-opacity=".9"/>
+      <stop offset=".5" stop-color="#3f7dff" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#0a1030" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="aclearcase-edge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".55"/>
+      <stop offset=".18" stop-color="#ffffff" stop-opacity=".05"/>
+      <stop offset=".82" stop-color="#ffffff" stop-opacity=".03"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity=".42"/>
+    </linearGradient>
+    <linearGradient id="aclearcase-lens" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3f4a5e"/>
+      <stop offset=".45" stop-color="#10151f"/>
+      <stop offset="1" stop-color="#03050a"/>
+    </linearGradient>
+    <clipPath id="aclearcase-scrclip"><rect x="16" y="16" width="268" height="578" rx="34"/></clipPath>
+  </defs>
+<rect width="800" height="800" fill="url(#aclearcase-bg)"/>
+  <rect width="800" height="800" fill="url(#aclearcase-dots)"/>
+  <circle cx="400" cy="330" r="340" fill="url(#aclearcase-glow)"/>
+  <ellipse cx="400" cy="705" rx="230" ry="38" fill="#0a1020" opacity=".18" filter="url(#aclearcase-blur)"/>
+  <path d="M0 610 L800 320 L800 800 L0 800 Z" fill="#ffffff" opacity=".16"/>
+<g transform="translate(400 395) rotate(-10)" filter="url(#aclearcase-sh)">
+    <rect x="-130" y="-252" width="260" height="504" rx="52" fill="#b9d4ff" fill-opacity=".26" stroke="#9cbde9" stroke-width="2"/>
+    <rect x="-117" y="-239" width="234" height="478" rx="44" fill="#ffffff" fill-opacity=".18" stroke="#ffffff" stroke-opacity=".65"/>
+    <rect x="-118" y="-180" width="46" height="120" rx="22" fill="#0b1220" fill-opacity=".16"/>
+    <rect x="-76" y="-238" width="152" height="140" rx="30" fill="#0b1220" fill-opacity=".10"/>
+    <circle cx="-38" cy="-194" r="13" fill="#0b1220" fill-opacity=".22"/>
+    <circle cx="-38" cy="-156" r="13" fill="#0b1220" fill-opacity=".22"/>
+    <circle cx="14" cy="-175" r="11" fill="#0b1220" fill-opacity=".18"/>
+    <path d="M-130 -120 L-60 -252" stroke="#ffffff" stroke-opacity=".5" stroke-width="3"/>
+    <path d="M-20 250 L110 120" stroke="#ffffff" stroke-opacity=".28" stroke-width="2"/>
+    <rect x="-130" y="-252" width="260" height="504" rx="52" fill="url(#aclearcase-sweep)" opacity=".2"/>
+    <text x="0" y="210" text-anchor="middle" fill="#233149" fill-opacity=".45" font-family="Segoe UI, Arial" font-size="10" letter-spacing="4">DEMO · CASE</text>
+  </g>
+  <g opacity=".6">
+    <circle cx="585" cy="240" r="4" fill="#9cbde9"/>
+    <circle cx="615" cy="280" r="2.5" fill="#9cbde9"/>
+    <circle cx="222" cy="550" r="3" fill="#9cbde9"/>
+  </g>
+</svg>

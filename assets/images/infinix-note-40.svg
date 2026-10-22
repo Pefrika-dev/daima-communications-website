@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" role="img" aria-label="Illustrative product render — demonstration catalogue">
+<title>Illustrative product render — demonstration catalogue</title>
+<defs>
+    <linearGradient id="ainfinixnote40-bg" x1="0" y1="0" x2=".85" y2="1">
+      <stop offset="0" stop-color="#fcfdff"/>
+      <stop offset=".55" stop-color="#f3f0ea"/>
+      <stop offset="1" stop-color="#e2e8f2"/>
+    </linearGradient>
+    <radialGradient id="ainfinixnote40-glow" cx="50%" cy="40%" r="60%">
+      <stop offset="0" stop-color="#d1a75a" stop-opacity=".30"/>
+      <stop offset=".55" stop-color="#d1a75a" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#d1a75a" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="ainfinixnote40-dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="1.2" cy="1.2" r="1.1" fill="#0a1020" opacity=".06"/>
+    </pattern>
+    <filter id="ainfinixnote40-sh" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="26" stdDeviation="24" flood-color="#081020" flood-opacity=".26"/>
+    </filter>
+    <filter id="ainfinixnote40-sh-soft" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#081020" flood-opacity=".18"/>
+    </filter>
+    <filter id="ainfinixnote40-blur" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="30"/>
+    </filter>
+    <filter id="ainfinixnote40-blur-s" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <linearGradient id="ainfinixnote40-sweep" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".0"/>
+      <stop offset=".45" stop-color="#ffffff" stop-opacity=".55"/>
+      <stop offset=".55" stop-color="#ffffff" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs><defs>
+    <linearGradient id="ainfinixnote40-body" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3b3732"/>
+      <stop offset=".42" stop-color="#0b0b0d"/>
+      <stop offset=".62" stop-color="#252320"/>
+      <stop offset="1" stop-color="#0b0b0d"/>
+    </linearGradient>
+    <linearGradient id="ainfinixnote40-frame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3b3732"/>
+      <stop offset=".08" stop-color="#252320"/>
+      <stop offset=".5" stop-color="#0b0b0d"/>
+      <stop offset=".92" stop-color="#252320"/>
+      <stop offset="1" stop-color="#3b3732"/>
+    </linearGradient>
+    <linearGradient id="ainfinixnote40-screen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#241503"/>
+      <stop offset=".55" stop-color="#b17417"/>
+      <stop offset="1" stop-color="#ffd899"/>
+    </linearGradient>
+    <radialGradient id="ainfinixnote40-sglow" cx="30%" cy="24%" r="72%">
+      <stop offset="0" stop-color="#8fd8ff" stop-opacity=".9"/>
+      <stop offset=".5" stop-color="#3f7dff" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#0a1030" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ainfinixnote40-edge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".55"/>
+      <stop offset=".18" stop-color="#ffffff" stop-opacity=".05"/>
+      <stop offset=".82" stop-color="#ffffff" stop-opacity=".03"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity=".42"/>
+    </linearGradient>
+    <linearGradient id="ainfinixnote40-lens" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3f4a5e"/>
+      <stop offset=".45" stop-color="#10151f"/>
+      <stop offset="1" stop-color="#03050a"/>
+    </linearGradient>
+    <clipPath id="ainfinixnote40-scrclip"><rect x="16" y="16" width="268" height="578" rx="34"/></clipPath>
+  </defs>
+<rect width="800" height="800" fill="url(#ainfinixnote40-bg)"/>
+  <rect width="800" height="800" fill="url(#ainfinixnote40-dots)"/>
+  <circle cx="400" cy="330" r="340" fill="url(#ainfinixnote40-glow)"/>
+  <ellipse cx="400" cy="705" rx="230" ry="38" fill="#0a1020" opacity=".18" filter="url(#ainfinixnote40-blur)"/>
+  <path d="M0 610 L800 320 L800 800 L0 800 Z" fill="#ffffff" opacity=".16"/>
+<g transform="translate(400 390) rotate(-9) scale(1) translate(-150 -305)" filter="url(#ainfinixnote40-sh)">
+    <rect width="300" height="610" rx="46" fill="url(#ainfinixnote40-body)" stroke="#ffffff" stroke-opacity=".38" stroke-width="1.4"/>
+    <rect x="2" y="2" width="296" height="606" rx="44" fill="none" stroke="#000" stroke-opacity=".22"/>
+    <path d="M284 34 L292 54 L292 520 L280 550 Z" fill="#0a0f1a" opacity=".35"/>
+    <path d="M24 8 L170 8 L80 602 L24 602 Z" fill="#ffffff" opacity=".045"/>
+    <path d="M186 2 L260 2 L296 120 L296 60 Z" fill="#ffffff" opacity=".06"/>
+    <!-- camera island -->
+    <rect x="18" y="18" width="136" height="166" rx="36" fill="#111722" stroke="#ffffff" stroke-opacity=".14"/>
+    <rect x="24" y="24" width="124" height="154" rx="31" fill="none" stroke="#000" stroke-opacity=".4"/>
+    <g>
+      <circle cx="62" cy="62" r="24" fill="#05080e" stroke="#465268" stroke-width="2"/>
+      <circle cx="62" cy="62" r="16" fill="url(#ainfinixnote40-lens)"/>
+      <circle cx="55" cy="55" r="5.5" fill="#8fd0ff" opacity=".65"/>
+      <circle cx="62" cy="122" r="24" fill="#05080e" stroke="#465268" stroke-width="2"/>
+      <circle cx="62" cy="122" r="16" fill="url(#ainfinixnote40-lens)"/>
+      <circle cx="55" cy="115" r="5.5" fill="#ffd7a1" opacity=".5"/>
+      <circle cx="124" cy="92" r="20" fill="#05080e" stroke="#465268" stroke-width="2"/>
+      <circle cx="124" cy="92" r="13" fill="url(#ainfinixnote40-lens)"/>
+      <circle cx="118" cy="86" r="4.4" fill="#a5e6ff" opacity=".6"/>
+      <circle cx="120" cy="42" r="7" fill="#f7e8c4" opacity=".85"/>
+      <circle cx="120" cy="42" r="3" fill="#ffffff"/>
+    </g>
+    <text x="30" y="205" fill="#ffffff" fill-opacity=".22" font-family="Segoe UI, Arial" font-size="9" letter-spacing="2">DEMO RENDER</text>
+    <rect x="108" y="592" width="84" height="3" rx="1.5" fill="#ffffff" opacity=".28"/>
+  </g>
+</svg>

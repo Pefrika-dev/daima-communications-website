@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 1300" width="1120" height="1300" role="img" aria-label="Illustrative smartphone and accessories composition">
+<title>Illustrative smartphone and accessories composition</title>
+<defs>
+    <radialGradient id="hero-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#3b7bff" stop-opacity=".5"/>
+      <stop offset=".55" stop-color="#1f4fd8" stop-opacity=".14"/>
+      <stop offset="1" stop-color="#081226" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hero-ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9dc4ff" stop-opacity=".55"/>
+      <stop offset=".5" stop-color="#9dc4ff" stop-opacity=".06"/>
+      <stop offset="1" stop-color="#9dc4ff" stop-opacity=".3"/>
+    </linearGradient>
+    <filter id="hero-blur"><feGaussianBlur stdDeviation="34"/></filter>
+    <filter id="hero-sh" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="40" stdDeviation="40" flood-color="#02060f" flood-opacity=".65"/>
+    </filter>
+    <filter id="hero-sh-soft" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#02060f" flood-opacity=".45"/>
+    </filter>
+    <linearGradient id="hero-body-a" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5a6478"/><stop offset=".45" stop-color="#242c3c"/><stop offset=".7" stop-color="#3d4658"/><stop offset="1" stop-color="#151b27"/>
+    </linearGradient>
+    <linearGradient id="hero-body-b" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c9c2b4"/><stop offset=".5" stop-color="#817b70"/><stop offset="1" stop-color="#b4ad9f"/>
+    </linearGradient>
+    <linearGradient id="hero-screen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#081445"/><stop offset=".45" stop-color="#3b63ff"/><stop offset="1" stop-color="#6fe8ff"/>
+    </linearGradient>
+    <radialGradient id="hero-sglow" cx="30%" cy="20%" r="80%">
+      <stop offset="0" stop-color="#b7f4ff" stop-opacity=".95"/>
+      <stop offset=".45" stop-color="#3f7dff" stop-opacity=".3"/>
+      <stop offset="1" stop-color="#050a1c" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hero-sweep" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".45" stop-color="#fff" stop-opacity=".45"/>
+      <stop offset=".6" stop-color="#fff" stop-opacity=".1"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="hero-case" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fdfeff"/><stop offset=".6" stop-color="#dfe6f2"/><stop offset="1" stop-color="#b9c5d8"/>
+    </linearGradient>
+    <clipPath id="hero-scr"><rect x="-146" y="-316" width="292" height="632" rx="44"/></clipPath>
+    <linearGradient id="hero-lens" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3f4a5e"/><stop offset=".5" stop-color="#10151f"/><stop offset="1" stop-color="#03050a"/>
+    </linearGradient>
+  </defs>
+  <circle cx="560" cy="650" r="520" fill="url(#hero-glow)"/>
+  <circle cx="560" cy="650" r="470" fill="none" stroke="url(#hero-ring)" stroke-width="1.2" opacity=".55"/>
+  <circle cx="560" cy="650" r="600" fill="none" stroke="#9dc4ff" stroke-opacity=".08"/>
+  <path d="M60 1180 C 300 980, 760 1120, 1060 820" fill="none" stroke="#9dc4ff" stroke-opacity=".07" stroke-width="1"/>
+  <g transform="translate(430 610) rotate(13) scale(1.1)" filter="url(#hero-sh)">
+    <rect x="-164" y="-342" width="328" height="684" rx="54" fill="url(#hero-body-b)" stroke="#ffffff" stroke-opacity=".35"/>
+    <rect x="2" y="-340" width="162" height="680" rx="52" fill="#000" opacity=".2"/>
+    <rect x="-146" y="-314" width="152" height="192" rx="42" fill="#161c27" stroke="#fff" stroke-opacity=".14"/>
+    <g>
+      <circle cx="-104" cy="-270" r="30" fill="#05080e" stroke="#5c6474" stroke-width="2"/><circle cx="-104" cy="-270" r="20" fill="url(#hero-lens)"/><circle cx="-113" cy="-279" r="7" fill="#8fd0ff" opacity=".6"/>
+      <circle cx="-104" cy="-198" r="30" fill="#05080e" stroke="#5c6474" stroke-width="2"/><circle cx="-104" cy="-198" r="20" fill="url(#hero-lens)"/><circle cx="-113" cy="-207" r="7" fill="#ffd7a1" opacity=".5"/>
+      <circle cx="-38" cy="-234" r="25" fill="#05080e" stroke="#5c6474" stroke-width="2"/><circle cx="-38" cy="-234" r="16" fill="url(#hero-lens)"/>
+      <circle cx="-38" cy="-290" r="9" fill="#fff7dd"/><circle cx="-38" cy="-290" r="4" fill="#fff"/>
+    </g>
+    <path d="M-164 60 L164 -120 L164 -40 L-164 150 Z" fill="#ffffff" opacity=".07"/>
+    <text x="-164" y="300" fill="#ffffff" fill-opacity=".16" font-family="Segoe UI, Arial" font-size="11" letter-spacing="5">DAIMA · CONCEPT</text>
+  </g>
+  <g transform="translate(612 640) rotate(-7) scale(1.28)" filter="url(#hero-sh)">
+    <rect x="-160" y="-330" width="320" height="660" rx="56" fill="url(#hero-body-a)" stroke="#ffffff" stroke-opacity=".55" stroke-width="2"/>
+    <rect x="-153" y="-323" width="306" height="646" rx="49" fill="#04060b"/>
+    <rect x="-146" y="-316" width="292" height="632" rx="44" fill="url(#hero-screen)"/>
+    <g clip-path="url(#hero-scr)">
+      <rect x="-146" y="-316" width="292" height="632" fill="url(#hero-screen)"/>
+      <ellipse cx="-60" cy="-150" rx="230" ry="250" fill="url(#hero-sglow)"/>
+      <ellipse cx="150" cy="120" rx="200" ry="250" fill="#ff5fa2" opacity=".38" filter="url(#hero-blur)"/>
+      <ellipse cx="-130" cy="300" rx="180" ry="220" fill="#00e5c3" opacity=".26" filter="url(#hero-blur)"/>
+      <path d="M-200 60 C -30 -80, 80 120, 220 -40" fill="none" stroke="#ffffff" stroke-opacity=".28" stroke-width="1.5"/>
+      <path d="M-200 130 C -30 -10, 80 190, 220 30" fill="none" stroke="#b7f4ff" stroke-opacity=".22" stroke-width="1"/>
+      <path d="M-200 200 C -30 60, 80 260, 220 100" fill="none" stroke="#ffffff" stroke-opacity=".1" stroke-width="1"/>
+      <circle cx="30" cy="230" r="130" fill="#071232" opacity=".45" filter="url(#hero-blur)"/>
+      <path d="M-146 -40 C 10 -146, 150 -50, 146 120" fill="none" stroke="#ffffff" stroke-opacity=".16" stroke-width="34" filter="url(#hero-blur)"/>
+      <rect x="-146" y="-316" width="292" height="632" fill="url(#hero-sweep)" opacity=".13"/>
+    </g>
+    <circle cx="0" cy="-306" r="7" fill="#020306"/>
+    <text x="-112" y="-288" fill="#ffffff" fill-opacity=".94" font-family="Segoe UI, Arial" font-size="15" font-weight="600">9:41</text>
+    <g fill="#ffffff" fill-opacity=".8">
+      <rect x="46" y="-300" width="3" height="8" rx="1"/><rect x="52" y="-303" width="3" height="11" rx="1"/><rect x="58" y="-306" width="3" height="14" rx="1"/><rect x="64" y="-309" width="3" height="17" rx="1"/>
+      <rect x="78" y="-306" width="20" height="11" rx="3" fill="none" stroke="#fff" stroke-opacity=".6"/><rect x="80" y="-304" width="13" height="7" rx="2"/>
+    </g>
+    <rect x="-48" y="298" width="96" height="5" rx="2.5" fill="#ffffff" opacity=".7"/>
+    <rect x="-165" y="-90" width="4" height="96" rx="2" fill="#ffffff" opacity=".42"/>
+    <rect x="-165" y="-190" width="4" height="48" rx="2" fill="#ffffff" opacity=".3"/>
+    <rect x="161" y="-130" width="4" height="110" rx="2" fill="#ffffff" opacity=".35"/>
+  </g>
+  <g transform="translate(258 1030) rotate(-10) scale(.84)" filter="url(#hero-sh-soft)">
+    <g transform="translate(0 78)">
+      <rect x="-138" y="-70" width="276" height="204" rx="76" fill="url(#hero-case)" stroke="#ffffff" stroke-opacity=".75"/>
+      <path d="M-138 -16 Q 0 18 138 -16" fill="none" stroke="#9fadc2" stroke-width="2.5"/>
+      <path d="M-136 -24 Q 0 10 136 -24" fill="none" stroke="#ffffff" stroke-width="2" opacity=".8"/>
+      <circle cx="0" cy="78" r="6" fill="#4f9bff"/><circle cx="0" cy="78" r="16" fill="#4f9bff" opacity=".18"/>
+    </g>
+    <g transform="translate(-96 -150) rotate(-16)">
+      <ellipse cx="0" cy="0" rx="34" ry="38" fill="#fafcff" stroke="#c3cddc" stroke-width="1.5"/>
+      <path d="M-7 24 C -12 58, -14 82, -14 104 C -14 116, 14 116, 14 104 C 14 82, 12 58, 7 24 Z" fill="#fafcff" stroke="#c3cddc" stroke-width="1.5"/>
+      <ellipse cx="0" cy="-4" rx="20" ry="23" fill="#232a36"/>
+      <ellipse cx="0" cy="-4" rx="12" ry="15" fill="#0a0f18"/>
+      <circle cx="-10" cy="-20" r="5" fill="#fff" opacity=".45"/>
+      <rect x="-5" y="94" width="10" height="4" rx="2" fill="#4f9bff" opacity=".7"/>
+    </g>
+    <g transform="translate(96 -150) rotate(16)">
+      <ellipse cx="0" cy="0" rx="34" ry="38" fill="#fafcff" stroke="#c3cddc" stroke-width="1.5"/>
+      <path d="M-7 24 C -12 58, -14 82, -14 104 C -14 116, 14 116, 14 104 C 14 82, 12 58, 7 24 Z" fill="#fafcff" stroke="#c3cddc" stroke-width="1.5"/>
+      <ellipse cx="0" cy="-4" rx="20" ry="23" fill="#232a36"/>
+      <ellipse cx="0" cy="-4" rx="12" ry="15" fill="#0a0f18"/>
+      <circle cx="-10" cy="-20" r="5" fill="#fff" opacity=".45"/>
+      <rect x="-5" y="94" width="10" height="4" rx="2" fill="#4f9bff" opacity=".7"/>
+    </g>
+    <ellipse cx="-96" cy="6" rx="50" ry="11" fill="#02060f" opacity=".25" filter="url(#hero-blur-s)"/>
+    <ellipse cx="96" cy="6" rx="50" ry="11" fill="#02060f" opacity=".25" filter="url(#hero-blur-s)"/>
+  </g>
+  <g transform="translate(892 985) rotate(14) scale(.62)" filter="url(#hero-sh-soft)">
+    <rect x="-62" y="-300" width="124" height="600" rx="58" fill="#202633"/>
+    <rect x="-118" y="-152" width="236" height="288" rx="72" fill="#2c3441" stroke="#ffffff" stroke-opacity=".3" stroke-width="2"/>
+    <rect x="-104" y="-138" width="208" height="260" rx="60" fill="#05080e"/>
+    <circle cx="0" cy="-8" r="82" fill="none" stroke="#48b9ff" stroke-opacity=".35" stroke-width="2"/>
+    <circle cx="0" cy="-8" r="66" fill="none" stroke="#48b9ff" stroke-opacity=".2" stroke-width="10"/>
+    <path d="M0 -90 A82 82 0 0 1 72 24" fill="none" stroke="#48b9ff" stroke-width="7" stroke-linecap="round"/>
+    <text x="0" y="4" text-anchor="middle" fill="#fff" font-family="Segoe UI, Arial" font-size="38" font-weight="600">9:41</text>
+    <text x="0" y="34" text-anchor="middle" fill="#48b9ff" font-family="Segoe UI, Arial" font-size="10" letter-spacing="2">DEMO</text>
+  </g>
+  
+    <circle cx="180" cy="280" r="3" fill="#9dc4ff" opacity=".55"/>
+    <circle cx="960" cy="330" r="2.5" fill="#9dc4ff" opacity=".4"/>
+    <circle cx="1010" cy="640" r="4" fill="#6fe8ff" opacity=".35"/>
+    <circle cx="120" cy="760" r="2" fill="#ffffff" opacity=".3"/>
+    <circle cx="760" cy="1030" r="3" fill="#9dc4ff" opacity=".3"/>
+    <circle cx="1050" cy="900" r="2" fill="#ffffff" opacity=".3"/>
+</svg>

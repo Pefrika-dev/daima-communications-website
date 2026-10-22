@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" role="img" aria-label="Illustrative product render — demonstration catalogue">
+<title>Illustrative product render — demonstration catalogue</title>
+<defs>
+    <linearGradient id="ahpkeyboard-bg" x1="0" y1="0" x2=".85" y2="1">
+      <stop offset="0" stop-color="#fcfdff"/>
+      <stop offset=".55" stop-color="#eef2f7"/>
+      <stop offset="1" stop-color="#e2e8f2"/>
+    </linearGradient>
+    <radialGradient id="ahpkeyboard-glow" cx="50%" cy="40%" r="60%">
+      <stop offset="0" stop-color="#4a5768" stop-opacity=".30"/>
+      <stop offset=".55" stop-color="#4a5768" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#4a5768" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="ahpkeyboard-dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="1.2" cy="1.2" r="1.1" fill="#0a1020" opacity=".06"/>
+    </pattern>
+    <filter id="ahpkeyboard-sh" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="26" stdDeviation="24" flood-color="#081020" flood-opacity=".26"/>
+    </filter>
+    <filter id="ahpkeyboard-sh-soft" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#081020" flood-opacity=".18"/>
+    </filter>
+    <filter id="ahpkeyboard-blur" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="30"/>
+    </filter>
+    <filter id="ahpkeyboard-blur-s" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <linearGradient id="ahpkeyboard-sweep" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".0"/>
+      <stop offset=".45" stop-color="#ffffff" stop-opacity=".55"/>
+      <stop offset=".55" stop-color="#ffffff" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs><defs>
+    <linearGradient id="ahpkeyboard-body" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#454e60"/>
+      <stop offset=".42" stop-color="#222937"/>
+      <stop offset=".62" stop-color="#343d4e"/>
+      <stop offset="1" stop-color="#222937"/>
+    </linearGradient>
+    <linearGradient id="ahpkeyboard-frame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#454e60"/>
+      <stop offset=".08" stop-color="#343d4e"/>
+      <stop offset=".5" stop-color="#222937"/>
+      <stop offset=".92" stop-color="#343d4e"/>
+      <stop offset="1" stop-color="#454e60"/>
+    </linearGradient>
+    <linearGradient id="ahpkeyboard-screen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10296b"/>
+      <stop offset=".55" stop-color="#6d3ff0"/>
+      <stop offset="1" stop-color="#04a6c8"/>
+    </linearGradient>
+    <radialGradient id="ahpkeyboard-sglow" cx="30%" cy="24%" r="72%">
+      <stop offset="0" stop-color="#8fd8ff" stop-opacity=".9"/>
+      <stop offset=".5" stop-color="#3f7dff" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#0a1030" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ahpkeyboard-edge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".55"/>
+      <stop offset=".18" stop-color="#ffffff" stop-opacity=".05"/>
+      <stop offset=".82" stop-color="#ffffff" stop-opacity=".03"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity=".42"/>
+    </linearGradient>
+    <linearGradient id="ahpkeyboard-lens" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3f4a5e"/>
+      <stop offset=".45" stop-color="#10151f"/>
+      <stop offset="1" stop-color="#03050a"/>
+    </linearGradient>
+    <clipPath id="ahpkeyboard-scrclip"><rect x="16" y="16" width="268" height="578" rx="34"/></clipPath>
+  </defs>
+<rect width="800" height="800" fill="url(#ahpkeyboard-bg)"/>
+  <rect width="800" height="800" fill="url(#ahpkeyboard-dots)"/>
+  <circle cx="400" cy="330" r="340" fill="url(#ahpkeyboard-glow)"/>
+  <ellipse cx="400" cy="705" rx="230" ry="38" fill="#0a1020" opacity=".18" filter="url(#ahpkeyboard-blur)"/>
+  <path d="M0 610 L800 320 L800 800 L0 800 Z" fill="#ffffff" opacity=".16"/>
+<g transform="translate(400 400) rotate(-7)" filter="url(#ahpkeyboard-sh)">
+    <rect x="-250" y="-118" width="500" height="236" rx="24" fill="#f1f4f8" stroke="#c2ccda" stroke-width="2"/>
+    <rect x="-238" y="-106" width="476" height="212" rx="18" fill="#dfe5ed"/>
+    <rect x="-222" y="-78" width="27.071428571428573" height="30" rx="6" fill="#39424f" stroke="#ffffff" stroke-opacity=".07"/><rect x="-189.92857142857144" y="-78" width="27.071428571428573" height="30" rx="6" fill="#39424f" stroke="#ffffff" stroke-opacity=".07"/><rect x="-157.85714285714286" y="-78" width="27.071428571428573" height="30" rx="6" fill="#39424f" stroke="#ffffff" stroke-opacity=".07"/><rect x="-125.78571428571429" y="-78" width="27.071428571428573" height="30" rx="6" fill="#39424f" stroke="#ffffff" stroke-opacity=".07"/><rect x="-93.71428571428572" y="-78" width="27.071428571428573" height="30" rx="6" fill="#39424f" stroke="#ffffff" stroke-opacity=".07"/><rect x="-61.64285714285717" y="-78" width="27.071428571428573" height="30" rx="6" fill="#39424f" stroke="#ffffff" stroke-opacity=".07"/><rect x="-29.571428571428584" y="-78" width="27.071428571428573" height="30" rx="6" fill="#39424f" stroke="#ffffff" stroke-opacity=".07"/><rect x="2.5" y="-78" width="27.071428571428573" height="30" rx="6" fill="#39424f" stroke="#ffffff" stroke-opacity=".07"/><rect x="34.571428571428555" y="-78" width="27.071428571428573" height="30" rx="6" fill="#39424f" stroke="#ffffff" stroke-opacity=".07"/><rect x="66.64285714285711" y="-78" width="27.071428571428573" height="30" rx="6" fill="#39424f" stroke="#ffffff" stroke-opacity=".07"/><rect x="98.71428571428567" y="-78" width="27.071428571428573" height="30" rx="6" fill="#39424f" stroke="#ffffff" stroke-opacity=".07"/><rect x="130.78571428571428" y="-78" width="27.071428571428573" height="30" rx="6" fill="#39424f" stroke="#ffffff" stroke-opacity=".07"/><rect x="162.85714285714283" y="-78" width="27.071428571428573" height="30" rx="6" fill="#39424f" stroke="#ffffff" stroke-opacity=".07"/><rect x="194.9285714285714" y="-78" width="27.071428571428573" height="30" rx="6" fill="#39424f" stroke="#ffffff" stroke-opacity=".07"/><rect x="-222" y="-40" width="27.071428571428573" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="-189.92857142857144" y="-40" width="27.071428571428573" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="-157.85714285714286" y="-40" width="27.071428571428573" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="-125.78571428571429" y="-40" width="27.071428571428573" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="-93.71428571428572" y="-40" width="27.071428571428573" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="-61.64285714285717" y="-40" width="27.071428571428573" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="-29.571428571428584" y="-40" width="27.071428571428573" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="2.5" y="-40" width="27.071428571428573" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="34.571428571428555" y="-40" width="27.071428571428573" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="66.64285714285711" y="-40" width="27.071428571428573" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="98.71428571428567" y="-40" width="27.071428571428573" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="130.78571428571428" y="-40" width="27.071428571428573" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="162.85714285714283" y="-40" width="27.071428571428573" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="194.9285714285714" y="-40" width="27.071428571428573" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="-222" y="-2" width="27.071428571428573" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="-189.92857142857144" y="-2" width="27.071428571428573" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="-157.85714285714286" y="-2" width="27.071428571428573" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="-125.78571428571429" y="-2" width="27.071428571428573" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="-93.71428571428572" y="-2" width="27.071428571428573" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="-61.64285714285717" y="-2" width="27.071428571428573" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="-29.571428571428584" y="-2" width="27.071428571428573" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="2.5" y="-2" width="27.071428571428573" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="34.571428571428555" y="-2" width="27.071428571428573" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="66.64285714285711" y="-2" width="27.071428571428573" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="98.71428571428567" y="-2" width="27.071428571428573" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="130.78571428571428" y="-2" width="27.071428571428573" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="162.85714285714283" y="-2" width="27.071428571428573" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="194.9285714285714" y="-2" width="27.071428571428573" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="-222" y="36" width="29.53846153846154" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="-187.46153846153845" y="36" width="29.53846153846154" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="-152.9230769230769" y="36" width="29.53846153846154" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="-118.38461538461539" y="36" width="29.53846153846154" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="-83.84615384615384" y="36" width="29.53846153846154" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="-49.30769230769229" y="36" width="29.53846153846154" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="-14.769230769230774" y="36" width="29.53846153846154" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="19.769230769230774" y="36" width="29.53846153846154" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="54.30769230769232" y="36" width="29.53846153846154" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="88.84615384615387" y="36" width="29.53846153846154" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="123.38461538461542" y="36" width="29.53846153846154" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="157.92307692307696" y="36" width="29.53846153846154" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="192.46153846153845" y="36" width="29.53846153846154" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="-222" y="74" width="57.30909090909091" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="-181.1818181818182" y="74" width="35.81818181818182" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="-140.36363636363637" y="74" width="35.81818181818182" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="-99.54545454545453" y="74" width="35.81818181818182" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="-58.72727272727272" y="74" width="35.81818181818182" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="-17.909090909090907" y="74" width="35.81818181818182" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="22.909090909090935" y="74" width="35.81818181818182" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="63.72727272727275" y="74" width="35.81818181818182" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="104.54545454545456" y="74" width="35.81818181818182" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="145.36363636363637" y="74" width="35.81818181818182" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/><rect x="186.1818181818182" y="74" width="57.30909090909091" height="30" rx="6" fill="#2c333e" stroke="#ffffff" stroke-opacity=".07"/>
+    <rect x="70" y="86" width="120" height="18" rx="6" fill="#c8d0da"/>
+    <rect x="-250" y="-118" width="500" height="236" rx="24" fill="url(#ahpkeyboard-sweep)" opacity=".22"/>
+  </g>
+</svg>

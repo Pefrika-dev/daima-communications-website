@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" role="img" aria-label="Illustrative product render — demonstration catalogue">
+<title>Illustrative product render — demonstration catalogue</title>
+<defs>
+    <linearGradient id="atemperedglass-bg" x1="0" y1="0" x2=".85" y2="1">
+      <stop offset="0" stop-color="#fcfdff"/>
+      <stop offset=".55" stop-color="#edf3fb"/>
+      <stop offset="1" stop-color="#e2e8f2"/>
+    </linearGradient>
+    <radialGradient id="atemperedglass-glow" cx="50%" cy="40%" r="60%">
+      <stop offset="0" stop-color="#78aaff" stop-opacity=".30"/>
+      <stop offset=".55" stop-color="#78aaff" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#78aaff" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="atemperedglass-dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="1.2" cy="1.2" r="1.1" fill="#0a1020" opacity=".06"/>
+    </pattern>
+    <filter id="atemperedglass-sh" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="26" stdDeviation="24" flood-color="#081020" flood-opacity=".26"/>
+    </filter>
+    <filter id="atemperedglass-sh-soft" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#081020" flood-opacity=".18"/>
+    </filter>
+    <filter id="atemperedglass-blur" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="30"/>
+    </filter>
+    <filter id="atemperedglass-blur-s" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <linearGradient id="atemperedglass-sweep" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".0"/>
+      <stop offset=".45" stop-color="#ffffff" stop-opacity=".55"/>
+      <stop offset=".55" stop-color="#ffffff" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs><defs>
+    <linearGradient id="atemperedglass-body" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#454e60"/>
+      <stop offset=".42" stop-color="#222937"/>
+      <stop offset=".62" stop-color="#343d4e"/>
+      <stop offset="1" stop-color="#222937"/>
+    </linearGradient>
+    <linearGradient id="atemperedglass-frame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#454e60"/>
+      <stop offset=".08" stop-color="#343d4e"/>
+      <stop offset=".5" stop-color="#222937"/>
+      <stop offset=".92" stop-color="#343d4e"/>
+      <stop offset="1" stop-color="#454e60"/>
+    </linearGradient>
+    <linearGradient id="atemperedglass-screen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10296b"/>
+      <stop offset=".55" stop-color="#6d3ff0"/>
+      <stop offset="1" stop-color="#04a6c8"/>
+    </linearGradient>
+    <radialGradient id="atemperedglass-sglow" cx="30%" cy="24%" r="72%">
+      <stop offset="0" stop-color="#8fd8ff" stop-opacity=".9"/>
+      <stop offset=".5" stop-color="#3f7dff" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#0a1030" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="atemperedglass-edge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".55"/>
+      <stop offset=".18" stop-color="#ffffff" stop-opacity=".05"/>
+      <stop offset=".82" stop-color="#ffffff" stop-opacity=".03"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity=".42"/>
+    </linearGradient>
+    <linearGradient id="atemperedglass-lens" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3f4a5e"/>
+      <stop offset=".45" stop-color="#10151f"/>
+      <stop offset="1" stop-color="#03050a"/>
+    </linearGradient>
+    <clipPath id="atemperedglass-scrclip"><rect x="16" y="16" width="268" height="578" rx="34"/></clipPath>
+  </defs>
+<rect width="800" height="800" fill="url(#atemperedglass-bg)"/>
+  <rect width="800" height="800" fill="url(#atemperedglass-dots)"/>
+  <circle cx="400" cy="330" r="340" fill="url(#atemperedglass-glow)"/>
+  <ellipse cx="400" cy="705" rx="230" ry="38" fill="#0a1020" opacity=".18" filter="url(#atemperedglass-blur)"/>
+  <path d="M0 610 L800 320 L800 800 L0 800 Z" fill="#ffffff" opacity=".16"/>
+<g transform="translate(400 392) rotate(-8)" filter="url(#atemperedglass-sh)">
+    <rect x="-136" y="-256" width="272" height="512" rx="46" fill="#d9e9ff" fill-opacity=".28" stroke="#a8c6ef" stroke-width="1.6"/>
+    <rect x="-126" y="-246" width="252" height="492" rx="38" fill="none" stroke="#ffffff" stroke-opacity=".75"/>
+    <path d="M-136 -150 L-20 -256 L120 -256 L-136 -30 Z" fill="#ffffff" opacity=".38"/>
+    <path d="M-40 256 L136 80 L136 160 L26 256 Z" fill="#7db1ff" opacity=".14"/>
+    <rect x="-136" y="-256" width="272" height="512" rx="46" fill="url(#atemperedglass-sweep)" opacity=".28"/>
+    <circle cx="-58" cy="-156" r="7" fill="#0b1220" fill-opacity=".14"/>
+    <circle cx="-42" cy="-190" r="7" fill="#0b1220" fill-opacity=".14"/>
+    <circle cx="70" cy="140" r="22" fill="none" stroke="#ffffff" stroke-opacity=".6"/>
+    <path d="M170 -100 l10 16 18 4 -14 12 4 18 -18 -9 -16 10 3 -19 -15 -12 19 -3 Z" fill="#ffffff" opacity=".55"/>
+    <path d="M198 180 l6 10 12 2 -9 8 3 12 -12 -6 -10 7 2 -13 -10 -8 13 -1 Z" fill="#ffffff" opacity=".4"/>
+  </g>
+</svg>

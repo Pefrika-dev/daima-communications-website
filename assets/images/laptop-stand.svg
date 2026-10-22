@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" role="img" aria-label="Illustrative product render — demonstration catalogue">
+<title>Illustrative product render — demonstration catalogue</title>
+<defs>
+    <linearGradient id="alaptopstand-bg" x1="0" y1="0" x2=".85" y2="1">
+      <stop offset="0" stop-color="#fcfdff"/>
+      <stop offset=".55" stop-color="#eff2f6"/>
+      <stop offset="1" stop-color="#e2e8f2"/>
+    </linearGradient>
+    <radialGradient id="alaptopstand-glow" cx="50%" cy="40%" r="60%">
+      <stop offset="0" stop-color="#4a5768" stop-opacity=".30"/>
+      <stop offset=".55" stop-color="#4a5768" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#4a5768" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="alaptopstand-dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="1.2" cy="1.2" r="1.1" fill="#0a1020" opacity=".06"/>
+    </pattern>
+    <filter id="alaptopstand-sh" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="26" stdDeviation="24" flood-color="#081020" flood-opacity=".26"/>
+    </filter>
+    <filter id="alaptopstand-sh-soft" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#081020" flood-opacity=".18"/>
+    </filter>
+    <filter id="alaptopstand-blur" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="30"/>
+    </filter>
+    <filter id="alaptopstand-blur-s" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <linearGradient id="alaptopstand-sweep" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".0"/>
+      <stop offset=".45" stop-color="#ffffff" stop-opacity=".55"/>
+      <stop offset=".55" stop-color="#ffffff" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs><defs>
+    <linearGradient id="alaptopstand-body" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#454e60"/>
+      <stop offset=".42" stop-color="#222937"/>
+      <stop offset=".62" stop-color="#343d4e"/>
+      <stop offset="1" stop-color="#222937"/>
+    </linearGradient>
+    <linearGradient id="alaptopstand-frame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#454e60"/>
+      <stop offset=".08" stop-color="#343d4e"/>
+      <stop offset=".5" stop-color="#222937"/>
+      <stop offset=".92" stop-color="#343d4e"/>
+      <stop offset="1" stop-color="#454e60"/>
+    </linearGradient>
+    <linearGradient id="alaptopstand-screen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10296b"/>
+      <stop offset=".55" stop-color="#6d3ff0"/>
+      <stop offset="1" stop-color="#04a6c8"/>
+    </linearGradient>
+    <radialGradient id="alaptopstand-sglow" cx="30%" cy="24%" r="72%">
+      <stop offset="0" stop-color="#8fd8ff" stop-opacity=".9"/>
+      <stop offset=".5" stop-color="#3f7dff" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#0a1030" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="alaptopstand-edge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".55"/>
+      <stop offset=".18" stop-color="#ffffff" stop-opacity=".05"/>
+      <stop offset=".82" stop-color="#ffffff" stop-opacity=".03"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity=".42"/>
+    </linearGradient>
+    <linearGradient id="alaptopstand-lens" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3f4a5e"/>
+      <stop offset=".45" stop-color="#10151f"/>
+      <stop offset="1" stop-color="#03050a"/>
+    </linearGradient>
+    <clipPath id="alaptopstand-scrclip"><rect x="16" y="16" width="268" height="578" rx="34"/></clipPath>
+  </defs>
+<rect width="800" height="800" fill="url(#alaptopstand-bg)"/>
+  <rect width="800" height="800" fill="url(#alaptopstand-dots)"/>
+  <circle cx="400" cy="330" r="340" fill="url(#alaptopstand-glow)"/>
+  <ellipse cx="400" cy="705" rx="230" ry="38" fill="#0a1020" opacity=".18" filter="url(#alaptopstand-blur)"/>
+  <path d="M0 610 L800 320 L800 800 L0 800 Z" fill="#ffffff" opacity=".16"/>
+<g transform="translate(400 410) rotate(-4)" filter="url(#alaptopstand-sh)">
+    <path d="M-178 98 L-112 -120 L-82 -120 L-148 98 Z" fill="#cfd6df" stroke="#aeb8c5" stroke-width="2"/>
+    <path d="M178 98 L112 -120 L82 -120 L148 98 Z" fill="#cfd6df" stroke="#aeb8c5" stroke-width="2"/>
+    <path d="M-148 98 L148 98 L170 124 L-170 124 Z" fill="#aab5c3"/>
+    <path d="M-178 98 L-148 98 L-170 124 L-202 124 Z" fill="#9ca8b7" opacity=".6"/>
+    <path d="M178 98 L148 98 L170 124 L202 124 Z" fill="#9ca8b7" opacity=".6"/>
+    <rect x="-146" y="-34" width="292" height="20" rx="10" fill="#e4e9ef" stroke="#b5bfcc"/>
+    <rect x="-146" y="-96" width="292" height="20" rx="10" fill="#d6dde6" stroke="#b5bfcc"/>
+    <rect x="-136" y="-22" width="22" height="130" rx="10" fill="#bcc6d2"/>
+    <rect x="114" y="-22" width="22" height="130" rx="10" fill="#bcc6d2"/>
+    <path d="M-178 -120 L178 -120" stroke="#ffffff" stroke-opacity=".5" stroke-width="2"/>
+    <text x="0" y="60" text-anchor="middle" fill="#6b7686" font-family="Segoe UI, Arial" font-size="9" letter-spacing="4">ALUMINIUM · DEMO</text>
+  </g>
+</svg>

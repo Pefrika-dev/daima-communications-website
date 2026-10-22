@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" role="img" aria-label="Illustrative product render — demonstration catalogue">
+<title>Illustrative product render — demonstration catalogue</title>
+<defs>
+    <linearGradient id="agalaxybudsfe-bg" x1="0" y1="0" x2=".85" y2="1">
+      <stop offset="0" stop-color="#fcfdff"/>
+      <stop offset=".55" stop-color="#eef0f5"/>
+      <stop offset="1" stop-color="#e2e8f2"/>
+    </linearGradient>
+    <radialGradient id="agalaxybudsfe-glow" cx="50%" cy="40%" r="60%">
+      <stop offset="0" stop-color="#5b7bb5" stop-opacity=".30"/>
+      <stop offset=".55" stop-color="#5b7bb5" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#5b7bb5" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="agalaxybudsfe-dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="1.2" cy="1.2" r="1.1" fill="#0a1020" opacity=".06"/>
+    </pattern>
+    <filter id="agalaxybudsfe-sh" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="26" stdDeviation="24" flood-color="#081020" flood-opacity=".26"/>
+    </filter>
+    <filter id="agalaxybudsfe-sh-soft" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#081020" flood-opacity=".18"/>
+    </filter>
+    <filter id="agalaxybudsfe-blur" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="30"/>
+    </filter>
+    <filter id="agalaxybudsfe-blur-s" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <linearGradient id="agalaxybudsfe-sweep" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".0"/>
+      <stop offset=".45" stop-color="#ffffff" stop-opacity=".55"/>
+      <stop offset=".55" stop-color="#ffffff" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs><defs>
+    <linearGradient id="agalaxybudsfe-body" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#454e60"/>
+      <stop offset=".42" stop-color="#222937"/>
+      <stop offset=".62" stop-color="#343d4e"/>
+      <stop offset="1" stop-color="#222937"/>
+    </linearGradient>
+    <linearGradient id="agalaxybudsfe-frame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#454e60"/>
+      <stop offset=".08" stop-color="#343d4e"/>
+      <stop offset=".5" stop-color="#222937"/>
+      <stop offset=".92" stop-color="#343d4e"/>
+      <stop offset="1" stop-color="#454e60"/>
+    </linearGradient>
+    <linearGradient id="agalaxybudsfe-screen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10296b"/>
+      <stop offset=".55" stop-color="#6d3ff0"/>
+      <stop offset="1" stop-color="#04a6c8"/>
+    </linearGradient>
+    <radialGradient id="agalaxybudsfe-sglow" cx="30%" cy="24%" r="72%">
+      <stop offset="0" stop-color="#8fd8ff" stop-opacity=".9"/>
+      <stop offset=".5" stop-color="#3f7dff" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#0a1030" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="agalaxybudsfe-edge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".55"/>
+      <stop offset=".18" stop-color="#ffffff" stop-opacity=".05"/>
+      <stop offset=".82" stop-color="#ffffff" stop-opacity=".03"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity=".42"/>
+    </linearGradient>
+    <linearGradient id="agalaxybudsfe-lens" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3f4a5e"/>
+      <stop offset=".45" stop-color="#10151f"/>
+      <stop offset="1" stop-color="#03050a"/>
+    </linearGradient>
+    <clipPath id="agalaxybudsfe-scrclip"><rect x="16" y="16" width="268" height="578" rx="34"/></clipPath>
+  </defs>
+<rect width="800" height="800" fill="url(#agalaxybudsfe-bg)"/>
+  <rect width="800" height="800" fill="url(#agalaxybudsfe-dots)"/>
+  <circle cx="400" cy="330" r="340" fill="url(#agalaxybudsfe-glow)"/>
+  <ellipse cx="400" cy="705" rx="230" ry="38" fill="#0a1020" opacity=".18" filter="url(#agalaxybudsfe-blur)"/>
+  <path d="M0 610 L800 320 L800 800 L0 800 Z" fill="#ffffff" opacity=".16"/>
+<g transform="translate(400 410) rotate(-5)" filter="url(#agalaxybudsfe-sh)">
+    <g transform="translate(0 96)">
+      <rect x="-142" y="-74" width="284" height="212" rx="78" fill="#333a46" stroke="#161b23" stroke-width="2"/>
+      <path d="M-142 -18 Q 0 16 142 -18" fill="none" stroke="#161b23" stroke-width="2.2" opacity=".9"/>
+      <path d="M-140 -26 Q 0 8 140 -26" fill="none" stroke="#ffffff" stroke-width="2.6" opacity=".75"/>
+      <rect x="-126" y="-62" width="252" height="74" rx="52" fill="#ffffff" opacity=".45"/>
+      <circle cx="0" cy="82" r="4.5" fill="#62a8ff"/>
+      <circle cx="0" cy="82" r="13" fill="#62a8ff" opacity=".18"/>
+    </g>
+    <g transform="translate(-104 -196) rotate(-14)">
+      <ellipse cx="0" cy="0" rx="35" ry="40" fill="#222833" stroke="#161b23" stroke-width="1.5"/>
+      <path d="M-7 26 C -12 60, -14 84, -14 110 C -14 122, 14 122, 14 110 C 14 84, 12 60, 7 26 Z" fill="#222833" stroke="#161b23" stroke-width="1.5"/>
+      <ellipse cx="-3" cy="-5" rx="21" ry="24" fill="#0c1016"/>
+      <ellipse cx="-3" cy="-5" rx="13" ry="16" fill="#0b0f16"/>
+      <g fill="#ffffff" opacity=".24">
+        <circle cx="-9" cy="-13" r="1.2"/><circle cx="-4" cy="-15" r="1.2"/><circle cx="1" cy="-15" r="1.2"/>
+        <circle cx="-10" cy="-8" r="1.2"/><circle cx="-5" cy="-10" r="1.2"/><circle cx="0" cy="-10" r="1.2"/>
+        <circle cx="-9" cy="-3" r="1.2"/><circle cx="-4" cy="-5" r="1.2"/>
+      </g>
+      <rect x="-6" y="100" width="12" height="4" rx="2" fill="#62a8ff" opacity=".75"/>
+      <circle cx="-12" cy="-24" r="5" fill="#ffffff" opacity=".4"/>
+    </g>
+    <g transform="translate(104 -196) rotate(14)">
+      <ellipse cx="0" cy="0" rx="35" ry="40" fill="#222833" stroke="#161b23" stroke-width="1.5"/>
+      <path d="M-7 26 C -12 60, -14 84, -14 110 C -14 122, 14 122, 14 110 C 14 84, 12 60, 7 26 Z" fill="#222833" stroke="#161b23" stroke-width="1.5"/>
+      <ellipse cx="3" cy="-5" rx="21" ry="24" fill="#0c1016"/>
+      <ellipse cx="3" cy="-5" rx="13" ry="16" fill="#0b0f16"/>
+      <g fill="#ffffff" opacity=".24">
+        <circle cx="-3" cy="-13" r="1.2"/><circle cx="2" cy="-15" r="1.2"/><circle cx="7" cy="-15" r="1.2"/>
+        <circle cx="-4" cy="-8" r="1.2"/><circle cx="1" cy="-10" r="1.2"/><circle cx="6" cy="-10" r="1.2"/>
+        <circle cx="-3" cy="-3" r="1.2"/><circle cx="2" cy="-5" r="1.2"/>
+      </g>
+      <rect x="-6" y="100" width="12" height="4" rx="2" fill="#62a8ff" opacity=".75"/>
+      <circle cx="12" cy="-24" r="5" fill="#ffffff" opacity=".4"/>
+    </g>
+    <ellipse cx="-104" cy="10" rx="56" ry="12" fill="#0a1020" opacity=".08" filter="url(#agalaxybudsfe-blur-s)"/>
+    <ellipse cx="104" cy="10" rx="56" ry="12" fill="#0a1020" opacity=".08" filter="url(#agalaxybudsfe-blur-s)"/>
+  </g>
+</svg>

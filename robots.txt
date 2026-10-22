@@ -1,0 +1,7 @@
+# DAIMA COMMUNICATIONS — independent website concept
+# Replace https://your-domain.example with the verified production domain before launch.
+User-agent: *
+Allow: /
+Disallow: /admin.html
+
+Sitemap: https://your-domain.example/sitemap.xml
