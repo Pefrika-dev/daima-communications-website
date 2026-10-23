@@ -200,11 +200,15 @@ No environment variables are required for the demonstration.
 
 ### Google Search Console
 
-1. Add the production domain as a property and verify ownership (DNS or HTML file method). For a `vercel.app` address, use the Vercel domain or connect a custom domain you control.
-2. Submit `https://daima-communications-website.vercel.app/sitemap.xml`.
-3. Request indexing for the homepage, catalogue and branches page.
-4. Confirm that `admin.html` is excluded and that cart/product pages use the intended `noindex` settings.
-5. Review the Page indexing report after deployment.
+Status as of 23 October 2026:
+
+- The URL-prefix property `https://daima-communications-website.vercel.app/` is verified with the committed `google9875c11804e2a13e.html` file. Keep that file in the repository; removing it can invalidate ownership verification.
+- `https://daima-communications-website.vercel.app/sitemap.xml` was submitted successfully. Search Console reports **Success** with **3 discovered pages**.
+- Live URL tests passed for the homepage, catalogue and branches page. Google reported that each page can be indexed and that all page resources loaded.
+- Indexing was requested for the homepage and catalogue. The branches page is already included in the sitemap; a separate manual request hit Google's daily quota and can be retried later.
+- Indexing and ranking are not guaranteed. Review the **Page indexing** report after Google crawls the site.
+
+If a custom domain is connected, add a new Search Console property for that domain, verify it, submit its sitemap, and update the canonical URLs as described above.
 
 No structured data (`LocalBusiness`, `Product`, review or rating markup) is included. Those schemas require verified addresses, hours, prices, availability and reviews; adding them with sample data would misrepresent the business.
 
