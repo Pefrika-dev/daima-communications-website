@@ -1,9 +1,9 @@
 /* ==========================================================================
-   DAIMA COMMUNICATIONS — CENTRAL CONFIGURATION
+   DAIMA COMMUNICATIONS - CENTRAL CONFIGURATION
    --------------------------------------------------------------------------
-   Edit this file to replace demonstration details with verified business
-   information. Anything marked "to be confirmed" is intentionally a
-   placeholder and must not be presented to customers as fact.
+   Business settings used across the public website and the local dashboard.
+   Keep prices, stock notes and branch information current as the business
+   confirms them.
    ========================================================================== */
 
 window.DAIMA = window.DAIMA || {};
@@ -20,7 +20,7 @@ DAIMA.CONFIG = {
     tagline: 'Your Technology. Your Choice. Your Daima.',
     headline: 'Technology that moves with you.',
     intro:
-      'Explore smartphones, accessories and everyday technology, with convenient ways to discover products and connect with Daima Communications.',
+      'Shop smartphones, accessories and everyday technology at Daima Communications in Sirare and Kehancha. Call or WhatsApp 0701 127 577 to confirm price, model and availability.',
     region: 'Sirare and Kehancha, Migori County, Kenya',
     established: null, // Add a verified year only when confirmed by the business.
   },
@@ -32,9 +32,9 @@ DAIMA.CONFIG = {
     name: 'Thomas Hondo Chacha',
     title: 'Software Engineer | Website Developer',
     credit:
-      'Website Concept Designed & Developed by Thomas Hondo Chacha — Software Engineer.',
+      'Website designed and developed by Thomas Hondo Chacha - Software Engineer.',
     note:
-      'This is an independent website proposal. It does not imply that Daima Communications has hired, endorsed or partnered with the developer.',
+      'Website designed and developed by Thomas Hondo Chacha for DAIMA COMMUNICATIONS.',
   },
 
   /* ------------------------------------------------------------------ */
@@ -47,90 +47,90 @@ DAIMA.CONFIG = {
   },
 
   /* ------------------------------------------------------------------ */
-  /* Demonstration mode                                                 */
+  /* Catalogue wording and honest customer notices                      */
   /* ------------------------------------------------------------------ */
   demo: {
-    mode: true,
-    catalogueLabel: 'Demonstration catalogue',
+    mode: false,
+    catalogueLabel: 'Product catalogue',
     priceNotice:
-      'Prices shown are illustrative demonstration prices in Kenyan shillings. They are not confirmed Daima Communications prices.',
-    availabilityNotice: 'Contact the branch to confirm current availability.',
+      'Displayed prices are indicative. Call or WhatsApp 0701 127 577 to confirm today\'s price before paying.',
+    availabilityNotice: 'Call or WhatsApp 0701 127 577 to confirm availability.',
     imageNotice:
-      'Product visuals are original illustrative renders created for this proposal — not photographs of Daima stock.',
+      'Product images are representative illustrations, not photographs of current stock.',
     inventoryNotice:
-      'Stock figures are demonstration data stored in this browser. They are not a live or shared inventory record.',
+      'Stock figures are managed in this browser preview and are not a live shared inventory record.',
   },
 
   /* ------------------------------------------------------------------ */
   /* WhatsApp                                                           */
   /* ------------------------------------------------------------------ */
-  /* IMPORTANT: use the full international format, digits only.
-     Example: 254712345678. Leave blank until a verified number is provided.
-     WhatsApp actions stay disabled while this is blank. */
+  /* Use the full international format, digits only.
+     The same business number is used by both branches. */
   whatsapp: {
-    number: '', // TODO: configure verified business WhatsApp number
+    number: '254701127577',
     placeholder: '2547XXXXXXXX',
-    enabled: false,
+    enabled: true,
     defaultMessage:
       'Hello Daima Communications, I would like to make an enquiry about a product on your website.',
   },
 
   /* ------------------------------------------------------------------ */
-  /* Verified contact details (none supplied yet)                       */
+  /* Business contact details                                           */
   /* ------------------------------------------------------------------ */
   contact: {
-    phone: '', // TODO: verified central phone number
-    phoneDisplay: 'Phone number to be confirmed',
-    email: '', // TODO: verified business email
-    emailDisplay: 'Email address to be confirmed',
+    phone: '0701127577',
+    phoneDisplay: '0701 127 577',
+    email: '',
+    emailDisplay: '',
     whatsappNote:
-      'WhatsApp enquiries are disabled until a verified business number is configured in js/config.js.',
+      'Call or WhatsApp 0701 127 577. Both Sirare and Kehancha use this one business number.',
   },
 
   /* ------------------------------------------------------------------ */
   /* Branches                                                           */
   /* ------------------------------------------------------------------ */
-  /* No street addresses, coordinates, opening hours or phone numbers
-     have been supplied. These are deliberately labelled placeholders. */
+  /* Exact street addresses and opening hours have not been supplied.
+     Customers are asked to call or WhatsApp for current directions and
+     hours rather than showing an unverified detail as fact. */
   branches: [
     {
       id: 'sirare',
       name: 'Sirare',
-      fullName: 'DAIMA COMMUNICATIONS — SIRARE',
+      fullName: 'DAIMA COMMUNICATIONS - SIRARE',
       location: 'Sirare / Isebania area, Migori County, Kenya.',
       locationShort: 'Sirare / Isebania area',
-      addressNote: 'Exact street address to be confirmed with the business.',
-      phone: '',
-      phoneDisplay: 'Branch phone to be confirmed',
-      whatsapp: '',
-      hours: 'Opening hours to be confirmed.',
+      addressNote: 'Sirare area, Migori County. Call or WhatsApp for exact directions.',
+      phone: '0701127577',
+      phoneDisplay: '0701 127 577',
+      whatsapp: '254701127577',
+      hours: 'Call or WhatsApp to confirm today\'s opening hours.',
       active: true,
       image: 'assets/images/branch-sirare.svg',
       imageAlt:
-        'Concept visual of a modern Daima Communications storefront at dusk — not an actual branch photograph.',
+        'Storefront illustration for Daima Communications Sirare. Representative image, not an actual branch photograph.',
       mapsQuery: 'Daima Communications Sirare Migori County Kenya',
-      directionsNote: 'Opens a Google Maps search for the Sirare area.',
-      stockLabel: 'Contact the branch to confirm availability.',
+      directionsNote: 'Opens a Google Maps search for the Sirare area. Call for exact directions.',
+      stockLabel: 'Call or WhatsApp 0701 127 577 to confirm availability.',
       tagline: 'Serving customers around Sirare and the Isebania border area.',
     },
     {
       id: 'kehancha',
       name: 'Kehancha',
-      fullName: 'DAIMA COMMUNICATIONS — KEHANCHA',
+      fullName: 'DAIMA COMMUNICATIONS - KEHANCHA',
       location: 'Kehancha, Migori County, Kenya.',
       locationShort: 'Kehancha town',
-      addressNote: 'Exact street address to be confirmed with the business.',
-      phone: '',
-      phoneDisplay: 'Branch phone to be confirmed',
-      whatsapp: '',
-      hours: 'Opening hours to be confirmed.',
+      addressNote: 'Kehancha town, Migori County. Call or WhatsApp for exact directions.',
+      phone: '0701127577',
+      phoneDisplay: '0701 127 577',
+      whatsapp: '254701127577',
+      hours: 'Call or WhatsApp to confirm today\'s opening hours.',
       active: true,
       image: 'assets/images/branch-kehancha.svg',
       imageAlt:
-        'Concept visual of a modern Daima Communications storefront in the evening — not an actual branch photograph.',
+        'Storefront illustration for Daima Communications Kehancha. Representative image, not an actual branch photograph.',
       mapsQuery: 'Daima Communications Kehancha Migori County Kenya',
-      directionsNote: 'Opens a Google Maps search for Kehancha town.',
-      stockLabel: 'Contact the branch to confirm availability.',
+      directionsNote: 'Opens a Google Maps search for Kehancha town. Call for exact directions.',
+      stockLabel: 'Call or WhatsApp 0701 127 577 to confirm availability.',
       tagline: 'Serving customers in Kehancha and surrounding communities.',
     },
   ],
@@ -154,33 +154,33 @@ DAIMA.CONFIG = {
   brands: ['Samsung', 'Apple', 'Xiaomi', 'Redmi', 'Infinix', 'Tecno', 'Nokia', 'Oraimo', 'Anker', 'JBL', 'Soundcore', 'Logitech', 'HP', 'TP-Link'],
 
   /* ------------------------------------------------------------------ */
-  /* Editable defaults for the demonstration dashboard                  */
+  /* Editable defaults for the local dashboard                          */
   /* ------------------------------------------------------------------ */
   defaults: {
     lowStockThreshold: 5,
     cataloguePriceDisplay: true,
-    showDemoBadges: true,
+    showDemoBadges: false,
     filterByBranch: false, // Turn on only when real per-branch stock is verified.
     businessName: 'DAIMA COMMUNICATIONS',
-    whatsappNumber: '',
+    whatsappNumber: '254701127577',
     currencySymbol: 'KSh',
-    demoBanner: true,
+    demoBanner: false,
     catalogueNote:
-      'Demonstration catalogue. Confirm exact model, colour, specification, price and availability with Daima Communications before purchase.',
+      'Prices are indicative. Call or WhatsApp 0701 127 577 to confirm the exact model, current price, colour and availability.',
   },
 
   /* ------------------------------------------------------------------ */
-  /* Browser storage keys (demonstration only — not authorization)      */
+  /* Browser storage keys (local preview - not authorization)            */
   /* ------------------------------------------------------------------ */
   storage: {
-    products: 'daima.products.v1',
-    branches: 'daima.branches.v1',
-    settings: 'daima.settings.v1',
-    inquiries: 'daima.inquiries.v1',
-    cart: 'daima.cart.v1',
-    wishlist: 'daima.wishlist.v1',
-    activity: 'daima.activity.v1',
-    seeded: 'daima.seeded.v1',
+    products: 'daima.products.v2',
+    branches: 'daima.branches.v2',
+    settings: 'daima.settings.v2',
+    inquiries: 'daima.inquiries.v2',
+    cart: 'daima.cart.v2',
+    wishlist: 'daima.wishlist.v2',
+    activity: 'daima.activity.v2',
+    seeded: 'daima.seeded.v2',
   },
 
   /* ------------------------------------------------------------------ */
@@ -196,7 +196,7 @@ DAIMA.CONFIG = {
   ],
 
   /* ------------------------------------------------------------------ */
-  /* Proposal meta                                                      */
+  /* Site metadata                                                      */
   /* ------------------------------------------------------------------ */
   meta: {
     siteUrl: 'https://daima-communications-website.vercel.app', // Update if a custom domain is connected.

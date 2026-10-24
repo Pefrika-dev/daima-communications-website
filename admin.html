@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Demo Dashboard — DAIMA COMMUNICATIONS</title>
-  <meta name="description" content="Local demonstration admin dashboard for the DAIMA COMMUNICATIONS website concept. Product, inventory, branch and inquiry management using browser storage only." />
+  <title>Business Dashboard — DAIMA COMMUNICATIONS</title>
+  <meta name="description" content="Local business dashboard for managing the DAIMA COMMUNICATIONS catalogue, stock, branches and inquiries in this browser." />
   <meta name="robots" content="noindex, nofollow" />
   <meta name="theme-color" content="#070c18" />
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
@@ -27,7 +27,7 @@
               <circle cx="31.4" cy="10.8" r="1.8" fill="#6fe8ff"/>
             </svg>
           </span>
-          <span class="admin-brand__word"><strong>DAIMA</strong><span>Demo dashboard</span></span>
+          <span class="admin-brand__word"><strong>DAIMA</strong><span>Business dashboard</span></span>
         </a>
         <button class="admin-icon-btn admin-sidebar__close" type="button" data-close-sidebar aria-label="Close navigation">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
@@ -37,7 +37,7 @@
       <div class="admin-workspace">
         <span class="admin-workspace__dot" aria-hidden="true"></span>
         <div>
-          <span>Local demo workspace</span>
+          <span>Local preview workspace</span>
           <strong>No secure sign-in</strong>
         </div>
       </div>
@@ -78,8 +78,8 @@
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4 10 14M18 14v5H5V6h5"/></svg>
           View public website
         </a>
-        <p class="admin-sidebar__note">Demonstration data is stored in this browser only. Clearing storage resets the workspace.</p>
-        <span class="admin-credit">Concept by Thomas Hondo Chacha</span>
+        <p class="admin-sidebar__note">Dashboard data is stored in this browser only. Clearing storage resets the workspace.</p>
+        <span class="admin-credit">Website by Thomas Hondo Chacha</span>
       </div>
     </aside>
 
@@ -97,12 +97,12 @@
           </div>
         </div>
         <div class="admin-topbar__actions">
-          <span class="admin-status-pill"><span aria-hidden="true"></span>Demo data</span>
+          <span class="admin-status-pill"><span aria-hidden="true"></span>Local preview</span>
           <a class="admin-btn admin-btn--ghost admin-btn--sm" href="products.html" target="_blank" rel="noopener noreferrer">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z"/><circle cx="12" cy="12" r="3"/></svg>
             <span>View catalogue</span>
           </a>
-          <button class="admin-avatar" type="button" data-admin-nav="settings" title="Demo profile settings" aria-label="TH — open demo settings">
+          <button class="admin-avatar" type="button" data-admin-nav="settings" title="Profile settings" aria-label="TH — open settings">
             <span>TH</span>
           </button>
         </div>
@@ -111,7 +111,7 @@
       <main class="admin-content" id="admin-content">
         <div class="admin-demo-banner" role="note">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 5 6v5c0 5 3.4 8 7 10 3.6-2 7-5 7-10V6l-7-3Z"/><path d="M12 8v5M12 16h.01"/></svg>
-          <p><strong>Demonstration dashboard.</strong> There is no authentication, server database or shared inventory. Changes save only in this browser.</p>
+          <p><strong>Local preview dashboard.</strong> There is no authentication, server database or shared inventory. Changes save only in this browser.</p>
           <a href="#settings" data-admin-nav="settings">Production requirements</a>
         </div>
 
@@ -123,7 +123,7 @@
             <div>
               <span class="admin-eyebrow">At a glance</span>
               <h2 id="overview-heading">Catalogue &amp; inquiries overview</h2>
-              <p>Every figure below is calculated from the demonstration data currently stored in this browser.</p>
+              <p>Every figure below is calculated from the data currently stored in this browser.</p>
             </div>
             <div class="admin-section__actions">
               <button class="admin-btn admin-btn--primary" type="button" data-open-product>
@@ -135,14 +135,14 @@
 
           <div class="metric-grid">
             <article class="metric-card">
-              <div class="metric-card__top"><span>Demo products</span><span class="metric-icon metric-icon--blue"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9"/></svg></span></div>
+              <div class="metric-card__top"><span>Products</span><span class="metric-icon metric-icon--blue"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9"/></svg></span></div>
               <strong class="metric-value" id="metric-products">0</strong>
               <p class="metric-meta"><span id="metric-categories">0</span> categories represented</p>
             </article>
             <article class="metric-card">
-              <div class="metric-card__top"><span>Demo stock units</span><span class="metric-icon metric-icon--navy"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h10"/><circle cx="18" cy="17" r="2"/></svg></span></div>
+              <div class="metric-card__top"><span>Stock units</span><span class="metric-icon metric-icon--navy"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h10"/><circle cx="18" cy="17" r="2"/></svg></span></div>
               <strong class="metric-value" id="metric-units">0</strong>
-              <p class="metric-meta">Across both proposed branches</p>
+              <p class="metric-meta">Across both branches</p>
             </article>
             <article class="metric-card">
               <div class="metric-card__top"><span>Low / out of stock</span><span class="metric-icon metric-icon--amber"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2.8 20h18.4L12 3Z"/><path d="M12 9v5M12 17h.01"/></svg></span></div>
@@ -155,33 +155,33 @@
               <p class="metric-meta"><span id="metric-total-inquiries">0</span> total saved inquiries</p>
             </article>
             <article class="metric-card metric-card--wide">
-              <div class="metric-card__top"><span>Illustrative catalogue value</span><span class="metric-icon metric-icon--blue"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5M4 19h16"/><path d="M8 15v-3M12 15V8M16 15v-5"/></svg></span></div>
+              <div class="metric-card__top"><span>Catalogue value</span><span class="metric-icon metric-icon--blue"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5M4 19h16"/><path d="M8 15v-3M12 15V8M16 15v-5"/></svg></span></div>
               <strong class="metric-value metric-value--sm" id="metric-value">KSh 0</strong>
-              <p class="metric-meta">Demo price × demo stock — not financial data</p>
+              <p class="metric-meta">Indicative price x local stock data</p>
             </article>
             <article class="metric-card metric-card--wide">
               <div class="metric-card__top"><span>Active branches</span><span class="metric-icon metric-icon--navy"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h16M5 9l1-5h12l1 5M6 9v11h12V9M10 20v-6h4v6"/></svg></span></div>
               <strong class="metric-value" id="metric-branches">0</strong>
-              <p class="metric-meta">Sirare &amp; Kehancha concept locations</p>
+              <p class="metric-meta">Sirare &amp; Kehancha branches</p>
             </article>
           </div>
 
           <div class="admin-grid admin-grid--charts">
             <article class="admin-card">
               <header class="admin-card__head">
-                <div><h3>Demo stock by category</h3><p>Total units in both proposed branches.</p></div>
+                <div><h3>Stock by category</h3><p>Total units in both branches.</p></div>
                 <span class="admin-chip">Derived</span>
               </header>
-              <div class="bar-chart" id="stock-chart" role="img" aria-label="Bar chart of demonstration stock by product category"></div>
+              <div class="bar-chart" id="stock-chart" role="img" aria-label="Bar chart of stock by product category"></div>
             </article>
 
             <article class="admin-card">
               <header class="admin-card__head">
-                <div><h3>Inquiry status</h3><p>Saved demonstration inquiries by current status.</p></div>
+                <div><h3>Inquiry status</h3><p>Saved inquiries by current status.</p></div>
                 <span class="admin-chip">Derived</span>
               </header>
               <div class="donut-wrap">
-                <div class="donut-chart" id="status-chart" role="img" aria-label="Donut chart of demonstration inquiry statuses">
+                <div class="donut-chart" id="status-chart" role="img" aria-label="Donut chart of inquiry statuses">
                   <div class="donut-chart__inner"><strong id="donut-total">0</strong><span>total</span></div>
                 </div>
                 <div class="chart-legend" id="status-legend"></div>
@@ -192,7 +192,7 @@
           <div class="admin-grid admin-grid--split">
             <article class="admin-card">
               <header class="admin-card__head">
-                <div><h3>Recent inquiries</h3><p>The latest saved demonstration messages.</p></div>
+                <div><h3>Recent inquiries</h3><p>The latest saved inquiry messages.</p></div>
                 <a class="admin-text-link" href="#inquiries" data-admin-nav="inquiries">View all</a>
               </header>
               <div class="admin-list" id="recent-inquiries"></div>
@@ -200,7 +200,7 @@
 
             <article class="admin-card">
               <header class="admin-card__head">
-                <div><h3>Demo activity</h3><p>Actions recorded in this browser.</p></div>
+                <div><h3>Activity</h3><p>Actions recorded in this browser.</p></div>
                 <span class="admin-chip">Local</span>
               </header>
               <div class="activity-feed" id="activity-feed"></div>
@@ -213,7 +213,7 @@
             </div>
             <div>
               <h3>What this dashboard does not claim</h3>
-              <p>This is a usability demonstration, not a production administration system. It has no secure login, server-side authorization, shared inventory, audit trail or backup. A real deployment needs all of those before it manages live business data.</p>
+              <p>This is a local preview, not a production administration system. It has no secure login, server-side authorization, shared inventory, audit trail or backup. A secure backend is required before it manages live customer data.</p>
             </div>
             <a class="admin-btn admin-btn--ghost admin-btn--sm" href="#settings" data-admin-nav="settings">Read requirements</a>
           </article>
@@ -226,8 +226,8 @@
           <header class="admin-section__head">
             <div>
               <span class="admin-eyebrow">Catalogue management</span>
-              <h2 id="products-heading">Demonstration products</h2>
-              <p>Create, edit and remove listings stored locally. Public pages read from the same demo store in this browser.</p>
+              <h2 id="products-heading">Products</h2>
+              <p>Create, edit and remove products stored locally. Public pages read from the same store in this browser.</p>
             </div>
             <div class="admin-section__actions">
               <button class="admin-btn admin-btn--primary" type="button" data-open-product>
@@ -255,7 +255,7 @@
             <div class="admin-table-wrap" id="products-table"></div>
             <div class="admin-empty" id="products-empty" hidden>
               <h3>No products match this view</h3>
-              <p>Try a different search term or add a new demonstration listing.</p>
+              <p>Try a different search term or add a new product.</p>
             </div>
           </div>
         </section>
@@ -266,9 +266,9 @@
         <section class="admin-section" id="section-inventory" data-admin-section="inventory" aria-labelledby="inventory-heading" hidden>
           <header class="admin-section__head">
             <div>
-              <span class="admin-eyebrow">Demonstration stock</span>
+              <span class="admin-eyebrow">Stock</span>
               <h2 id="inventory-heading">Inventory by branch</h2>
-              <p>These figures are sample data. They do not represent verified Sirare or Kehancha stock and are not shared with other devices.</p>
+              <p>These figures are kept in this browser. They are not a live shared inventory record and must be confirmed with the branch.</p>
             </div>
             <div class="admin-section__actions">
               <button class="admin-btn admin-btn--primary" type="button" id="save-inventory">
@@ -290,8 +290,8 @@
                   <label class="sr-only" for="inventory-filter">Filter stock level</label>
                   <select id="inventory-filter">
                     <option value="">All stock levels</option>
-                    <option value="low">Low demo stock</option>
-                    <option value="out">Out of demo stock</option>
+                    <option value="low">Low stock</option>
+                    <option value="out">Out of stock</option>
                   </select>
                 </div>
               </div>
@@ -305,7 +305,7 @@
             </div>
             <div class="notice-strip notice-strip--amber">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2.8 20h18.4L12 3Z"/><path d="M12 9v5M12 17h.01"/></svg>
-              <span>Stock is demonstration data only. Public product pages intentionally say “Contact branch to confirm availability” instead of showing these figures.</span>
+              <span>Stock figures are stored in this browser only. Public product pages ask customers to confirm availability with the team instead of showing these figures.</span>
             </div>
             <div class="admin-table-wrap" id="inventory-table"></div>
             <div class="admin-empty" id="inventory-empty" hidden>
@@ -313,7 +313,7 @@
               <p>Clear the search or choose a different stock filter.</p>
             </div>
             <footer class="inventory-foot">
-              <p id="inventory-summary">0 demonstration units across 0 listings.</p>
+              <p id="inventory-summary">0 units across 0 products.</p>
               <button class="admin-btn admin-btn--primary" type="button" id="save-inventory-foot">Save inventory changes</button>
             </footer>
           </div>
@@ -326,14 +326,14 @@
           <header class="admin-section__head">
             <div>
               <span class="admin-eyebrow">Location configuration</span>
-              <h2 id="branches-heading">Proposed branches</h2>
-              <p>Edit the branch details used across the public concept. Only information verified by the business should replace these placeholders.</p>
+              <h2 id="branches-heading">Branches</h2>
+              <p>Edit the branch details used across the public website. Confirm changes with the business before publishing.</p>
             </div>
           </header>
 
           <div class="definition-banner">
             <strong>Do not invent operational details.</strong>
-            <span>Street addresses, phone numbers, opening hours and WhatsApp numbers should be completed only after the business confirms them. The public site labels unverified values as placeholders.</span>
+            <span>Street addresses, phone numbers, opening hours and WhatsApp numbers should be updated only when the business confirms them.</span>
           </div>
 
           <div class="branch-admin-grid" id="branch-forms"></div>
@@ -345,7 +345,7 @@
         <section class="admin-section" id="section-inquiries" data-admin-section="inquiries" aria-labelledby="inquiries-heading" hidden>
           <header class="admin-section__head">
             <div>
-              <span class="admin-eyebrow">Demo inbox</span>
+              <span class="admin-eyebrow">Inquiries</span>
               <h2 id="inquiries-heading">Saved inquiries</h2>
               <p>These messages were saved by the public inquiry forms in this browser. No email, SMS or WhatsApp message has been delivered.</p>
             </div>
@@ -375,7 +375,7 @@
             <div class="admin-inquiry-list" id="inquiries-list"></div>
             <div class="admin-empty" id="inquiries-empty" hidden>
               <h3>No inquiries match this view</h3>
-              <p>Try another search term or status filter. New demonstration inquiries appear here after a public form is submitted.</p>
+              <p>Try another search term or status filter. New inquiries appear here after a public form is submitted in this browser.</p>
             </div>
           </div>
         </section>
@@ -387,15 +387,15 @@
           <header class="admin-section__head">
             <div>
               <span class="admin-eyebrow">Configuration</span>
-              <h2 id="settings-heading">Demo settings</h2>
-              <p>These settings affect public pages that read the same browser demo storage. They are not server-side business settings.</p>
+              <h2 id="settings-heading">Settings</h2>
+              <p>These settings affect public pages that read the same browser storage. They are not shared server-side settings.</p>
             </div>
           </header>
 
           <div class="admin-grid admin-grid--settings">
             <form class="admin-card admin-form" id="settings-form" novalidate>
               <header class="admin-card__head">
-                <div><h3>Business &amp; catalogue</h3><p>Values are saved locally for this demonstration.</p></div>
+                <div><h3>Business &amp; catalogue</h3><p>Values are saved locally in this browser.</p></div>
               </header>
               <div class="admin-form-grid">
                 <div class="admin-field">
@@ -406,7 +406,7 @@
                 <div class="admin-field">
                   <label for="settings-currency">Currency symbol</label>
                   <input id="settings-currency" name="currencySymbol" type="text" maxlength="8" required />
-                  <span class="admin-field__hint">Used to format demonstration prices.</span>
+                  <span class="admin-field__hint">Used to format prices.</span>
                 </div>
                 <div class="admin-field">
                   <label for="settings-whatsapp">WhatsApp number</label>
@@ -416,7 +416,7 @@
                 <div class="admin-field">
                   <label for="settings-threshold">Low-stock threshold</label>
                   <input id="settings-threshold" name="lowStockThreshold" type="number" min="0" max="999" step="1" inputmode="numeric" />
-                  <span class="admin-field__hint">Products at or below this total count as low demo stock.</span>
+                  <span class="admin-field__hint">Products at or below this total count as low stock.</span>
                 </div>
                 <div class="admin-field admin-field--full">
                   <label for="settings-catalogue-note">Catalogue note</label>
@@ -427,15 +427,15 @@
 
               <div class="admin-toggle-list">
                 <label class="admin-toggle">
-                  <span><strong>Show demonstration badges</strong><small>Display “Demo listing” labels on public product cards.</small></span>
+                  <span><strong>Show product badges</strong><small>Add a small catalogue label to public product cards.</small></span>
                   <input type="checkbox" name="showDemoBadges" />
                 </label>
                 <label class="admin-toggle">
-                  <span><strong>Show catalogue prices</strong><small>Keep clearly labelled illustrative prices visible.</small></span>
+                  <span><strong>Show catalogue prices</strong><small>Keep indicative prices visible.</small></span>
                   <input type="checkbox" name="cataloguePriceDisplay" />
                 </label>
                 <label class="admin-toggle">
-                  <span><strong>Demonstration banner</strong><small>Reserved for a public demo notice flag.</small></span>
+                  <span><strong>Announcement banner</strong><small>Reserved for a future public announcement.</small></span>
                   <input type="checkbox" name="demoBanner" />
                 </label>
                 <label class="admin-toggle">
@@ -453,17 +453,17 @@
             <div class="admin-stack">
               <article class="admin-card">
                 <header class="admin-card__head">
-                  <div><h3>Demo data tools</h3><p>Export or reset the local workspace.</p></div>
+                  <div><h3>Local preview tools</h3><p>Export or reset the local workspace.</p></div>
                 </header>
-                <p class="admin-muted">The export contains demonstration products, branches, inquiries, settings and activity. It does not contain real customer data unless you entered it yourself.</p>
+                <p class="admin-muted">The export contains products, branches, inquiries, settings and activity stored in this browser. It is not a server backup.</p>
                 <div class="admin-form-actions admin-form-actions--stack">
                   <button class="admin-btn admin-btn--ghost" type="button" id="export-data">
                     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 11l5 4 5-4M4 20h16"/></svg>
-                    Export demo data (JSON)
+                    Export data (JSON)
                   </button>
                   <button class="admin-btn admin-btn--danger-ghost" type="button" id="reset-demo-data">
                     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11a8 8 0 0 1 14-4l2 2M20 5v4h-4M20 13a8 8 0 0 1-14 4l-2-2M4 19v-4h4"/></svg>
-                    Reset all demonstration data
+                    Reset all data
                   </button>
                 </div>
               </article>
@@ -489,8 +489,8 @@
       </main>
 
       <footer class="admin-footer">
-        <p>Website Concept Designed &amp; Developed by <strong>Thomas Hondo Chacha</strong> — Software Engineer.</p>
-        <p>Independent proposal · demonstration data only</p>
+        <p>Website Designed &amp; Developed by <strong>Thomas Hondo Chacha</strong> — Software Engineer.</p>
+        <p>Local preview workspace</p>
       </footer>
     </div>
   </div>
@@ -501,7 +501,7 @@
       <header class="admin-dialog__head">
         <div>
           <span class="admin-eyebrow">Catalogue</span>
-          <h2 id="product-dialog-title">Add demonstration product</h2>
+          <h2 id="product-dialog-title">Add product</h2>
         </div>
         <button class="admin-icon-btn" type="button" data-close-admin-dialog aria-label="Close product form">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
@@ -536,7 +536,7 @@
             <span class="admin-field__error" role="alert"></span>
           </div>
           <div class="admin-field">
-            <label for="product-price">Illustrative price (KSh) <span class="req">*</span></label>
+            <label for="product-price">Indicative price (KSh) <span class="req">*</span></label>
             <input id="product-price" name="price" type="number" min="0" step="1" inputmode="numeric" required />
             <span class="admin-field__error" role="alert"></span>
           </div>
@@ -548,15 +548,15 @@
             </label>
           </div>
           <div class="admin-field">
-            <label for="product-stock-sirare">Demo stock — Sirare</label>
+            <label for="product-stock-sirare">Stock - Sirare</label>
             <input id="product-stock-sirare" name="stockSirare" type="number" min="0" step="1" inputmode="numeric" value="0" />
           </div>
           <div class="admin-field">
-            <label for="product-stock-kehancha">Demo stock — Kehancha</label>
+            <label for="product-stock-kehancha">Stock - Kehancha</label>
             <input id="product-stock-kehancha" name="stockKehancha" type="number" min="0" step="1" inputmode="numeric" value="0" />
           </div>
           <div class="admin-field admin-field--full">
-            <label for="product-image">Illustrative image path</label>
+            <label for="product-image">Product image path</label>
             <input id="product-image" name="image" type="text" maxlength="160" placeholder="assets/images/fallback.svg" />
             <span class="admin-field__hint">Use one of the original SVG renders in <code>assets/images/</code>. A fallback is applied automatically if the path fails.</span>
           </div>
@@ -566,8 +566,8 @@
           </div>
           <div class="admin-field admin-field--full">
             <label for="product-highlights">Highlights</label>
-            <textarea id="product-highlights" name="highlights" rows="3" placeholder="One demonstration highlight per line"></textarea>
-            <span class="admin-field__hint">Keep claims illustrative and clearly unverified.</span>
+            <textarea id="product-highlights" name="highlights" rows="3" placeholder="One highlight per line"></textarea>
+            <span class="admin-field__hint">Keep claims accurate and confirm details with the branch.</span>
           </div>
         </div>
       </div>
@@ -582,7 +582,7 @@
   <dialog class="admin-dialog" id="inquiry-dialog" aria-labelledby="inquiry-dialog-title">
     <header class="admin-dialog__head">
       <div>
-        <span class="admin-eyebrow">Demonstration inquiry</span>
+        <span class="admin-eyebrow">Inquiry</span>
         <h2 id="inquiry-dialog-title">Inquiry details</h2>
       </div>
       <button class="admin-icon-btn" type="button" data-close-admin-dialog aria-label="Close inquiry details">

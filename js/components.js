@@ -94,9 +94,9 @@
     <a class="skip-link" href="#main">Skip to main content</a>
     <div class="announcement" role="region" aria-label="Announcement">
       <div class="container announcement-inner">
-        <p><span class="announcement-dot" aria-hidden="true"></span>${esc(C.business.tagline)}</p>
+        <p><span class="announcement-dot" aria-hidden="true"></span>Sirare &amp; Kehancha &middot; Call or WhatsApp ${esc(C.contact.phoneDisplay)}</p>
         <a class="announcement-link" href="products.html">Explore the catalogue ${icon('arrow', 14)}</a>
-        <span class="announcement-meta">Independent website concept · demonstration catalogue</span>
+        <span class="announcement-meta">One business number for both branches</span>
       </div>
     </div>
     <header class="site-header" id="site-header">
@@ -126,7 +126,9 @@
         </nav>
 
         <div class="header-actions">
-          <span class="demo-pill" title="This interface uses demonstration data">Demo</span>
+          <a class="icon-btn header-call" href="${esc(H.phoneHref(C.contact.phone))}" aria-label="Call DAIMA Communications on ${esc(C.contact.phoneDisplay)}" title="Call ${esc(C.contact.phoneDisplay)}">
+            ${icon('phone', 19)}
+          </a>
           <button class="icon-btn" type="button" data-open-search aria-label="Search products">
             ${icon('search', 20)}
           </button>
@@ -177,8 +179,10 @@
           <a class="text-link" href="branches.html">View branch details ${icon('arrow', 14)}</a>
         </div>
         <div class="mobile-menu-foot">
-          <a class="btn btn-primary btn-block" href="products.html">Explore Products ${icon('arrow', 16)}</a>
-          <p>${configured ? 'WhatsApp enquiries available' : 'WhatsApp number to be configured'}</p>
+          <a class="btn btn-primary btn-block" href="${esc(H.phoneHref(C.contact.phone))}">${icon('phone', 16)} Call ${esc(C.contact.phoneDisplay)}</a>
+          ${configured ? `<a class="btn btn-whatsapp btn-block" href="${esc(H.whatsAppLink(C.whatsapp.defaultMessage))}" target="_blank" rel="noopener noreferrer">${icon('whatsapp', 16)} WhatsApp us</a>` : ''}
+          <a class="btn btn-ghost btn-block" href="products.html">Explore Products ${icon('arrow', 16)}</a>
+          <p>One business number for Sirare &amp; Kehancha.</p>
         </div>
       </div>
     </div>
@@ -187,7 +191,7 @@
       <form class="search-panel" method="get" action="products.html" role="search">
         <div class="search-head">
           <span class="search-icon">${icon('search', 22)}</span>
-          <label for="global-search" id="search-title">Search the demonstration catalogue</label>
+          <label for="global-search" id="search-title">Search the catalogue</label>
           <button class="icon-btn" type="button" data-close-dialog aria-label="Close search">${icon('close', 20)}</button>
         </div>
         <input id="global-search" name="q" type="search" placeholder="Search phones, audio, chargers…" autocomplete="off" />
@@ -207,16 +211,16 @@
     <dialog class="sheet cart-sheet" id="cart-drawer" aria-labelledby="cart-title">
       <div class="sheet-head">
         <div>
-          <span class="eyebrow">Demonstration cart</span>
+          <span class="eyebrow">Inquiry list</span>
           <h2 id="cart-title">Your selections</h2>
         </div>
         <button class="icon-btn" type="button" data-close-dialog aria-label="Close cart">${icon('close', 20)}</button>
       </div>
       <div class="sheet-body" data-cart-body></div>
       <div class="sheet-foot" data-cart-foot hidden>
-        <div class="sheet-total"><span>Cart subtotal</span><strong data-cart-subtotal>KSh 0</strong></div>
-        <p class="micro-note">Demonstration only. No payment is taken online.</p>
-        <a class="btn btn-primary btn-block" href="cart.html">Review cart &amp; request availability ${icon('arrow', 16)}</a>
+        <div class="sheet-total"><span>Indicative subtotal</span><strong data-cart-subtotal>KSh 0</strong></div>
+        <p class="micro-note">No online payment. Prices are indicative until confirmed.</p>
+        <a class="btn btn-primary btn-block" href="cart.html">Review list &amp; send inquiry ${icon('arrow', 16)}</a>
         <button class="btn btn-ghost btn-block" type="button" data-close-dialog>Continue browsing</button>
       </div>
     </dialog>
@@ -238,15 +242,15 @@
 
     <dialog class="privacy-dialog" id="privacy-dialog" aria-labelledby="privacy-title">
       <div class="dialog-head">
-        <div><span class="eyebrow">Transparency</span><h2 id="privacy-title">Privacy &amp; demonstration notice</h2></div>
+        <div><span class="eyebrow">Your data</span><h2 id="privacy-title">Privacy &amp; data notice</h2></div>
         <button class="icon-btn" type="button" data-close-dialog aria-label="Close privacy notice">${icon('close', 20)}</button>
       </div>
       <div class="dialog-body prose">
-        <p><strong>This is an independent website proposal.</strong> It is not the live Daima Communications website and has not been approved, endorsed or adopted by the business.</p>
-        <p>Cart items, wishlist selections, catalogue edits and demonstration inquiries are stored only in your browser's <code>localStorage</code>. They are not sent to a server and are not visible to Daima Communications.</p>
-        <p>The contact form is a front-end demonstration. When no backend is connected, no message is delivered. If you continue through WhatsApp after a verified number is configured, WhatsApp's own privacy terms apply.</p>
-        <p>No payment is processed and no card details are collected anywhere in this demonstration. Product images are original illustrative renders, not photographs of Daima stock or premises.</p>
-        <p>Production deployment requires a secure backend, server-side authentication and authorization, validated data storage, rate limiting, audit logging and backups. See the README for the full list.</p>
+        <p><strong>This website is operated for DAIMA COMMUNICATIONS.</strong> It is a front-end business website with no customer account or online payment system.</p>
+        <p>Cart items, wishlist selections and inquiry drafts are stored in your browser's <code>localStorage</code> so you can return to them on this device. They are not automatically sent to Daima Communications.</p>
+        <p>When you submit an inquiry, the website prepares a WhatsApp message and opens WhatsApp. Nothing reaches the business until you press Send in WhatsApp. WhatsApp's own privacy terms then apply.</p>
+        <p>No payment is processed and no card details are collected. Product images are representative illustrations, not photographs of current stock or premises.</p>
+        <p>For a privacy question or a correction, call or WhatsApp ${esc(C.contact.phoneDisplay)}.</p>
       </div>
       <div class="dialog-foot">
         <button class="btn btn-primary" type="button" data-close-dialog>Understood</button>
@@ -309,34 +313,33 @@
           <h3>Contact</h3>
           <ul class="contact-list">
             <li>${icon('store', 16)}<span>${esc(businessName)}<br><span class="muted-sm">${esc(C.business.region)}</span></span></li>
-            <li>${icon('phone', 16)}<span>${esc(C.contact.phoneDisplay)}</span></li>
-            <li>${icon('mail', 16)}<span>${esc(C.contact.emailDisplay)}</span></li>
+            <li><a href="${esc(H.phoneHref(C.contact.phone))}">${icon('phone', 16)} ${esc(C.contact.phoneDisplay)}</a></li>
+            ${C.contact.emailDisplay ? `<li>${icon('mail', 16)}<a href="mailto:${esc(C.contact.email)}">${esc(C.contact.emailDisplay)}</a></li>` : ''}
           </ul>
           <div class="footer-wa">
             ${configured
               ? `<a class="btn btn-whatsapp btn-sm" href="${esc(H.whatsAppLink(C.whatsapp.defaultMessage))}" target="_blank" rel="noopener noreferrer">${icon('whatsapp', 16)} WhatsApp us</a>`
               : `<span class="config-flag">${icon('whatsapp', 15)} WhatsApp number to be configured</span>`}
           </div>
-          <p class="footer-micro">Social links will be added only after official accounts are verified.</p>
+          <p class="footer-micro">One business number for Sirare and Kehancha.</p>
         </div>
       </div>
 
       <div class="container footer-note">
-        <p><strong>Demonstration notice:</strong> This is an independent website concept prepared as a proposal. It is not an operational Daima Communications platform. Products, prices and stock figures are illustrative sample data. Please confirm all details directly with the business.</p>
-        <p>${esc(C.developer.note)}</p>
+        <p><strong>Price and availability notice:</strong> Displayed prices are indicative and product images are representative illustrations. Call or WhatsApp ${esc(C.contact.phoneDisplay)} to confirm the exact model, current price, colour and branch availability before paying or travelling.</p>
       </div>
 
       <div class="container footer-bottom">
-        <p>© ${year} DAIMA COMMUNICATIONS concept. All product names and brands are the property of their respective owners.</p>
+        <p>&copy; ${year} DAIMA COMMUNICATIONS. All product names and brands are the property of their respective owners.</p>
         <div class="footer-legal">
-          <button class="link-button" type="button" data-open-privacy>Privacy &amp; demo notice</button>
+          <button class="link-button" type="button" data-open-privacy>Privacy &amp; data notice</button>
           <span aria-hidden="true">·</span>
-          <a href="README.md">Project documentation</a>
+          <a href="branches.html">Branches</a>
         </div>
       </div>
       <div class="container developer-credit">
         <span class="credit-rule" aria-hidden="true"></span>
-        <p>Website Concept Designed &amp; Developed by <strong>Thomas Hondo Chacha</strong> — Software Engineer.</p>
+        <p>Website Designed &amp; Developed by <strong>Thomas Hondo Chacha</strong> - Software Engineer.</p>
         <span class="credit-rule" aria-hidden="true"></span>
       </div>
     </footer>`;
@@ -367,7 +370,7 @@
     return `
       <div class="cart-line" data-line-id="${esc(p.id)}">
         <a class="cart-line-img" href="product.html?id=${encodeURIComponent(p.id)}" aria-label="View ${esc(p.name)}">
-          <img src="${esc(p.image)}" alt="${esc(p.name)} — illustrative render" width="96" height="96" loading="lazy" />
+          <img src="${esc(p.image)}" alt="${esc(p.name)} product image" width="96" height="96" loading="lazy" />
         </a>
         <div class="cart-line-main">
           <div class="cart-line-top">
@@ -385,7 +388,7 @@
             </div>
             <strong class="cart-line-price">${esc(H.formatPrice(Number(p.price) * item.line.qty))}</strong>
           </div>
-          ${compact ? '' : '<span class="micro-note">Demo price · availability to confirm</span>'}
+          ${compact ? '' : '<span class="micro-note">Indicative price &middot; availability to confirm</span>'}
         </div>
       </div>`;
   }
@@ -401,7 +404,7 @@
       body.innerHTML = `
         <div class="empty-state empty-state--drawer">
           <span class="empty-icon">${icon('bag', 28)}</span>
-          <h3>Your demo cart is empty</h3>
+          <h3>Your inquiry list is empty</h3>
           <p>Add products you would like to ask about. Nothing is purchased or paid for online.</p>
           <a class="btn btn-primary" href="products.html" data-close-dialog>Browse products ${icon('arrow', 16)}</a>
         </div>`;
@@ -438,13 +441,13 @@
         (p) => `
         <div class="wishlist-line">
           <a class="wishlist-img" href="product.html?id=${encodeURIComponent(p.id)}">
-            <img src="${esc(p.image)}" alt="${esc(p.name)} — illustrative render" width="80" height="80" loading="lazy" />
+            <img src="${esc(p.image)}" alt="${esc(p.name)} product image" width="80" height="80" loading="lazy" />
           </a>
           <div class="wishlist-main">
             <a href="product.html?id=${encodeURIComponent(p.id)}" class="wishlist-name">${esc(p.name)}</a>
-            <span class="wishlist-price">${esc(H.formatPrice(p.price))} <span class="muted-sm">demo</span></span>
+            <span class="wishlist-price">${esc(H.formatPrice(p.price))} <span class="muted-sm">indicative</span></span>
             <div class="wishlist-actions">
-              <button class="btn btn-ghost btn-xs" type="button" data-add-to-cart="${esc(p.id)}">${icon('bag', 14)} Add to cart</button>
+              <button class="btn btn-ghost btn-xs" type="button" data-add-to-cart="${esc(p.id)}">${icon('bag', 14)} Add to inquiry list</button>
               <button class="icon-btn icon-btn-sm" type="button" data-wishlist="${esc(p.id)}" aria-label="Remove ${esc(p.name)} from wishlist">${icon('trash', 15)}</button>
             </div>
           </div>
@@ -563,14 +566,14 @@
   function addToCart(id, qty, options) {
     const product = Store.getProduct(id);
     if (!product) {
-      toast('That demonstration product could not be found.', 'error');
+      toast('That product could not be found.', 'error');
       return false;
     }
     Store.addToCart(id, qty || 1);
     updateCounts();
     renderCart();
     if (!options || options.open !== false) openDialog('cart-drawer');
-    toast(`${product.name} added to your demo cart.`);
+    toast(`${product.name} added to your inquiry list.`);
     document.dispatchEvent(new CustomEvent('daima:cart-change'));
     return true;
   }
@@ -588,7 +591,7 @@
 
   function whatsApp(product, branchId) {
     if (!H.whatsAppConfigured()) {
-      toast('WhatsApp is not configured yet. Add a verified business number in js/config.js or Settings.', 'info');
+      toast('WhatsApp is not configured. Add a business number in js/config.js or Settings.', 'info');
       return false;
     }
     const message = H.buildInquiryMessage({ product, branchId });
@@ -678,7 +681,7 @@
         event.preventDefault();
         Store.removeFromCart(removeLine.getAttribute('data-remove-line'));
         renderCart();
-        toast('Removed from your demo cart.', 'info');
+        toast('Removed from your inquiry list.', 'info');
         if (document.body.dataset.page === 'cart') document.dispatchEvent(new CustomEvent('daima:cart-change'));
         return;
       }
@@ -755,7 +758,7 @@
         img.dataset.fallbackApplied = 'true';
         img.classList.add('is-fallback');
         img.src = 'assets/images/fallback.svg';
-        img.alt = 'Product image unavailable — illustrative placeholder';
+        img.alt = 'Product image unavailable';
       },
       true
     );

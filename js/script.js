@@ -37,7 +37,7 @@
     return `<button class="btn btn-ghost wa-btn ${extraClass || ''}" type="button"
       data-wa-product="${esc(product.id)}" data-wa-branch="${esc(branch || '')}"
       ${configured ? '' : 'disabled aria-disabled="true"'}
-      title="${configured ? 'Ask about this product on WhatsApp' : 'WhatsApp number not configured yet — see js/config.js'}">
+      title="${configured ? 'Ask about this product on WhatsApp' : 'WhatsApp number not configured - see js/config.js'}">
       ${UI.icon('whatsapp', 15)}<span>${esc(label || 'WhatsApp')}</span>
     </button>`;
   }
@@ -45,15 +45,15 @@
   function productCard(product, options) {
     const opts = options || {};
     const saved = Store.isWishlisted(product.id);
-    const demo = Store.getSettings().showDemoBadges;
+    const showLabel = Store.getSettings().showDemoBadges;
     const href = `product.html?id=${encodeURIComponent(product.id)}`;
     return `
     <article class="product-card" data-product-card="${esc(product.id)}">
       <div class="product-media">
         <a href="${href}" aria-label="View ${esc(product.name)}">
-          ${imageTag(product.image, `${product.name} — illustrative product render`, { width: 800, height: 800 })}
+          ${imageTag(product.image, `${product.name} product image`, { width: 800, height: 800 })}
         </a>
-        ${demo ? `<div class="product-media__badges"><span class="demo-chip">Demo listing</span></div>` : ''}
+        ${showLabel ? `<div class="product-media__badges"><span class="demo-chip">Catalogue item</span></div>` : ''}
         <button class="product-wish${saved ? ' is-active' : ''}" type="button" data-wishlist="${esc(product.id)}"
           aria-label="${saved ? 'Remove' : 'Save'} ${esc(product.name)} ${saved ? 'from' : 'to'} wishlist" aria-pressed="${saved}">
           ${UI.icon('heart', 16)}
@@ -65,15 +65,15 @@
         <span class="product-model">${esc(product.model || '')}</span>
         <div class="product-price-row">
           <span class="product-price">${esc(H.formatPrice(product.price))}</span>
-          <span class="price-demo-label">demo price</span>
+          <span class="price-demo-label">indicative</span>
         </div>
         <div class="product-availability" title="${esc(C.demo.availabilityNotice)}">
           <span class="availability-dot" aria-hidden="true"></span>
-          <span>Contact branch to confirm availability</span>
+          <span>Call or WhatsApp to confirm</span>
         </div>
         <div class="product-actions">
           <button class="btn btn-dark" type="button" data-add-to-cart="${esc(product.id)}" data-open="false">
-            ${UI.icon('bag', 14)} Add to cart
+            ${UI.icon('bag', 14)} Add to inquiry
           </button>
           ${whatsAppButton(product, opts.branch || '', '', 'WhatsApp')}
         </div>
@@ -96,10 +96,10 @@
   function categoryCard(category, index, products) {
     const count = products.filter((p) => p.category === category.id).length;
     const number = String(index + 1).padStart(2, '0');
-    const countLabel = `${count} demo ${count === 1 ? 'listing' : 'listings'}`;
+    const countLabel = `${count} ${count === 1 ? 'product' : 'products'}`;
     return `
       <a class="category-card" href="products.html?category=${encodeURIComponent(category.id)}">
-        ${imageTag(category.image, `${category.name} category — illustrative render`, { width: 800, height: 800 })}
+        ${imageTag(category.image, `${category.name} category image`, { width: 800, height: 800 })}
         <span class="category-card__num">${number}</span>
         <span class="category-card__arrow">${UI.icon('arrowUpRight', 15)}</span>
         <div class="category-card__body">
@@ -133,7 +133,7 @@
         ${imageTag(branch.image, branch.imageAlt, { width: 1200, height: 800 })}
         <div class="branch-media__top">
           <span class="branch-index">${String(index + 1).padStart(2, '0')}</span>
-          <span class="demo-chip">Concept visual</span>
+          <span class="demo-chip">Storefront illustration</span>
         </div>
       </div>
       <div class="branch-body">
@@ -142,14 +142,14 @@
             <span class="eyebrow eyebrow--plain">Daima Communications</span>
             <h3 id="branch-${branch.id}-title">${esc(branch.name)}</h3>
           </div>
-          <span class="status ${active ? 'status--warning' : 'status--neutral'}">${active ? 'Details to be verified' : 'Inactive in demo'}</span>
+          <span class="status ${active ? 'status--warning' : 'status--neutral'}">${active ? 'Call to confirm' : 'Inactive'}</span>
         </div>
         <p class="branch-location">${UI.icon('pin', 14)}<span>${esc(branch.location)}</span></p>
         <p class="branch-tagline">${esc(branch.tagline || '')}</p>
         <div class="branch-meta">
           <div class="branch-meta__row">${UI.icon('store', 14)}<span>${esc(branch.addressNote)}</span></div>
           <div class="branch-meta__row">${UI.icon('clock', 14)}<span>${esc(branch.hours)}</span></div>
-          <div class="branch-meta__row">${UI.icon('phone', 14)}<span>${esc(branch.phone || branch.phoneDisplay)}</span></div>
+          <div class="branch-meta__row">${UI.icon('phone', 14)}<span>${phoneHref ? `<a href="${esc(phoneHref)}">${esc(branch.phoneDisplay || branch.phone)}</a>` : esc(branch.phoneDisplay || 'Call the main number')}</span></div>
         </div>
         <div class="branch-availability">${UI.icon('spark', 14)}<span>${esc(branch.stockLabel || C.demo.availabilityNotice)}</span></div>
         <div class="branch-actions">
@@ -157,11 +157,11 @@
             ${UI.icon('pin', 15)} Directions
           </a>
           ${phoneHref
-            ? `<a class="btn btn-ghost" href="${esc(phoneHref)}">${UI.icon('phone', 15)} Call branch</a>`
-            : `<button class="btn btn-ghost" type="button" disabled title="Branch phone number to be configured">${UI.icon('phone', 15)} Call to be configured</button>`}
+            ? `<a class="btn btn-ghost" href="${esc(phoneHref)}">${UI.icon('phone', 15)} Call ${esc(branch.phoneDisplay || C.contact.phoneDisplay)}</a>`
+            : `<a class="btn btn-ghost" href="${esc(H.phoneHref(C.contact.phone))}">${UI.icon('phone', 15)} Call ${esc(C.contact.phoneDisplay)}</a>`}
           ${wa
             ? `<a class="btn btn-whatsapp" href="${esc(wa)}" target="_blank" rel="noopener noreferrer">${UI.icon('whatsapp', 15)} WhatsApp</a>`
-            : `<button class="btn btn-ghost" type="button" disabled title="WhatsApp number to be configured in js/config.js">${UI.icon('whatsapp', 15)} WhatsApp to be configured</button>`}
+            : `<button class="btn btn-ghost" type="button" disabled title="WhatsApp number not configured">${UI.icon('whatsapp', 15)} WhatsApp unavailable</button>`}
           <a class="btn btn-ghost" href="branches.html#${branch.id}">Branch details ${UI.icon('arrow', 14)}</a>
         </div>
       </div>
@@ -217,7 +217,7 @@
       if (value.length < 10) fail(message, 'Please add a little more detail (at least 10 characters).');
       else if (value.length > 1200) fail(message, 'Please keep your message under 1,200 characters.');
     }
-    if (consent && !consent.checked) fail(consent, 'Please acknowledge the demonstration notice before submitting.');
+    if (consent && !consent.checked) fail(consent, 'Please agree to send your inquiry through WhatsApp.');
 
     if (firstInvalid) {
       firstInvalid.focus({ preventScroll: false });
@@ -303,9 +303,14 @@
       });
 
       showFormSuccess(form, success, inquiry, {
-        waMessage: config.productId ? waMessage : undefined,
+        waMessage,
       });
-      UI.toast(`Demonstration inquiry saved locally as ${inquiry.reference}. It was not sent.`, 'info');
+      if (H.whatsAppConfigured()) {
+        window.open(H.whatsAppLink(waMessage), '_blank', 'noopener,noreferrer');
+        UI.toast('Inquiry ready. Press Send in WhatsApp to deliver it.', 'success');
+      } else {
+        UI.toast('Inquiry saved locally. WhatsApp is not configured.', 'info');
+      }
     });
   }
 
@@ -346,7 +351,7 @@
       ? list.slice(0, 8).map((product) => productCard(product, { branch: homeState.branch })).join('')
       : `<div class="empty-state">
           <span class="empty-icon">${UI.icon('search', 26)}</span>
-          <h3>No demonstration products in this view</h3>
+          <h3>No products in this view</h3>
           <p>Try another search or filter, or browse the complete catalogue.</p>
           <a class="btn btn-primary" href="products.html">View the catalogue ${UI.icon('arrow', 15)}</a>
         </div>`;
@@ -411,7 +416,7 @@
         .map((category) => {
           const options = products.filter((p) => p.category === category.id);
           if (!options.length) return '';
-          return `<optgroup label="${esc(category.name)}">${options.map((p) => `<option value="${esc(p.id)}">${esc(p.name)} — ${esc(H.formatPrice(p.price))} demo</option>`).join('')}</optgroup>`;
+          return `<optgroup label="${esc(category.name)}">${options.map((p) => `<option value="${esc(p.id)}">${esc(p.name)} — ${esc(H.formatPrice(p.price))} indicative</option>`).join('')}</optgroup>`;
         })
         .join('');
       productSelect.innerHTML = `<option value="">General enquiry / not sure yet</option>${groups}`;
@@ -420,7 +425,7 @@
     initInquiryForm({ formId: 'contact-form', successId: 'contact-success' });
     renderFeatured();
 
-    // Keep the flagship spotlight tied to the same demonstration data store.
+    // Keep the flagship spotlight tied to the same product store.
     const spotlight = Store.getProduct('p01') || products[0];
     if (spotlight) {
       const price = document.querySelector('[data-spotlight-price]');
@@ -432,7 +437,7 @@
       const image = document.querySelector('.spotlight-media img');
       if (image && spotlight.image) {
         image.src = spotlight.gallery && spotlight.gallery[1] ? spotlight.gallery[1] : spotlight.image;
-        image.alt = `${spotlight.name} — illustrative product render`;
+        image.alt = `${spotlight.name} product image`;
       }
       const features = document.querySelector('.spotlight-features');
       if (features && Array.isArray(spotlight.highlights) && spotlight.highlights.length) {
@@ -598,14 +603,14 @@
     const countEl = byId('catalogue-count');
     const count = list.length;
     if (countEl) {
-      countEl.innerHTML = `<strong>${count}</strong> demonstration ${count === 1 ? 'product' : 'products'}`;
+      countEl.innerHTML = `<strong>${count}</strong> ${count === 1 ? 'product' : 'products'}`;
     }
     grid.innerHTML = shown.length
       ? shown.map((product) => productCard(product, { branch: catState.branch })).join('')
       : `<div class="empty-state">
           <span class="empty-icon">${UI.icon('search', 26)}</span>
           <h3>No products match those filters</h3>
-          <p>Try a different search term, remove a filter, or browse the full demonstration catalogue.</p>
+          <p>Try a different search term, remove a filter, or browse the full catalogue.</p>
           <button class="btn btn-primary" type="button" data-clear-filters>Reset filters ${UI.icon('refresh', 15)}</button>
         </div>`;
     const more = byId('load-more-wrap');
@@ -750,11 +755,11 @@
 
     // Reflect the current path/query in the document title for search clarity.
     if (catState.q) {
-      document.title = `Search “${catState.q}” — demonstration catalogue | DAIMA COMMUNICATIONS`;
+      document.title = `Search “${catState.q}” | DAIMA COMMUNICATIONS`;
     }
     const meta = document.querySelector('meta[name="description"]');
     if (meta) {
-      meta.content = 'Search and compare demonstration smartphone, audio, charging and accessory listings from Daima Communications. Confirm all details with the branch.';
+      meta.content = 'Search and compare phones, audio, charging and accessories from Daima Communications. Call or WhatsApp 0701 127 577 to confirm price and availability.';
     }
   }
 
@@ -769,7 +774,7 @@
         <div class="empty-state" style="margin-block:60px">
           <span class="empty-icon">${UI.icon('search', 26)}</span>
           <h1 style="font-size:1.7rem;margin-bottom:8px">Product not found</h1>
-          <p>This demonstration listing may have been removed or the link may be incomplete.</p>
+          <p>This product may have been removed or the link may be incomplete.</p>
           <a class="btn btn-primary" href="products.html">Browse the catalogue ${UI.icon('arrow', 15)}</a>
         </div>
       </div>`;
@@ -782,9 +787,9 @@
     const product = id ? Store.getProduct(id) : null;
     if (!product) { renderProductNotFound(); return; }
 
-    document.title = `${product.name} — demonstration listing | DAIMA COMMUNICATIONS`;
+    document.title = `${product.name} - Product Details | DAIMA COMMUNICATIONS`;
     const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.content = `${product.name} by ${product.brand}. This is an illustrative demonstration listing — confirm price, specification, availability and warranty with Daima Communications.`;
+    if (meta) meta.content = `${product.name} by ${product.brand} at Daima Communications. Call or WhatsApp 0701 127 577 to confirm price, specification, availability and warranty.`;
 
     const branchList = Store.getBranches().filter((branch) => branch.active !== false);
     const branches = Store.getBranches().find((b) => b.active !== false) || Store.getBranches()[0];
@@ -813,9 +818,9 @@
       <div class="product-detail-grid">
         <div class="product-gallery">
           <div class="gallery-main">
-            <img id="gallery-main-image" src="${esc(gallery[0])}" alt="${esc(product.name)} — illustrative product render" width="800" height="800" />
-            <span class="gallery-main__tag demo-chip">Illustrative render</span>
-            <span class="gallery-main__zoom">${UI.icon('eye', 13)} Concept visual</span>
+            <img id="gallery-main-image" src="${esc(gallery[0])}" alt="${esc(product.name)} product image" width="800" height="800" />
+            <span class="gallery-main__tag demo-chip">Representative image</span>
+            <span class="gallery-main__zoom">${UI.icon('eye', 13)} View image</span>
           </div>
           ${gallery.length > 1 ? `<div class="gallery-thumbs" role="group" aria-label="Product images">
             ${gallery.map((src, index) => `<button class="gallery-thumb${index === 0 ? ' is-active' : ''}" type="button" data-gallery-src="${esc(src)}" aria-label="View image ${index + 1} of ${gallery.length}" aria-pressed="${index === 0}"><img src="${esc(src)}" alt="" width="120" height="120" loading="lazy" /></button>`).join('')}
@@ -837,7 +842,7 @@
 
           <div class="product-price-block">
             <span class="price">${esc(H.formatPrice(product.price))}</span>
-            <span class="price-note">illustrative demo price</span>
+            <span class="price-note">indicative price</span>
           </div>
           <p class="product-demo-note">${UI.icon('spark', 13)}<span>${esc(C.demo.priceNotice)}</span></p>
 
@@ -846,11 +851,11 @@
           <div class="availability-panel">
             <div class="availability-panel__head">
               <h2>Branch availability</h2>
-              <span>Not verified stock data</span>
+              <span>Confirm by phone or WhatsApp</span>
             </div>
             ${branchList.map((branch) => `<div class="availability-row">
               <span class="availability-row__branch">${UI.icon('pin', 14)} ${esc(branch.name)}</span>
-              <span class="availability-row__status">Contact branch to confirm</span>
+              <span class="availability-row__status">Call ${esc(C.contact.phoneDisplay)}</span>
             </div>`).join('')}
             <div class="availability-foot">
               <span class="micro-note">${esc(C.demo.availabilityNotice)}</span>
@@ -872,7 +877,7 @@
               <button type="button" id="detail-qty-up" aria-label="Increase quantity">${UI.icon('plus', 15)}</button>
             </div>
             <button class="btn btn-primary btn-lg" type="button" data-add-to-cart="${esc(product.id)}" data-qty-source="#detail-qty">
-              ${UI.icon('bag', 16)} Add to demonstration cart
+              ${UI.icon('bag', 16)} Add to inquiry list
             </button>
           </div>
           <div class="product-buy-secondary">
@@ -881,12 +886,12 @@
             </button>
             ${whatsAppButton(product, '', '', 'Ask on WhatsApp')}
           </div>
-          ${waConfigured ? '' : `<p class="micro-note" style="margin-top:8px">WhatsApp enquiries will activate once a verified business number is configured in <code>js/config.js</code>.</p>`}
+          ${waConfigured ? '' : `<p class="micro-note" style="margin-top:8px">WhatsApp enquiries will activate once a business number is configured in <code>js/config.js</code>.</p>`}
 
           <div class="product-trust">
-            <div class="product-trust__item">${UI.icon('shield', 15)}<span><strong>Nothing is charged online.</strong> The cart is a demonstration for requesting availability, not an order.</span></div>
-            <div class="product-trust__item">${UI.icon('store', 15)}<span><strong>Two proposed branch locations.</strong> Confirm the exact model, colour and price with the team before travelling.</span></div>
-            <div class="product-trust__item">${UI.icon('spark', 15)}<span><strong>Illustrative product render.</strong> ${esc(C.demo.imageNotice)}</span></div>
+            <div class="product-trust__item">${UI.icon('shield', 15)}<span><strong>Nothing is charged online.</strong> The inquiry list helps the team confirm what you need; it is not an order.</span></div>
+            <div class="product-trust__item">${UI.icon('store', 15)}<span><strong>Branches in Sirare and Kehancha.</strong> Confirm the exact model, colour and price with the team before travelling.</span></div>
+            <div class="product-trust__item">${UI.icon('spark', 15)}<span><strong>Representative product image.</strong> ${esc(C.demo.imageNotice)}</span></div>
           </div>
         </div>
       </div>
@@ -894,20 +899,20 @@
       <div class="product-detail-cols">
         <section class="product-section" aria-labelledby="about-product">
           <span class="eyebrow">Overview</span>
-          <h2 id="about-product">About this demonstration listing</h2>
+          <h2 id="about-product">About this product</h2>
           <p class="product-description">${esc(product.description)}</p>
           <div class="notice notice--blue" style="margin-top:18px">
             ${UI.icon('spark', 15)}
-            <span><strong>Specifications are illustrative.</strong> ${esc(product.specsNote || '')}</span>
+            <span><strong>Specifications are indicative.</strong> ${esc(product.specsNote || 'Confirm the exact variant and specification with the team.')}</span>
           </div>
         </section>
         <section class="product-section" aria-labelledby="product-specs">
           <span class="eyebrow">At a glance</span>
-          <h2 id="product-specs">Demonstration details</h2>
-          <dl class="spec-grid">${specRows || '<div class="spec-row"><dt>Details</dt><dd>To be confirmed with the branch.</dd></div>'}</dl>
+          <h2 id="product-specs">Product details</h2>
+          <dl class="spec-grid">${specRows || '<div class="spec-row"><dt>Details</dt><dd>Ask the branch for current details.</dd></div>'}</dl>
           <div class="notice" style="margin-top:16px">
             ${UI.icon('phone', 15)}
-            <span><strong>Colour availability to be confirmed.</strong> Ask the branch which colours and variants are currently available.</span>
+            <span><strong>Colours vary by model and branch.</strong> Ask the branch which colours and variants are currently available.</span>
           </div>
         </section>
       </div>
@@ -915,7 +920,7 @@
       <div class="product-inquiry-strip">
         <div>
           <h3>Have a specific question about this product?</h3>
-          <p>Send a demonstration inquiry to test the workflow — or use WhatsApp once a verified business number is configured.</p>
+          <p>Call or WhatsApp 0701 127 577, or prepare a message below and send it when WhatsApp opens.</p>
         </div>
         <a class="btn btn-dark" href="#product-inquiry">Ask about this product ${UI.icon('arrow', 15)}</a>
       </div>
@@ -925,7 +930,7 @@
           <div class="section-head__main">
             <span class="eyebrow">Product inquiry</span>
             <h2 class="section-title" id="product-inquiry-title" style="font-size:clamp(1.5rem,2.4vw,2rem)">Ask about the ${esc(product.name)}</h2>
-            <p class="section-lede" style="margin-top:10px">This form saves a demonstration inquiry in your browser. It is not delivered to Daima Communications.</p>
+            <p class="section-lede" style="margin-top:10px">Submitting prepares a WhatsApp message to Daima Communications. You press Send in WhatsApp to deliver it.</p>
           </div>
         </div>
         <div class="form-card" style="max-width:760px">
@@ -956,22 +961,22 @@
               <div class="field">
                 <label class="checkbox-field">
                   <input type="checkbox" name="consent" required />
-                  <span>I understand this is a demonstration: the inquiry is stored only in this browser and is not sent to the business.</span>
+                  <span>I agree to my inquiry being prepared in WhatsApp so I can send it to Daima Communications.</span>
                 </label>
                 <span class="field-error" role="alert"></span>
               </div>
               <div class="form-submit">
-                <button class="btn btn-primary" type="submit">Save demonstration inquiry ${UI.icon('arrow', 15)}</button>
+                <button class="btn btn-primary" type="submit">Prepare WhatsApp inquiry ${UI.icon('arrow', 15)}</button>
               </div>
             </div>
           </form>
           <div class="form-success" id="product-inquiry-success">
             <span class="form-success__icon">${UI.icon('check', 26)}</span>
-            <h3>Demonstration inquiry saved</h3>
-            <p>This inquiry has been saved in your browser only. <strong>It has not been sent to Daima Communications.</strong></p>
+            <h3>Inquiry ready to send</h3>
+            <p>WhatsApp should open with your message ready. <strong>Press Send there to deliver it to Daima Communications.</strong></p>
             <span class="reference" data-inquiry-reference>Reference —</span>
             <div class="form-success__actions">
-              <a class="btn btn-whatsapp" data-inquiry-whatsapp href="#contact" target="_blank" rel="noopener noreferrer" hidden>${UI.icon('whatsapp', 15)} Continue on WhatsApp</a>
+              <a class="btn btn-whatsapp" data-inquiry-whatsapp href="#contact" target="_blank" rel="noopener noreferrer" hidden>${UI.icon('whatsapp', 15)} Open WhatsApp</a>
               <button class="btn btn-ghost" type="button" data-inquiry-reset>Send another inquiry</button>
               <a class="btn btn-ghost" href="cart.html">View cart</a>
             </div>
@@ -983,7 +988,7 @@
         <div class="section-head section-head--split" style="margin-bottom:22px">
           <div class="section-head__main">
             <span class="eyebrow">Continue exploring</span>
-            <h2 class="section-title" id="related-title" style="font-size:clamp(1.5rem,2.4vw,2rem)">Related demo listings</h2>
+            <h2 class="section-title" id="related-title" style="font-size:clamp(1.5rem,2.4vw,2rem)">Related products</h2>
           </div>
           <div class="section-head__side"><a class="text-link" href="products.html">All products ${UI.icon('arrow', 14)}</a></div>
         </div>
@@ -994,9 +999,9 @@
     <div class="sticky-buy" aria-label="Quick purchase actions">
       <div class="sticky-buy__price">
         <strong>${esc(H.formatPrice(product.price))}</strong>
-        <span>demo price · availability to confirm</span>
+        <span>indicative price · availability to confirm</span>
       </div>
-      <button class="btn btn-primary" type="button" data-add-to-cart="${esc(product.id)}" data-qty-source="#detail-qty">${UI.icon('bag', 15)} Add to cart</button>
+      <button class="btn btn-primary" type="button" data-add-to-cart="${esc(product.id)}" data-qty-source="#detail-qty">${UI.icon('bag', 15)} Add to inquiry</button>
     </div>`;
 
     // Set the branch select to a URL-provided preference.
@@ -1081,14 +1086,14 @@
     host.innerHTML = items.map(({ line, product }) => `
       <div class="cart-page-line" data-line-id="${esc(product.id)}">
         <a class="cart-page-line__img" href="product.html?id=${encodeURIComponent(product.id)}" aria-label="View ${esc(product.name)}">
-          ${imageTag(product.image, `${product.name} — illustrative product render`, { width: 200, height: 200 })}
+          ${imageTag(product.image, `${product.name} product image`, { width: 200, height: 200 })}
         </a>
         <div class="cart-page-line__main">
           <div class="cart-page-line__top">
             <div>
               <span class="product-brand" style="margin-bottom:3px">${esc(product.brand)}</span>
               <a class="cart-page-line__name" href="product.html?id=${encodeURIComponent(product.id)}">${esc(product.name)}</a>
-              <div class="cart-page-line__meta">${esc(product.model)} · ${esc(product.sku)} · demo listing</div>
+              <div class="cart-page-line__meta">${esc(product.model)} · ${esc(product.sku)}</div>
             </div>
             <button class="icon-btn icon-btn-sm" type="button" data-remove-line="${esc(product.id)}" aria-label="Remove ${esc(product.name)}">${UI.icon('trash', 16)}</button>
           </div>
@@ -1100,7 +1105,7 @@
             </div>
             <div>
               <span class="cart-page-line__price">${esc(H.formatPrice(Number(product.price) * line.qty))}</span>
-              <span class="cart-page-line__each">${esc(H.formatPrice(product.price))} each (demo)</span>
+              <span class="cart-page-line__each">${esc(H.formatPrice(product.price))} each (indicative)</span>
             </div>
           </div>
         </div>
@@ -1112,7 +1117,7 @@
     if (waBtn) {
       const configured = H.whatsAppConfigured();
       waBtn.disabled = !configured;
-      waBtn.title = configured ? 'Send this demonstration cart as a WhatsApp message' : 'WhatsApp number not configured yet — see js/config.js';
+      waBtn.title = configured ? 'Send this inquiry list as a WhatsApp message' : 'WhatsApp number not configured - see js/config.js';
     }
     UI.updateCounts();
   }
@@ -1129,34 +1134,39 @@
         event.preventDefault();
         const items = cartItems();
         if (!items.length) {
-          UI.toast('Your demonstration cart is empty.', 'error');
+          UI.toast('Your inquiry list is empty.', 'error');
           return;
         }
-        if (!validateInquiryForm(form)) return;
+        if (!validateInquiryForm(form, { messageOptional: true })) return;
 
         const data = new FormData(form);
         const branchId = String(data.get('branch') || '');
         const name = String(data.get('name') || '').trim();
         const phone = String(data.get('phone') || '').trim();
         const note = String(data.get('message') || '').trim();
-        const itemSummary = items.map(({ line, product }) => `${product.name} × ${line.qty} (${H.formatPrice(product.price)} each, demo)`).join('; ');
-        const message = `Cart availability inquiry — ${items.length} demo ${items.length === 1 ? 'line' : 'lines'}. Items: ${itemSummary}${note ? '. Note: ' + note : ''}`;
+        const itemSummary = items.map(({ line, product }) => `${product.name} x ${line.qty} (${H.formatPrice(product.price)} each, indicative)`).join('; ');
+        const message = `Availability inquiry - ${items.length} ${items.length === 1 ? 'item' : 'items'}. Items: ${itemSummary}${note ? '. Note: ' + note : ''}`;
         const inquiry = Store.addInquiry({
           name,
           phone,
           branch: branchId,
           message,
           productId: '',
-          productName: `Cart inquiry — ${items.length} ${items.length === 1 ? 'item' : 'items'}`,
+          productName: `Inquiry list - ${items.length} ${items.length === 1 ? 'item' : 'items'}`,
         });
-        const waMessage = H.buildInquiryMessage({ items, branchId, customerName: name, message: note });
+        const waMessage = H.buildInquiryMessage({ items: items.map(({ line, product }) => ({ product, qty: line.qty })), branchId, customerName: name, message: note });
         if (success) {
           showFormSuccess(form, success, inquiry, { waMessage });
           const container = byId('cart-summary-body');
           if (container) container.classList.add('is-submitted');
         }
+        if (H.whatsAppConfigured()) {
+          window.open(H.whatsAppLink(waMessage), '_blank', 'noopener,noreferrer');
+          UI.toast(`Inquiry ${inquiry.reference} ready. Press Send in WhatsApp to deliver it.`, 'success');
+        } else {
+          UI.toast(`Inquiry ${inquiry.reference} saved locally. WhatsApp is not configured.`, 'info');
+        }
         UI.updateCounts();
-        UI.toast(`Demo inquiry ${inquiry.reference} saved locally. No message was sent.`, 'info');
       });
     }
 
@@ -1164,12 +1174,12 @@
       const items = cartItems();
       if (!items.length) return;
       if (!H.whatsAppConfigured()) {
-        UI.toast('WhatsApp is not configured yet. Add a verified number in Settings or js/config.js.', 'info');
+        UI.toast('WhatsApp is not configured. Add a business number in Settings or js/config.js.', 'info');
         return;
       }
       const branchId = byId('cart-branch')?.value || '';
       const note = byId('cart-note')?.value || '';
-      const waMessage = H.buildInquiryMessage({ items, branchId, message: note });
+      const waMessage = H.buildInquiryMessage({ items: items.map(({ line, product }) => ({ product, qty: line.qty })), branchId, message: note });
       window.open(H.whatsAppLink(waMessage), '_blank', 'noopener,noreferrer');
     });
 
@@ -1187,7 +1197,7 @@
     <article class="branch-profile" id="${esc(branch.id)}" aria-labelledby="profile-${branch.id}">
       <div class="branch-profile__media">
         ${imageTag(branch.image, branch.imageAlt, { width: 1200, height: 800 })}
-        <span class="branch-profile__tag">Concept visual — not an actual branch photograph</span>
+        <span class="branch-profile__tag">Storefront illustration</span>
       </div>
       <div class="branch-profile__body">
         <span class="eyebrow">Branch ${String(index + 1).padStart(2, '0')}</span>
@@ -1195,16 +1205,16 @@
         <p class="branch-location">${UI.icon('pin', 14)}<span>${esc(branch.location)}</span></p>
         <p class="branch-tagline" style="margin-top:12px;color:var(--muted);font-size:13px;max-width:52ch">${esc(branch.tagline || '')}</p>
         <dl class="branch-facts">
-          <div class="branch-fact"><dt>Street address</dt><dd class="is-placeholder">${esc(branch.addressNote)}</dd></div>
-          <div class="branch-fact"><dt>Opening hours</dt><dd class="is-placeholder">${esc(branch.hours)}</dd></div>
-          <div class="branch-fact"><dt>Phone</dt><dd class="${branch.phone ? '' : 'is-placeholder'}">${esc(branch.phone || branch.phoneDisplay)}</dd></div>
+          <div class="branch-fact"><dt>Location</dt><dd>${esc(branch.addressNote)}</dd></div>
+          <div class="branch-fact"><dt>Opening hours</dt><dd>${esc(branch.hours)}</dd></div>
+          <div class="branch-fact"><dt>Business number</dt><dd>${phoneHref ? `<a href="${esc(phoneHref)}">${esc(branch.phoneDisplay || branch.phone)}</a>` : esc(branch.phoneDisplay || C.contact.phoneDisplay)}</dd></div>
           <div class="branch-fact"><dt>Product availability</dt><dd>${esc(branch.stockLabel || C.demo.availabilityNotice)}</dd></div>
         </dl>
-        <div class="branch-availability">${UI.icon('spark', 14)}<span>Branch inventory has not been verified. Please contact the branch before making a trip.</span></div>
+        <div class="branch-availability">${UI.icon('spark', 14)}<span>Call or WhatsApp ${esc(C.contact.phoneDisplay)} to confirm availability and today's opening hours before travelling.</span></div>
         <div class="branch-actions">
           <a class="btn btn-dark" href="${directionsUrl(branch)}" target="_blank" rel="noopener noreferrer">${UI.icon('pin', 15)} Search directions</a>
-          ${phoneHref ? `<a class="btn btn-ghost" href="${esc(phoneHref)}">${UI.icon('phone', 15)} Call branch</a>` : `<button class="btn btn-ghost" type="button" disabled title="Phone number to be configured">${UI.icon('phone', 15)} Call to be configured</button>`}
-          ${wa ? `<a class="btn btn-whatsapp" href="${esc(wa)}" target="_blank" rel="noopener noreferrer">${UI.icon('whatsapp', 15)} WhatsApp ${esc(branch.name)}</a>` : `<button class="btn btn-ghost" type="button" disabled title="WhatsApp number to be configured">${UI.icon('whatsapp', 15)} WhatsApp to be configured</button>`}
+          ${phoneHref ? `<a class="btn btn-ghost" href="${esc(phoneHref)}">${UI.icon('phone', 15)} Call ${esc(branch.phoneDisplay || C.contact.phoneDisplay)}</a>` : `<a class="btn btn-ghost" href="${esc(H.phoneHref(C.contact.phone))}">${UI.icon('phone', 15)} Call ${esc(C.contact.phoneDisplay)}</a>`}
+          ${wa ? `<a class="btn btn-whatsapp" href="${esc(wa)}" target="_blank" rel="noopener noreferrer">${UI.icon('whatsapp', 15)} WhatsApp ${esc(branch.name)}</a>` : `<button class="btn btn-ghost" type="button" disabled title="WhatsApp number not configured">${UI.icon('whatsapp', 15)} WhatsApp unavailable</button>`}
           <a class="btn btn-ghost" href="products.html?branch=${encodeURIComponent(branch.id)}">Browse catalogue ${UI.icon('arrow', 14)}</a>
         </div>
         <p class="micro-note" style="margin-top:14px">${esc(branch.addressNote)} Directions open a location search, not a confirmed pin.</p>

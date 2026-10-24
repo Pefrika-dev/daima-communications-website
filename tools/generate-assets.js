@@ -1,8 +1,8 @@
 /*
  * DAIMA COMMUNICATIONS — original SVG art asset generator
  * -------------------------------------------------------
- * Produces original, licence-free illustrative product renders and concept
- * visuals used across the demonstration. These are NOT photographs of Daima
+ * Produces original, licence-free illustrative product renders and storefront
+ * visuals used across the website. These are NOT photographs of Daima
  * stock or premises. Run: node tools/generate-assets.js
  */
 const fs = require('fs');
@@ -141,7 +141,7 @@ function phoneBack(p, cx = 400, cy = 392, rot = -9, scale = 1, w = 300, h = 610)
       <circle cx="120" cy="42" r="7" fill="#f7e8c4" opacity=".85"/>
       <circle cx="120" cy="42" r="3" fill="#ffffff"/>
     </g>
-    <text x="30" y="205" fill="#ffffff" fill-opacity=".22" font-family="Segoe UI, Arial" font-size="9" letter-spacing="2">DEMO RENDER</text>
+    <text x="30" y="205" fill="#ffffff" fill-opacity=".22" font-family="Segoe UI, Arial" font-size="9" letter-spacing="2">PRODUCT IMAGE</text>
     <rect x="${w / 2 - 42}" y="${h - 18}" width="84" height="3" rx="1.5" fill="#ffffff" opacity=".28"/>
   </g>`;
 }
@@ -200,7 +200,7 @@ function featurePhone(p, cx = 400, cy = 400, rot = -7, scale = 1, body = '#232a3
     <rect x="22" y="24" width="${w - 44}" height="152" rx="9" fill="url(#${p}-screen)"/>
     <rect x="22" y="24" width="${w - 44}" height="152" rx="9" fill="#ffffff" opacity=".12"/>
     <text x="${w / 2}" y="78" text-anchor="middle" fill="#ffffff" fill-opacity=".92" font-family="Segoe UI, Arial" font-size="15" font-weight="600">Daima</text>
-    <text x="${w / 2}" y="98" text-anchor="middle" fill="#ffffff" fill-opacity=".55" font-family="Segoe UI, Arial" font-size="9" letter-spacing="2">DEMO</text>
+    <text x="${w / 2}" y="98" text-anchor="middle" fill="#ffffff" fill-opacity=".55" font-family="Segoe UI, Arial" font-size="9" letter-spacing="2">DAIMA</text>
     <text x="${w / 2}" y="150" text-anchor="middle" fill="#ffffff" fill-opacity=".8" font-family="Segoe UI, Arial" font-size="22" font-weight="600">${timeNow()}</text>
     <circle cx="${w / 2}" cy="202" r="16" fill="#3a4454" stroke="#ffffff" stroke-opacity=".18"/>
     <g transform="translate(${w / 2} ${h - 188})">${keys.join('')}</g>
@@ -293,7 +293,7 @@ function powerBank(p, o = {}) {
     <path d="M-122 -160 L122 -192 L122 -120 L-122 -88 Z" fill="#ffffff" opacity=".05"/>
     <rect x="-84" y="-140" width="168" height="88" rx="14" fill="#0b1018" stroke="#ffffff" stroke-opacity=".1"/>
     <text x="0" y="-96" text-anchor="middle" fill="${accent}" font-family="Segoe UI, Arial" font-size="30" font-weight="700">${o.capacity || '20K'}</text>
-    <text x="0" y="-72" text-anchor="middle" fill="#ffffff" fill-opacity=".45" font-family="Segoe UI, Arial" font-size="10" letter-spacing="3">mAh · DEMO</text>
+    <text x="0" y="-72" text-anchor="middle" fill="#ffffff" fill-opacity=".45" font-family="Segoe UI, Arial" font-size="10" letter-spacing="3">mAh · DAIMA</text>
     <g transform="translate(-44 30)">
       ${[0, 1, 2, 3].map((i) => `<rect x="${i * 26}" y="0" width="18" height="6" rx="3" fill="${i < 3 ? accent : '#37404f'}"/>`).join('')}
     </g>
@@ -314,7 +314,7 @@ function charger(p, o = {}) {
     <rect x="-104" y="-104" width="208" height="208" rx="44" fill="${body}" stroke="${edge}" stroke-width="2"/>
     <rect x="-96" y="-96" width="192" height="192" rx="38" fill="none" stroke="#ffffff" stroke-opacity=".65"/>
     <text x="0" y="-32" text-anchor="middle" fill="#2a3342" font-family="Segoe UI, Arial" font-size="13" font-weight="700" letter-spacing="1">${o.label || '30W'}</text>
-    <text x="0" y="-14" text-anchor="middle" fill="#6b7688" font-family="Segoe UI, Arial" font-size="8" letter-spacing="2">USB-C · DEMO</text>
+    <text x="0" y="-14" text-anchor="middle" fill="#6b7688" font-family="Segoe UI, Arial" font-size="8" letter-spacing="2">USB-C · DAIMA</text>
     <rect x="-48" y="20" width="96" height="22" rx="11" fill="#0a0f17"/>
     <rect x="-42" y="25" width="84" height="12" rx="6" fill="#232c38"/>
     <rect x="-14" y="29" width="28" height="4" rx="2" fill="${accent}" opacity=".6"/>
@@ -358,7 +358,7 @@ function phoneCase(p, o = {}) {
     <path d="M-130 -120 L-60 -252" stroke="#ffffff" stroke-opacity=".5" stroke-width="3"/>
     <path d="M-20 250 L110 120" stroke="#ffffff" stroke-opacity=".28" stroke-width="2"/>
     <rect x="-130" y="-252" width="260" height="504" rx="52" fill="url(#${p}-sweep)" opacity=".2"/>
-    <text x="0" y="210" text-anchor="middle" fill="#233149" fill-opacity=".45" font-family="Segoe UI, Arial" font-size="10" letter-spacing="4">DEMO · CASE</text>
+    <text x="0" y="210" text-anchor="middle" fill="#233149" fill-opacity=".45" font-family="Segoe UI, Arial" font-size="10" letter-spacing="4">DAIMA · CASE</text>
   </g>
   <g opacity=".6">
     <circle cx="585" cy="240" r="4" fill="${o.edge || '#8db6ec'}"/>
@@ -398,7 +398,7 @@ function watch(p, o = {}) {
       <circle cx="0" cy="-8" r="66" fill="none" stroke="${accent}" stroke-opacity=".18" stroke-width="10"/>
       <path d="M0 -90 A82 82 0 0 1 72 24" fill="none" stroke="${accent}" stroke-width="7" stroke-linecap="round"/>
       <text x="0" y="4" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Arial" font-size="38" font-weight="600">9:41</text>
-      <text x="0" y="34" text-anchor="middle" fill="${accent}" font-family="Segoe UI, Arial" font-size="10" letter-spacing="2">DEMO</text>
+      <text x="0" y="34" text-anchor="middle" fill="${accent}" font-family="Segoe UI, Arial" font-size="10" letter-spacing="2">DAIMA</text>
       <rect x="-26" y="66" width="52" height="4" rx="2" fill="#ffffff" opacity=".35"/>
       <rect x="118" y="-46" width="7" height="38" rx="3.5" fill="${caseCol}" stroke="#ffffff" stroke-opacity=".2"/>
       <rect x="118" y="18" width="7" height="18" rx="3.5" fill="${caseCol}"/>
@@ -480,7 +480,7 @@ function hub(p) {
     <rect x="-122" y="7" width="18" height="10" rx="4" fill="#0a0e15"/>
     <path d="M190 16 C 260 6, 268 -58, 214 -92" fill="none" stroke="#2b3340" stroke-width="10" stroke-linecap="round"/>
     <rect x="196" y="-116" width="38" height="18" rx="7" fill="#d7dde5" transform="rotate(-20 215 -107)"/>
-    <text x="-60" y="-38" fill="#4a5565" font-family="Segoe UI, Arial" font-size="9" letter-spacing="3">MULTI-PORT · DEMO</text>
+    <text x="-60" y="-38" fill="#4a5565" font-family="Segoe UI, Arial" font-size="9" letter-spacing="3">MULTI-PORT · DAIMA</text>
   </g>`;
 }
 
@@ -496,7 +496,7 @@ function stand(p) {
     <rect x="-136" y="-22" width="22" height="130" rx="10" fill="#bcc6d2"/>
     <rect x="114" y="-22" width="22" height="130" rx="10" fill="#bcc6d2"/>
     <path d="M-178 -120 L178 -120" stroke="#ffffff" stroke-opacity=".5" stroke-width="2"/>
-    <text x="0" y="60" text-anchor="middle" fill="#6b7686" font-family="Segoe UI, Arial" font-size="9" letter-spacing="4">ALUMINIUM · DEMO</text>
+    <text x="0" y="60" text-anchor="middle" fill="#6b7686" font-family="Segoe UI, Arial" font-size="9" letter-spacing="4">ALUMINIUM · DAIMA</text>
   </g>`;
 }
 
@@ -515,7 +515,7 @@ function router(p) {
     <circle cx="-88" cy="-24" r="5" fill="#285fee"/>
     <circle cx="-68" cy="-24" r="5" fill="#39c98a"/>
     <circle cx="-48" cy="-24" r="5" fill="#ffc247"/>
-    <text x="80" y="-18" fill="#7a8698" font-family="Segoe UI, Arial" font-size="9" letter-spacing="2">DEMO</text>
+    <text x="80" y="-18" fill="#7a8698" font-family="Segoe UI, Arial" font-size="9" letter-spacing="2">DAIMA</text>
     <path d="M-152 -10 L152 -10" stroke="#dfe6ef" stroke-width="2"/>
     <path d="M-152 42 L152 42" stroke="#ffffff" stroke-opacity=".7" stroke-width="2"/>
   </g>`;
@@ -643,7 +643,7 @@ function renderProduct(spec) {
 
   fs.writeFileSync(
     path.join(OUT, `${spec.slug}.svg`),
-    svgDoc(`${defs}\n${stageMarkup}\n${art}`, 800, 800, 'Illustrative product render — demonstration catalogue'),
+    svgDoc(`${defs}\n${stageMarkup}\n${art}`, 800, 800, 'Product image from the Daima Communications catalogue'),
     'utf8'
   );
 
@@ -732,7 +732,7 @@ function buildHero() {
       <circle cx="-38" cy="-290" r="9" fill="#fff7dd"/><circle cx="-38" cy="-290" r="4" fill="#fff"/>
     </g>
     <path d="M-164 60 L164 -120 L164 -40 L-164 150 Z" fill="#ffffff" opacity=".07"/>
-    <text x="-164" y="300" fill="#ffffff" fill-opacity=".16" font-family="Segoe UI, Arial" font-size="11" letter-spacing="5">DAIMA · CONCEPT</text>
+    <text x="-164" y="300" fill="#ffffff" fill-opacity=".16" font-family="Segoe UI, Arial" font-size="11" letter-spacing="5">DAIMA · MIGORI</text>
   </g>`;
 
   const frontPhone = `<g transform="translate(612 640) rotate(-7) scale(1.28)" filter="url(#hero-sh)">
@@ -798,7 +798,7 @@ function buildHero() {
     <circle cx="0" cy="-8" r="66" fill="none" stroke="#48b9ff" stroke-opacity=".2" stroke-width="10"/>
     <path d="M0 -90 A82 82 0 0 1 72 24" fill="none" stroke="#48b9ff" stroke-width="7" stroke-linecap="round"/>
     <text x="0" y="4" text-anchor="middle" fill="#fff" font-family="Segoe UI, Arial" font-size="38" font-weight="600">9:41</text>
-    <text x="0" y="34" text-anchor="middle" fill="#48b9ff" font-family="Segoe UI, Arial" font-size="10" letter-spacing="2">DEMO</text>
+    <text x="0" y="34" text-anchor="middle" fill="#48b9ff" font-family="Segoe UI, Arial" font-size="10" letter-spacing="2">DAIMA</text>
   </g>`;
 
   const particles = `
@@ -826,7 +826,7 @@ function buildHero() {
 buildHero();
 
 /* ------------------------------------------------------------------ */
-/* Branch concept visuals                                              */
+/* Branch storefront illustrations                                    */
 /* ------------------------------------------------------------------ */
 
 function branchScene(slug, opts) {
@@ -877,7 +877,7 @@ function branchScene(slug, opts) {
     <rect x="176" y="268" width="848" height="296" rx="4" fill="#1a2232"/>
     <rect x="176" y="268" width="848" height="46" fill="url(#${p}-sign)"/>
     <text x="600" y="298" text-anchor="middle" fill="#eef4ff" font-family="Segoe UI, Arial" font-size="23" font-weight="700" letter-spacing="8">DAIMA</text>
-    <text x="600" y="309" text-anchor="middle" fill="#7fa6e0" font-family="Segoe UI, Arial" font-size="5.5" letter-spacing="5">COMMUNICATIONS · CONCEPT</text>
+    <text x="600" y="309" text-anchor="middle" fill="#7fa6e0" font-family="Segoe UI, Arial" font-size="5.5" letter-spacing="5">COMMUNICATIONS · MIGORI</text>
     <rect x="160" y="308" width="880" height="10" fill="#0d1420"/>
     <rect x="160" y="308" width="880" height="3" fill="${opts.accent}" opacity=".8"/>
     <rect x="196" y="330" width="808" height="218" fill="url(#${p}-glass)"/>
@@ -905,7 +905,7 @@ function branchScene(slug, opts) {
       <rect x="812" y="382" width="118" height="126" rx="4" fill="#0b1420" opacity=".55"/>
       <rect x="826" y="396" width="42" height="62" rx="3" fill="#dce9f8" opacity=".22"/>
       <rect x="878" y="396" width="38" height="62" rx="3" fill="#dce9f8" opacity=".16"/>
-      <text x="870" y="486" text-anchor="middle" fill="#e6f0ff" opacity=".55" font-family="Segoe UI, Arial" font-size="7" letter-spacing="2">DEMO CATALOGUE</text>
+      <text x="870" y="486" text-anchor="middle" fill="#e6f0ff" opacity=".55" font-family="Segoe UI, Arial" font-size="7" letter-spacing="2">PRODUCT CATALOGUE</text>
     </g>
     <g>
       <rect x="600" y="438" width="86" height="110" rx="3" fill="#0a111c" opacity=".8"/>
@@ -955,9 +955,9 @@ function branchScene(slug, opts) {
     <circle cx="220" cy="150" r="2" fill="#fff" opacity=".35"/>
     <circle cx="880" cy="130" r="2.4" fill="#fff" opacity=".3"/>
   </g>
-  <text x="1184" y="782" text-anchor="end" fill="#ffffff" fill-opacity=".42" font-family="Segoe UI, Arial" font-size="10" letter-spacing="3">CONCEPT VISUAL — NOT AN ACTUAL BRANCH PHOTOGRAPH</text>`;
+  <text x="1184" y="782" text-anchor="end" fill="#ffffff" fill-opacity=".42" font-family="Segoe UI, Arial" font-size="10" letter-spacing="3">STOREFRONT ILLUSTRATION - REPRESENTATIVE IMAGE</text>`;
 
-  fs.writeFileSync(path.join(OUT, `${slug}.svg`), svgDoc(body, 1200, 800, 'Concept visual of the proposed Daima Communications storefront'), 'utf8');
+  fs.writeFileSync(path.join(OUT, `${slug}.svg`), svgDoc(body, 1200, 800, 'Storefront illustration for Daima Communications'), 'utf8');
 }
 
 branchScene('branch-sirare', {
@@ -1003,9 +1003,9 @@ function socialCard() {
   <text x="80" y="350" fill="#ffffff" font-family="Segoe UI, Arial" font-size="62" font-weight="700" letter-spacing="-1">moves with you.</text>
   <text x="80" y="410" fill="#b7c5dc" font-family="Segoe UI, Arial" font-size="21">Smartphones · Accessories · Everyday technology</text>
   <text x="80" y="442" fill="#7fa6e0" font-family="Segoe UI, Arial" font-size="17">Sirare &amp; Kehancha · Migori County, Kenya</text>
-  <rect x="80" y="500" width="238" height="52" rx="26" fill="#285fee"/>
-  <text x="199" y="532" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Arial" font-size="15" font-weight="600">Website concept · 2026</text>
-  <text x="80" y="592" fill="#5f7597" font-family="Segoe UI, Arial" font-size="12">Concept &amp; development by Thomas Hondo Chacha · Illustrative product render</text>
+  <rect x="80" y="500" width="260" height="52" rx="26" fill="#285fee"/>
+  <text x="210" y="532" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Arial" font-size="15" font-weight="600">Call 0701 127 577</text>
+  <text x="80" y="592" fill="#5f7597" font-family="Segoe UI, Arial" font-size="12">Sirare &amp; Kehancha · One business number · Representative product image</text>
   <g transform="translate(965 330) rotate(-8)" filter="url(#sc-sh)">
     <rect x="-150" y="-280" width="300" height="560" rx="50" fill="url(#sc-phone)" stroke="#fff" stroke-opacity=".35" stroke-width="2"/>
     <rect x="-136" y="-266" width="272" height="532" rx="40" fill="url(#sc-scr)"/>
@@ -1013,7 +1013,7 @@ function socialCard() {
     <circle cx="0" cy="-236" r="7" fill="#020306"/>
     <rect x="-40" y="222" width="80" height="4" rx="2" fill="#fff" opacity=".65"/>
   </g>`;
-  fs.writeFileSync(path.join(OUT, 'social-card.svg'), `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Daima Communications concept social card">${body}</svg>`, 'utf8');
+  fs.writeFileSync(path.join(OUT, 'social-card.svg'), `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Daima Communications social card">${body}</svg>`, 'utf8');
 }
 socialCard();
 
@@ -1026,4 +1026,4 @@ function favicon() {
 }
 favicon();
 
-console.log(`Generated ${products.length} product renders (+${products.filter((x) => x.alt).length} alternate views), hero, 2 branch concepts, social card and favicon.`);
+console.log(`Generated ${products.length} product renders (+${products.filter((x) => x.alt).length} alternate views), hero, 2 branch illustrations, social card and favicon.`);

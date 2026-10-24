@@ -1,6 +1,6 @@
 /* ==========================================================================
-   DAIMA COMMUNICATIONS — DEMONSTRATION DASHBOARD BEHAVIOUR
-   Local-only admin concept. Nothing here is a production security boundary.
+   DAIMA COMMUNICATIONS - BUSINESS DASHBOARD BEHAVIOUR
+   Local-only admin preview. Nothing here is a production security boundary.
    ========================================================================== */
 
 (function () {
@@ -21,9 +21,9 @@
   const SECTIONS = {
     overview: { title: 'Dashboard', eyebrow: 'Workspace overview' },
     products: { title: 'Products', eyebrow: 'Catalogue management' },
-    inventory: { title: 'Inventory', eyebrow: 'Demonstration stock' },
+    inventory: { title: 'Inventory', eyebrow: 'Stock' },
     branches: { title: 'Branches', eyebrow: 'Location configuration' },
-    inquiries: { title: 'Inquiries', eyebrow: 'Demo inbox' },
+    inquiries: { title: 'Inquiries', eyebrow: 'Inquiries' },
     settings: { title: 'Settings', eyebrow: 'Configuration' },
   };
 
@@ -266,7 +266,7 @@
         <span class="bar-row__track"><span class="bar-row__fill" style="width:${Math.round((row.units / max) * 100)}%"></span></span>
         <span class="bar-row__value">${row.units}</span>
       </div>`).join('');
-    host.setAttribute('aria-label', 'Bar chart of demonstration stock by category. ' + rows.map((row) => `${row.name}: ${row.units} units`).join(', '));
+    host.setAttribute('aria-label', 'Bar chart of stock by category. ' + rows.map((row) => `${row.name}: ${row.units} units`).join(', '));
   }
 
   function renderStatusChart(inquiries) {
@@ -283,7 +283,7 @@
 
     if (!total) {
       chart.style.background = 'var(--surface)';
-      chart.setAttribute('aria-label', 'No demonstration inquiries saved yet.');
+      chart.setAttribute('aria-label', 'No inquiries saved yet.');
     } else {
       const newDeg = (counts.new / total) * 360;
       const progressDeg = newDeg + (counts.in_progress / total) * 360;
@@ -312,14 +312,14 @@
       .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
       .slice(0, 4);
     if (!recent.length) {
-      host.innerHTML = '<p class="admin-empty-line">No demonstration inquiries have been saved yet.</p>';
+      host.innerHTML = '<p class="admin-empty-line">No inquiries have been saved yet.</p>';
       return;
     }
     host.innerHTML = recent.map((inquiry) => `
       <div class="admin-list-row">
         <span class="admin-list-row__avatar">${esc(initials(inquiry.name))}</span>
         <div class="admin-list-row__main">
-          <strong>${esc(inquiry.name || 'Unnamed demo customer')}</strong>
+          <strong>${esc(inquiry.name || 'Unnamed customer')}</strong>
           <span>${esc(inquiry.productName || 'General enquiry')} · ${esc(branchName(inquiry.branch))}</span>
         </div>
         <div class="admin-list-row__meta">
@@ -334,14 +334,14 @@
     if (!host) return;
     const feed = Store.getActivity().slice(0, 6);
     if (!feed.length) {
-      host.innerHTML = '<p class="admin-empty-line">No demonstration activity recorded yet.</p>';
+      host.innerHTML = '<p class="admin-empty-line">No activity recorded yet.</p>';
       return;
     }
     host.innerHTML = feed.map((item) => `
       <div class="activity-row">
         <span class="activity-row__dot" aria-hidden="true"></span>
         <div class="activity-row__main">
-          <strong>${esc(item.action || 'Demo activity')}</strong>
+          <strong>${esc(item.action || 'Activity')}</strong>
           <span>${esc(item.detail || '')}</span>
           <time datetime="${escapeAttr(item.at || '')}">${esc(H.formatDateTime(item.at))}</time>
         </div>
@@ -393,8 +393,8 @@
           <tr>
             <th scope="col">Product</th>
             <th scope="col">Category</th>
-            <th scope="col">Demo price</th>
-            <th scope="col">Demo stock</th>
+            <th scope="col">Indicative price</th>
+            <th scope="col">Stock</th>
             <th scope="col">Stock note</th>
             <th scope="col"><span class="sr-only">Actions</span></th>
           </tr>
@@ -414,7 +414,7 @@
                 </div>
               </td>
               <td>${esc(category.name)}<span class="table-muted" style="display:block">${esc(product.model || 'Model not set')}</span></td>
-              <td class="table-price">${esc(currency(product.price))}<span class="table-muted" style="display:block;font-weight:400">demo price</span></td>
+              <td class="table-price">${esc(currency(product.price))}<span class="table-muted" style="display:block;font-weight:400">indicative price</span></td>
               <td><span class="stock-total">${stock.total}</span><span class="table-muted" style="display:block">S: ${H.totalStock({ stock: { sirare: product.stock ? product.stock.sirare : 0, kehancha: 0 } })} · K: ${H.totalStock({ stock: { sirare: 0, kehancha: product.stock ? product.stock.kehancha : 0 } })}</span></td>
               <td><span class="stock-note stock-note--${stock.className}"><span class="stock-dot"></span>${esc(stock.label)}</span></td>
               <td>
@@ -454,7 +454,7 @@
     populateCategorySelects();
 
     const product = id ? Store.getProduct(id) : null;
-    byId('product-dialog-title').textContent = product ? 'Edit demonstration product' : 'Add demonstration product';
+    byId('product-dialog-title').textContent = product ? 'Edit product' : 'Add product';
     byId('product-id').value = product ? product.id : '';
     byId('product-name').value = product ? product.name : '';
     byId('product-brand').value = product ? product.brand : '';
@@ -493,12 +493,12 @@
     if (!brand) { setFieldError(elements.brand, 'Enter a brand.'); invalid = invalid || elements.brand; }
     if (!C.categories.some((item) => item.id === category)) { setFieldError(elements.category, 'Choose a valid category.'); invalid = invalid || elements.category; }
     if (sku.length < 2) { setFieldError(elements.sku, 'Enter a SKU of at least 2 characters.'); invalid = invalid || elements.sku; }
-    if (priceValue === '' || !Number.isFinite(price) || price < 0) { setFieldError(elements.price, 'Enter a non-negative demonstration price.'); invalid = invalid || elements.price; }
+    if (priceValue === '' || !Number.isFinite(price) || price < 0) { setFieldError(elements.price, 'Enter a non-negative price.'); invalid = invalid || elements.price; }
     if (!Number.isFinite(sirare) || sirare < 0) { setFieldError(elements.stockSirare, 'Stock cannot be negative.'); invalid = invalid || elements.stockSirare; }
     if (!Number.isFinite(kehancha) || kehancha < 0) { setFieldError(elements.stockKehancha, 'Stock cannot be negative.'); invalid = invalid || elements.stockKehancha; }
 
     const duplicate = Store.getProducts().find((product) => product.sku.toLowerCase() === sku.toLowerCase() && product.id !== elements.id.value);
-    if (duplicate && !invalid) { setFieldError(elements.sku, 'This SKU is already used by another demonstration product.'); invalid = elements.sku; }
+    if (duplicate && !invalid) { setFieldError(elements.sku, 'This SKU is already used by another product.'); invalid = elements.sku; }
 
     if (invalid) {
       invalid.focus();
@@ -524,39 +524,39 @@
       sku,
       image,
       gallery: existing ? existing.gallery || [image] : [image],
-      description: elements.description.value.trim() || 'A demonstration product listing created in the local dashboard. Confirm all details with the branch.',
+      description: elements.description.value.trim() || 'A product created in the local dashboard. Confirm all details with the branch.',
       highlights,
       specs: existing ? existing.specs || [] : [],
       stock: { sirare: Math.round(sirare), kehancha: Math.round(kehancha) },
       featured: elements.featured.checked,
       compareAt: null,
       colors: existing ? existing.colors || [] : [],
-      demo: true,
-      stockNote: 'Demonstration stock data stored in this browser only.',
-      specsNote: 'Specifications are illustrative and must be confirmed with the branch.',
+      demo: false,
+      stockNote: 'Stock data stored in this browser only.',
+      specsNote: 'Confirm the exact model, variant and specification with the branch.',
       createdAt: existing ? existing.createdAt || now : now,
       updatedAt: now,
     };
 
     Store.saveProduct(product);
-    Store.logActivity(existing ? 'Product edited' : 'Product created', `${product.name} — local demonstration catalogue updated.`);
+    Store.logActivity(existing ? 'Product edited' : 'Product created', `${product.name} — local catalogue updated.`);
     closeDialog(byId('product-dialog'));
     refreshDataViews();
-    toast(existing ? 'Demonstration product updated.' : 'Demonstration product added.', 'success');
+    toast(existing ? 'Product updated.' : 'Product added.', 'success');
   }
 
   function requestDeleteProduct(id) {
     const product = Store.getProduct(id);
     if (!product) return;
     askConfirm({
-      title: 'Delete this demonstration product?',
-      message: `“${product.name}” will be removed from this browser's demo catalogue. Cart lines referencing it will no longer display a product. This cannot be undone.`,
+      title: 'Delete this product?',
+      message: `“${product.name}” will be removed from this browser's catalogue. Cart lines referencing it will no longer display a product. This cannot be undone.`,
       confirmLabel: 'Delete product',
       onConfirm: () => {
         Store.deleteProduct(id);
-        Store.logActivity('Product deleted', `${product.name} — removed from the local demonstration catalogue.`);
+        Store.logActivity('Product deleted', `${product.name} - removed from the local catalogue.`);
         refreshDataViews();
-        toast('Demonstration product deleted.', 'info');
+        toast('Product deleted.', 'info');
       },
     });
   }
@@ -588,7 +588,7 @@
     if (empty) empty.hidden = products.length > 0;
     if (!products.length) {
       host.innerHTML = '';
-      if (byId('inventory-summary')) byId('inventory-summary').textContent = '0 demonstration listings in this filtered view.';
+      if (byId('inventory-summary')) byId('inventory-summary').textContent = '0 products in this filtered view.';
       return;
     }
     host.innerHTML = `
@@ -617,8 +617,8 @@
                   </span>
                 </div>
               </td>
-              <td><label class="sr-only" for="stock-sirare-${escapeAttr(product.id)}">Sirare demonstration units for ${escapeAttr(product.name)}</label><input class="stock-input" id="stock-sirare-${escapeAttr(product.id)}" type="number" min="0" step="1" inputmode="numeric" value="${sirare}" data-stock-id="${escapeAttr(product.id)}" data-stock-branch="sirare" /></td>
-              <td><label class="sr-only" for="stock-kehancha-${escapeAttr(product.id)}">Kehancha demonstration units for ${escapeAttr(product.name)}</label><input class="stock-input" id="stock-kehancha-${escapeAttr(product.id)}" type="number" min="0" step="1" inputmode="numeric" value="${kehancha}" data-stock-id="${escapeAttr(product.id)}" data-stock-branch="kehancha" /></td>
+              <td><label class="sr-only" for="stock-sirare-${escapeAttr(product.id)}">Sirare units for ${escapeAttr(product.name)}</label><input class="stock-input" id="stock-sirare-${escapeAttr(product.id)}" type="number" min="0" step="1" inputmode="numeric" value="${sirare}" data-stock-id="${escapeAttr(product.id)}" data-stock-branch="sirare" /></td>
+              <td><label class="sr-only" for="stock-kehancha-${escapeAttr(product.id)}">Kehancha units for ${escapeAttr(product.name)}</label><input class="stock-input" id="stock-kehancha-${escapeAttr(product.id)}" type="number" min="0" step="1" inputmode="numeric" value="${kehancha}" data-stock-id="${escapeAttr(product.id)}" data-stock-branch="kehancha" /></td>
               <td><span class="stock-total">${stock.total}</span></td>
               <td><span class="stock-note stock-note--${stock.className}"><span class="stock-dot"></span>${esc(stock.label)}</span></td>
             </tr>`;
@@ -627,7 +627,7 @@
       </table>`;
     if (byId('inventory-summary')) {
       const units = products.reduce((sum, product) => sum + H.totalStock(product), 0);
-      byId('inventory-summary').textContent = `${units.toLocaleString('en-KE')} demonstration units across ${products.length} ${products.length === 1 ? 'listing' : 'listings'} in this view. Threshold: ${threshold}.`;
+      byId('inventory-summary').textContent = `${units.toLocaleString('en-KE')} units across ${products.length} ${products.length === 1 ? 'listing' : 'listings'} in this view. Threshold: ${threshold}.`;
     }
   }
 
@@ -662,7 +662,7 @@
       product.updatedAt = new Date().toISOString();
     });
     Store.saveProducts(products);
-    Store.logActivity('Inventory updated', `${changed} branch stock ${changed === 1 ? 'value' : 'values'} changed in the local demonstration inventory.`);
+    Store.logActivity('Inventory updated', `${changed} branch stock ${changed === 1 ? 'value' : 'values'} changed in the local inventory.`);
     refreshDataViews();
     toast(changed ? `Inventory saved — ${changed} stock ${changed === 1 ? 'value' : 'values'} changed.` : 'No stock changes to save.', 'success');
   }
@@ -678,7 +678,7 @@
     }
     input.style.borderColor = '';
     Store.saveSettings({ lowStockThreshold: value });
-    Store.logActivity('Low-stock threshold updated', `Demonstration low-stock threshold set to ${value}.`);
+    Store.logActivity('Low-stock threshold updated', `Low-stock threshold set to ${value}.`);
     if (byId('settings-threshold')) byId('settings-threshold').value = String(value);
     renderOverview();
     renderInventory();
@@ -696,10 +696,10 @@
       <form class="branch-admin-card" data-branch-form="${escapeAttr(branch.id)}" novalidate>
         <header class="branch-admin-card__head">
           <div>
-            <span>Proposed branch ${String(index + 1).padStart(2, '0')}</span>
+            <span>Branch ${String(index + 1).padStart(2, '0')}</span>
             <h3>${esc(branch.name)}</h3>
           </div>
-          <span class="admin-chip">${branch.active === false ? 'Inactive' : 'Active in demo'}</span>
+          <span class="admin-chip">${branch.active === false ? 'Inactive' : 'Active'}</span>
         </header>
         <div class="branch-admin-card__body">
           <div class="admin-form-grid">
@@ -745,7 +745,7 @@
             </div>
             <div class="admin-field admin-field--full">
               <label class="admin-toggle admin-toggle--compact">
-                <span><strong>Show this branch on the public concept</strong><small>Inactive branches remain editable but are hidden from public branch lists.</small></span>
+                <span><strong>Show this branch on the public website</strong><small>Inactive branches remain editable but are hidden from public branch lists.</small></span>
                 <input type="checkbox" name="active" ${branch.active === false ? '' : 'checked'} />
               </label>
             </div>
@@ -791,14 +791,14 @@
       addressNote: elements.addressNote.value.trim(),
       hours: elements.hours.value.trim(),
       phone: elements.phone.value.trim(),
-      phoneDisplay: elements.phone.value.trim() || 'Branch phone to be confirmed',
+      phoneDisplay: elements.phone.value.trim() || 'Call the main number',
       whatsapp: elements.whatsapp.value.trim(),
       mapsQuery: elements.mapsQuery.value.trim(),
       stockLabel: elements.stockLabel.value.trim(),
       active: elements.active.checked,
     });
     Store.saveBranches(branches);
-    Store.logActivity('Branch updated', `${name} — local demonstration branch details updated.`);
+    Store.logActivity('Branch updated', `${name} — local branch details updated.`);
     renderBranches();
     renderOverview();
     toast(`${name} branch details saved locally.`, 'success');
@@ -840,7 +840,7 @@
             <span class="inquiry-card__ref">${esc(inquiry.reference)}</span>
             ${statusBadge(inquiry.status)}
           </div>
-          <strong>${esc(inquiry.name || 'Unnamed demo customer')} · ${esc(inquiry.productName || 'General enquiry')}</strong>
+          <strong>${esc(inquiry.name || 'Unnamed customer')} · ${esc(inquiry.productName || 'General enquiry')}</strong>
           <p>${esc(inquiry.message || 'No message supplied.')}</p>
         </div>
         <div class="inquiry-card__meta">
@@ -870,7 +870,7 @@
         <dl class="inquiry-detail__meta">
           <div><dt>Reference</dt><dd>${esc(inquiry.reference)}</dd></div>
           <div><dt>Status</dt><dd>${statusBadge(inquiry.status)}</dd></div>
-          <div><dt>Customer</dt><dd>${esc(inquiry.name || 'Unnamed demo customer')}</dd></div>
+          <div><dt>Customer</dt><dd>${esc(inquiry.name || 'Unnamed customer')}</dd></div>
           <div><dt>Phone</dt><dd>${esc(inquiry.phone || 'Not supplied')}</dd></div>
           <div><dt>Product</dt><dd>${esc(inquiry.productName || 'General enquiry')}</dd></div>
           <div><dt>Branch</dt><dd>${esc(branchName(inquiry.branch))}</dd></div>
@@ -878,7 +878,7 @@
           <div><dt>Email</dt><dd>${esc(inquiry.email || 'Not supplied')}</dd></div>
         </dl>
         <div class="inquiry-detail__message">${esc(inquiry.message || 'No message supplied.')}</div>
-        <p class="admin-small-note">Demonstration inquiry only. No reply has been sent. Contact details were entered by the person using this browser and may be sample data.</p>
+        <p class="admin-small-note">Local inquiry record only. No reply has been sent from this browser. Confirm contact details before acting on them.</p>
         <div class="inquiry-detail__foot">
           <label class="sr-only" for="detail-status">Inquiry status</label>
           <select class="inquiry-status-select" id="detail-status" data-inquiry-status="${escapeAttr(inquiry.id)}">
@@ -895,7 +895,7 @@
     const inquiry = Store.getInquiries().find((item) => item.id === id);
     if (!inquiry) return;
     Store.updateInquiry(id, { status });
-    Store.logActivity('Inquiry status updated', `${inquiry.reference} marked ${STATUS[status].label.toLowerCase()} in the local demo inbox.`);
+    Store.logActivity('Inquiry status updated', `${inquiry.reference} marked ${STATUS[status].label.toLowerCase()} in the local inbox.`);
     renderInquiries();
     renderOverview();
     if (state.viewingInquiryId === id && byId('inquiry-dialog') && byId('inquiry-dialog').open) openInquiry(id);
@@ -906,19 +906,19 @@
     const inquiry = Store.getInquiries().find((item) => item.id === id);
     if (!inquiry) return;
     askConfirm({
-      title: 'Delete this demonstration inquiry?',
-      message: `${inquiry.reference} from ${inquiry.name || 'an unnamed customer'} will be permanently removed from this browser's demo inbox. No real message is affected.`,
+      title: 'Delete this inquiry?',
+      message: `${inquiry.reference} from ${inquiry.name || 'an unnamed customer'} will be permanently removed from this browser's inbox. No real message is affected.`,
       confirmLabel: 'Delete inquiry',
       onConfirm: () => {
         Store.deleteInquiry(id);
-        Store.logActivity('Inquiry deleted', `${inquiry.reference} removed from the local demonstration inbox.`);
+        Store.logActivity('Inquiry deleted', `${inquiry.reference} removed from the local inbox.`);
         if (state.viewingInquiryId === id) {
           state.viewingInquiryId = '';
           closeDialog(byId('inquiry-dialog'));
         }
         renderInquiries();
         renderOverview();
-        toast('Demonstration inquiry deleted.', 'info');
+        toast('Inquiry deleted.', 'info');
       },
     });
   }
@@ -977,31 +977,31 @@
       demoBanner: elements.demoBanner.checked,
       filterByBranch: elements.filterByBranch.checked,
     });
-    Store.logActivity('Demo settings updated', 'Business display, catalogue and WhatsApp configuration saved locally.');
+    Store.logActivity('Settings updated', 'Business display, catalogue and WhatsApp configuration saved locally.');
     refreshDataViews();
-    toast('Demonstration settings saved in this browser.', 'success');
+    toast('Settings saved in this browser.', 'success');
   }
 
   function resetSettings() {
     askConfirm({
-      title: 'Reset demonstration settings?',
+      title: 'Reset settings?',
       message: 'Business name, currency, WhatsApp number and display toggles will return to their configured defaults. Products, branches and inquiries are not affected.',
       confirmLabel: 'Reset settings',
       onConfirm: () => {
         Store.resetSettings();
-        Store.logActivity('Demo settings reset', 'Settings returned to the config.js demonstration defaults.');
+        Store.logActivity('Settings reset', 'Settings returned to the config.js defaults.');
         fillSettingsForm();
         refreshDataViews();
-        toast('Demonstration settings reset to defaults.', 'info');
+        toast('Settings reset to defaults.', 'info');
       },
     });
   }
 
   function exportData() {
     const payload = {
-      project: 'DAIMA COMMUNICATIONS demonstration website',
+      project: 'DAIMA COMMUNICATIONS website',
       exportedAt: new Date().toISOString(),
-      notice: 'Demonstration data only. This export is not a backup of live business data and may contain test entries.',
+      notice: 'Local preview export. This is not a backup of live business data and may contain test entries.',
       products: Store.getProducts(),
       branches: Store.getBranches(),
       inquiries: Store.getInquiries(),
@@ -1013,25 +1013,25 @@
     const link = document.createElement('a');
     const date = new Date().toISOString().slice(0, 10);
     link.href = url;
-    link.download = `daima-demo-data-${date}.json`;
+    link.download = `daima-data-${date}.json`;
     document.body.appendChild(link);
     link.click();
     link.remove();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
-    toast('Demonstration data export prepared.', 'success');
+    toast('Data export prepared.', 'success');
   }
 
   function resetAllData() {
     askConfirm({
-      title: 'Reset all demonstration data?',
-      message: 'Products, inventory, branches, inquiries, settings, cart and wishlist will be cleared from this browser and the seeded demo catalogue restored. This cannot be undone.',
-      confirmLabel: 'Reset all demo data',
+      title: 'Reset all data?',
+      message: 'Products, inventory, branches, inquiries, settings, cart and wishlist will be cleared from this browser and the seeded catalogue restored. This cannot be undone.',
+      confirmLabel: 'Reset all data',
       onConfirm: () => {
         Store.resetAll();
         Store.getProducts();
         Store.getInquiries();
         Store.getActivity();
-        Store.logActivity('Demo data reset', 'Seeded demonstration products, inquiries and activity restored in this browser.');
+        Store.logActivity('Data reset', 'Seeded products, inquiries and activity restored in this browser.');
         state.productSearch = '';
         state.productCategory = '';
         state.inventorySearch = '';
@@ -1047,7 +1047,7 @@
         populateCategorySelects();
         fillSettingsForm();
         refreshDataViews();
-        toast('All demonstration data reset to seeded defaults.', 'info');
+        toast('All data reset to seeded defaults.', 'info');
       },
     });
   }

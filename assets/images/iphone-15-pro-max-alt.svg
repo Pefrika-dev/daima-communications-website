@@ -96,7 +96,7 @@
       <circle cx="120" cy="42" r="7" fill="#f7e8c4" opacity=".85"/>
       <circle cx="120" cy="42" r="3" fill="#ffffff"/>
     </g>
-    <text x="30" y="205" fill="#ffffff" fill-opacity=".22" font-family="Segoe UI, Arial" font-size="9" letter-spacing="2">DEMO RENDER</text>
+    <text x="30" y="205" fill="#ffffff" fill-opacity=".22" font-family="Segoe UI, Arial" font-size="9" letter-spacing="2">PRODUCT IMAGE</text>
     <rect x="108" y="592" width="84" height="3" rx="1.5" fill="#ffffff" opacity=".28"/>
   </g>
 </svg>

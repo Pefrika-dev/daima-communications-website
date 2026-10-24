@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Daima Communications concept social card"><defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Daima Communications social card"><defs>
     <linearGradient id="sc-bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#070c18"/><stop offset=".6" stop-color="#0b1428"/><stop offset="1" stop-color="#0e1b36"/>
     </linearGradient>
@@ -23,14 +23,13 @@
   <text x="80" y="350" fill="#ffffff" font-family="Segoe UI, Arial" font-size="62" font-weight="700" letter-spacing="-1">moves with you.</text>
   <text x="80" y="410" fill="#b7c5dc" font-family="Segoe UI, Arial" font-size="21">Smartphones · Accessories · Everyday technology</text>
   <text x="80" y="442" fill="#7fa6e0" font-family="Segoe UI, Arial" font-size="17">Sirare &amp; Kehancha · Migori County, Kenya</text>
-  <rect x="80" y="500" width="238" height="52" rx="26" fill="#285fee"/>
-  <text x="199" y="532" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Arial" font-size="15" font-weight="600">Website concept · 2026</text>
-  <text x="80" y="592" fill="#5f7597" font-family="Segoe UI, Arial" font-size="12">Concept &amp; development by Thomas Hondo Chacha · Illustrative product render</text>
+  <rect x="80" y="500" width="260" height="52" rx="26" fill="#285fee"/>
+  <text x="210" y="532" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Arial" font-size="15" font-weight="600">Call 0701 127 577</text>
+  <text x="80" y="592" fill="#5f7597" font-family="Segoe UI, Arial" font-size="12">Sirare &amp; Kehancha · One business number · Representative product image</text>
   <g transform="translate(965 330) rotate(-8)" filter="url(#sc-sh)">
     <rect x="-150" y="-280" width="300" height="560" rx="50" fill="url(#sc-phone)" stroke="#fff" stroke-opacity=".35" stroke-width="2"/>
     <rect x="-136" y="-266" width="272" height="532" rx="40" fill="url(#sc-scr)"/>
     <ellipse cx="-20" cy="-80" rx="180" ry="220" fill="#8fd8ff" opacity=".25" filter="url(#sc-sh)"/>
     <circle cx="0" cy="-236" r="7" fill="#020306"/>
     <rect x="-40" y="222" width="80" height="4" rx="2" fill="#fff" opacity=".65"/>
-  </g>
-</svg>
+  </g></svg>

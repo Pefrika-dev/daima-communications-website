@@ -1,4 +1,4 @@
-# DAIMA COMMUNICATIONS — independent website concept
+# DAIMA COMMUNICATIONS - business website
 # Production: https://daima-communications-website.vercel.app
 # If a custom domain is connected, replace the production URL below.
 User-agent: *
