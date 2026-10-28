@@ -339,7 +339,7 @@
       </div>
       <div class="container developer-credit">
         <span class="credit-rule" aria-hidden="true"></span>
-        <p>Website Designed &amp; Developed by <strong>Thomas Hondo Chacha</strong> - Software Engineer.</p>
+        <p>Website Designed &amp; Developed by <a href="https://www.thomashondochacha.co.ke" target="_blank" rel="noopener noreferrer"><strong>Thomas Hondo Chacha</strong></a> - Software Engineer.</p>
         <span class="credit-rule" aria-hidden="true"></span>
       </div>
     </footer>`;
